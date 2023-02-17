@@ -1,0 +1,9 @@
+com\example\booking\entity\Categoria.class
+com\example\booking\service\CategoriaService.class
+com\example\booking\service\impl\ICategoriaService.class
+com\example\booking\DTO\CategoriaDTO.class
+com\example\booking\controller\CategoriaController.class
+com\example\booking\repository\ICategoriaRepository.class
+com\example\booking\service\impl\IBasicCrudService.class
+com\example\booking\BookingApplication.class
+com\example\booking\exception\ResourceNotFoundException.class
