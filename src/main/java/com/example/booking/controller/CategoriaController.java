@@ -25,13 +25,6 @@ public class CategoriaController {
         return new ResponseEntity<>(categoriaCreated, HttpStatus.OK);
     }
 
-    @Operation(summary = "Get a categoria specified by id")
-    @GetMapping("/{id}")
-    public ResponseEntity<CategoriaDTO> findCategoria(@PathVariable Long id) {
-        CategoriaDTO categoriaDTO = iCategoriaService.findOne(id);
-        return ResponseEntity.ok(categoriaDTO);
-    }
-
     @Operation(summary = "Get list of categorias")
     @GetMapping()
     public ResponseEntity<Iterable<CategoriaDTO>> findAllCategorias() {
@@ -41,8 +34,8 @@ public class CategoriaController {
     @Operation(summary = "Update an existing categoria")
     @PutMapping("/{id}")
     public ResponseEntity<CategoriaDTO> updateCategoria(@RequestBody CategoriaDTO categoriaDTO, @PathVariable Long id) {
-        if (categoriaDTO.getIdcategorias() != id) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        if (iCategoriaService.findOne(id) == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
             CategoriaDTO categoriaUpdated = iCategoriaService.update(categoriaDTO, id);
             return new ResponseEntity<>(categoriaUpdated, HttpStatus.OK);
