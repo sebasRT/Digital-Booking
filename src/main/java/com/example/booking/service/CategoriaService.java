@@ -43,12 +43,9 @@ public class CategoriaService implements ICategoriaService {
 
     @Override
     public Iterable<CategoriaDTO> findAll() {
-        List<Categoria> categoriaList = new ArrayList<>();
-        Set<CategoriaDTO> categoriaDTO = new HashSet<>();
-        for (Categoria categoria : categoriaList) {
-            categoriaDTO.add(mapper.convertValue(categoria, CategoriaDTO.class));
-        }
-        return categoriaDTO;
+        List<CategoriaDTO> categoriaDTOList = new ArrayList<>();
+        iCategoriaRepository.findAll().forEach(categoria -> categoriaDTOList.add(mapDTO(categoria)));
+        return categoriaDTOList;
     }
 
     @Override
