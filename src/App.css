@@ -1,0 +1,147 @@
+
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  overflow: auto;
+}
+
+.register-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #0069d9;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+input[type=password].error {
+  border: 2px solid red;
+}
+
+.password-match {
+  border: 2px solid #e74c3c;
+}
+
+.password-mismatch-message {
+  color: #e74c3c;
+  margin: 0.5rem 0 0 0;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #0069d9;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
