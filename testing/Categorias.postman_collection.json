@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "bb8c1cbc-2c74-411b-9035-46427b08ae50",
+		"name": "Categorias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20449814"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"Hoteles\",\r\n    \"descripcion\": \"Categoria Hotel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categoria/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"Hostel\",\r\n    \"descripcion\": \"Categoria Hostel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/910999556/es/foto/dormitorio-en-el-moderno-albergue.jpg?s=612x612&w=0&k=20&c=xVZYYJHhP7XtG5dQzae3uCSJcjW7h_RqbYQqbFA60v4=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categoria/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar categoria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"titulo\":\"Hostel\",\r\n    \"descripcion\": \"Categoria Hotel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categoria/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
