@@ -106,7 +106,6 @@ p{
 
 footer{
   background-color: #FFFBE2;
-  width: 100dvw;
   width: 100vw;
   position: sticky;
   bottom: 0;
@@ -137,28 +136,4 @@ footer{
 }
 footer > p{
   font-size: 90%;
-}
-.dropdown-menu{
-  content: '';
-  background-color: #FFFBE2;
-  width: 10vw;
-  padding-top: 2%;
-  padding: 9%;
-  position:fixed;
-  right: 1.5%;
-  display:block;
-  border-radius: 20px;
-}
-
-.dropdown-menu.active{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-.dropdown-menu.unactive{
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(0);
-  transition: var(--speed) ease;
 }
