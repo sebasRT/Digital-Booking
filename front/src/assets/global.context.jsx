@@ -1,6 +1,5 @@
 import { createContext } from "react"
 import { useMedia } from "../hooks/useMedia";
-
 const Themes = {
     A:{
         color1:'#F0572D',
@@ -22,11 +21,12 @@ const Themes = {
         color4:'#FFFBE2'
     }
 }
-export const GlobalContext = createContext();
 
+export const GlobalContext = createContext();
 export const GlobalProvider = ({children}) => {
   const isMobile = useMedia();
   return (
+
     <GlobalContext.Provider value={{isMobile}}>
       {children}
     </GlobalContext.Provider>

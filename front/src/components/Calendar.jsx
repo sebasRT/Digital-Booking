@@ -9,7 +9,6 @@ export const Calendar = (props) => {
     const media = useMedia();
     
     function handleChange(value){
-      //your modification on passed value ....
       setValue(value)
     }
   

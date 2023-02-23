@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export const useMedia = () => {
 
-    const media = window.matchMedia("(max-width:420px)");
+    const media = window.matchMedia("(max-width:510px)");
     const [matches, setMatches] = useState(media.matches)
 
 

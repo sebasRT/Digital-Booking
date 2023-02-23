@@ -1,0 +1,10 @@
+
+.Suggestions{
+    width: 90vw;
+}
+.cards-container{
+    display: grid;
+    gap: 1rem;
+    grid-column: 20rem;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
