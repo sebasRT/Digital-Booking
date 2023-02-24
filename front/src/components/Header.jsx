@@ -14,7 +14,7 @@ const Header = () => {
   sethidden({display:"none"})
   }
   return (
-    <header style={hidden} >
+    <header style={hidden}>
       <Link to='/' className='logo'>
       
         <img src="./logo1.svg" alt="DigitalBooking"  />
