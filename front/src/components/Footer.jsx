@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 export const Footer = () => {
   return (
     <footer>
-      <Link to= '/' className='footerLink'>
-        <img src="./logo.svg"/>
+      <Link to= '/' className='footerLink' >
+        <div style={{backgroundImage:"url('./logo.svg')", backgroundSize:"contain",width:"30vw", backgroundRepeat:"no-repeat"}} className="img"></div>
       </Link>
       <p>©2021 Digital Booking</p>
       <div className='socialNetworksContainer'>

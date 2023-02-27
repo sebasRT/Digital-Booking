@@ -8,10 +8,9 @@ import { Menu } from './menu'
 const Header = () => {
   const isMobile = useMedia();
 
-  const [hidden, sethidden] = useState({display: ""})
-
+  const [hidden, sethidden] = useState({position:"sticky", top:"0px"})
   const handleHidden = ()=>{
-  sethidden({display:"none"})
+  sethidden({position: "absolute", top:"-100px"})
   }
   return (
     <header style={hidden}>

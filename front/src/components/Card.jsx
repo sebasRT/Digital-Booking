@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <>
       <section className="container-card">
-        <div  className="container-img" style={{backgroundImage:`url(${props.url})`, backgroundSize:"cover"}}>
+        <div  className="container-img" style={{backgroundImage:`url(${props.url})`, backgroundSize:"cover", backgroundPosition:"50%"}}>
           {/* <img
             className="container-img"
             src={props.url}

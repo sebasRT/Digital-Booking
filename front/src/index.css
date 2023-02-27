@@ -21,20 +21,24 @@ body{
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-
 }
+.route{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;}
 /* -----------------------------------|HEADER STYLES|------------------------------------- */
 header{
   z-index: 100;
   background-color: #FFFBE2;
   width: 100%;
   position: sticky;
-  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: top 2s;
 }
-
 .sessionButtonsContainer{
   width: 20vw;
   display: flex;
@@ -43,12 +47,13 @@ header{
   padding-right: 6%;
 }
 .sessionButton{
+  align-self: center;
   margin: 3%;
   width: 100%;
   height: fit-content;
   font-size: 1vw;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 3px;
   border-style:solid;
   border-color: #FBC02D;
 }
@@ -57,60 +62,12 @@ header{
 }
 .sessionButton > a{
   text-decoration: none;
+  font-size: 1rem;
 }
 .sessionButton > a >h4{
   margin: 3%;
   color: #263238;
 }
-.menuButton{
-  background-color: transparent;
-  border-style: none;
-}
-.dropdown-menu{
-  content: '';
-  background-color: #FFFBE2;
-  width: 50%;
-  padding-top: 2%;
-  padding: 9%;
-  position:fixed;
-  right: 1.5%;
-  display:block;
-  border-radius: 20px;
-}
-
-.dropdown-menu.active{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-.dropdown-menu.unactive{
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-.quitHeader{
-  color: #FBC02D;
-  background-color: transparent;
-  border-style: solid;
-  border-color: #FBC02D;
-  border-radius: 50%;
-  padding:auto;
-  font-size: 0.7em;
-  size: 1em;
-  position: absolute;
-  top: 0%;
-  right: 1%;
-}
-.quitHeader:hover{
- background-color:#FBC02D;
- color: #FFFBE2;
-}
-.route{
-  min-height: 100vh;
-}
-
 .logo{
   display: flex;
   flex-direction: row;
@@ -118,7 +75,8 @@ header{
   padding: 1%;
   padding-left: 2%;
   width: 20vw;
-  font-size:1vw;
+  min-width: 200px;
+  font-size:13px;
   font-style: italic;
   text-decoration: none;
   cursor: pointer;
@@ -129,51 +87,6 @@ header{
   margin-right: 2%;
   max-width: 23%;
 }
-/* -----------------------------------|LOGIN & SIGNUP STYLES|------------------------------------- */
-.route{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  min-width: 100vw;
-  min-height: 100vh;
-}
-.login-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.form-group{
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-
-}
-.form-group > input{
-  border-color: #FBC02D;
-  border-style: solid;
-  border-radius: 10px;
-}
-.form-group > input:focus{
-  border-color:#263238;
-
-}
-.submitButton{
-  background-color: #FBC02D;
-  border-style: none;
-  padding: 10px;
-  border-radius: 15px;
-  color: white;
-  margin-bottom: 20px;
-}
-.register-container{
-  display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-}
-/* -----------------------------------| HOME STYLES |------------------------------------- */
 
 /* -----------------------------------|FOOTER STYLES|------------------------------------- */
 footer{
@@ -185,27 +98,39 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  max-height: 30px;
+  height: fit-content;
 }
 .footerLink{
   margin-left: 2%;
-  width: 20vw;
+  height: 2rem;
+  width: 25vw;
   font-size:0.9vw;
   font-style: italic;
   text-decoration: none;
   cursor: pointer; 
 }
-.footerLink > img{
-  max-width: 40%;
+.footerLink > .img{
+  height: 100%;
+  max-width: 30%;
+  min-width: 90px;
 }
 .socialNetworksContainer{
   margin-right: 2%;
   display: flex;
   justify-content: space-between;
-  width: 20vw;
+  width: 25vw;
 }
 .icon{
   width: 10%;
+  margin: 2px;
+  min-width: 15px;
 }
 footer > p{
-  font-size: 90%;
+  font-size: 2vw;
+}
+@media screen and (min-width: 480px){
+  footer > p{
+    font-size: 2vh;
+  }
 }

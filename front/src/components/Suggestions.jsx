@@ -1,8 +1,11 @@
 import React from 'react'
-import cards from "../assets/cards.json"
-import Card from '../components/Card';
 import "../styles/Suggestions.css" 
+
+import Card from '../components/Card';
+
+import cards from "../assets/cards.json"
 const cardsJSON = cards;
+
 export const Suggestions = () => {
   return (
     <div className='Suggestions'>
