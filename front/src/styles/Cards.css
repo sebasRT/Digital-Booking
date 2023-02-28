@@ -1,0 +1,147 @@
+.container-card {
+  width: 635px;
+  min-height: 276px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  filter:drop-shadow(0px 3px 3px #DFE4EA);
+  margin: 10px ;
+}
+  .container-img {
+    width: 500px;
+    height: 276px;
+    border-radius: 8px;
+  }
+  .container-detail {
+    padding: 10px;
+  }
+  
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .name-hotel {
+    width: 189px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .starts {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fbc02d;
+  }
+  .icon-heart{
+  position:absolute;
+  left:276px;
+  top:15px;
+  color:white;
+  width: 25px;
+  height: 22px;
+  }
+  
+  .icon-star {
+    width: 15px;
+    margin-left: 5px;
+  }
+  .title {
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 700;
+    color: #263238;
+    margin: 0%;
+  }
+  .ranking-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .ranking-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .calification-card {
+    background-color: #263238;
+    border-radius: 10px;
+    width: 30px;
+    height: 25px;
+    color: white;
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .medition-card {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .location-card {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .description-location {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-right: 5px;
+  }
+  .location-mapa {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #fbc02d;
+    text-decoration: none;
+  }
+  
+  .icon-location {
+    width: 10px;
+    height: 14px;
+    color: #263238;
+    margin-right: 5px;
+  }
+  .icons-locations {
+    display: flex;
+  }
+  
+  .icon-wifi {
+    color: #263238;
+    margin-right: 5px;
+  }
+  .icon-Swimming {
+    color: #263238;
+    height: 20px;
+  }
+  .description-card {
+    display: block;
+  }
+  .description-card p {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 500;
+    margin: 20px 0px;
+  }
+  .button-card {
+    width: 100%;
+    background-color: #fbc02d;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+  }
