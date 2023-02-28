@@ -5,7 +5,7 @@
     padding: 1%;
 }
 .searching{
-    font-size:2vw;
+    font-size:1.5vw;
     text-align: center;
     background-color: #FBC02D;
     color:white;
@@ -30,18 +30,21 @@
     color: white;
 }
 .searchButton{
+    font-size: 1rem;
     border-radius: 10px;
     background-color: #607D8B;
     border-style: none;
     color:white;
 }
 .rmdp-input{
-    padding: 2%;
+    font-size: 1rem;
+    min-height: 35px;
+    text-align: center;
 }
 .placeInput{
+
     border: 1px solid #c0c4d6;
     border-radius: 5px;
-    padding: 2%;
 }
 .placeInput:focus {
     border: 1px solid #a4b3c5;
