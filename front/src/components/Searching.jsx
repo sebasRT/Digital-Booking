@@ -1,16 +1,16 @@
 import React from 'react'
 import { Calendar } from './Calendar'
 import "../styles/Searching.css"
+import Select from 'react-select'
 export const Searching = () => {
   return (
     <div className='searching'>
-      <h2>busca ofertas en hoteles, casas y mucho mas</h2>
+      <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
     <form action="" className='searchingForm'>
-      <div style={{display: "block"}}>
-      <input type="text" className='placeInput' placeholder='¿A donde iremos?'/>
-
-      </div>
-     
+      
+    <Select className='placeInput' placeholder='¿A donde iremos?' ></Select>
+    <Select className='placeInput' placeholder='Categoria' ></Select>
+    
       <Calendar></Calendar>
       <button type="submit" className='searchButton'>Buscar</button>
     </form>

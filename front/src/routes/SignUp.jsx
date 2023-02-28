@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../styles/SignUp.css"
 import { Link } from 'react-router-dom';
 
 export const SignUp = () => {
@@ -9,7 +10,7 @@ export const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
       setFormSubmitted(true);
@@ -28,29 +29,32 @@ export const SignUp = () => {
       setPassword('');
       setConfirmPassword('');
       setFormSubmitted(false);
-      const formDataJSON = JSON.stringify(formData);
-      console.log(formDataJSON);
-  
-      try {
-        const response = await fetch('data.json', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: formDataJSON
-        });
-  
-        if (response.ok) {
+
+      fetch('./data.json')
+        .then(response => response.json())
+        .then(data => {
+          const formDataList = data ? data : [];
+          formDataList.push(formData);
+          const formDataJSON = JSON.stringify(formDataList);
+          return fetch('./data.json', {
+            method: 'POST',
+            body: formDataJSON,
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error saving form data');
+          }
           console.log('Data saved successfully');
-        } else {
-          console.log('Failed to save data');
-        }
-      } catch (error) {
-        console.log('Error:', error);
-      }
+        })
+        .catch(error => {
+          console.log('Error:', error);
+        });
     }
   };
-  
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -63,34 +67,46 @@ export const SignUp = () => {
   const passwordClass = formSubmitted && password !== confirmPassword ? 'error' : '';
 
   return (
-    <div className="register-container route">
-      <h1>Crear una cuenta</h1>
+    <div className="register-container">
+      <h1>Crear cuenta</h1>
       <form onSubmit={handleSubmit}>
+        <div className='nombres'>
         <div className="form-group">
-          <label htmlFor="first-name">Nombre</label>
-          <input type="text" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <div className='nombreDiv'>
+          <label htmlFor="first-name" class="textTitulosInputs">Nombre</label>
+          <input type="text" class ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          </div>
         </div>
         <div className="form-group">
-          <label htmlFor="last-name">Apellido</label>
-          <input type="text" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <div className='apellidoDiv'>
+          <label htmlFor="last-name" class="textTitulosInputs" >Apellido</label>
+          <input type="text" class="apellido" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          </div>
+        </div>
+        </div>  
+        <div className="form-group">
+          <div className='emailDiv'>
+          <label htmlFor="email" class="textTitulosInputs" >Correo electrónico</label>
+          <input type="email" class="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
         </div>
         <div className="form-group">
-          <label htmlFor="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Contraseña</label>
+          <div className='passwordDiv'>
+          <label htmlFor="password" class="textTitulosInputs">Contraseña</label>
           <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} className={passwordClass} />
+          </div>
         </div>
         <div className="form-group">
-          <label htmlFor="confirm-password">Confirmar contraseña</label>
+          <div className='passwordConfirmDiv'>
+          <label htmlFor="confirm-password" class="textTitulosInputs" >Confirmar contraseña</label>
           <input type="password" id="confirm-password" name="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} className={passwordClass} />
+          </div>
           {formSubmitted && password !== confirmPassword && <p className="password-mismatch-message error">Las contraseñas no coinciden</p>}
         </div>
-        <button type="submit" className='submitButton'>Crear cuenta</button>
+        <button type="submit" class="crearCuenta" >Crear cuenta</button>
       </form>
-      {formSubmitted && password === confirmPassword && <p className="success-message">Cuenta creada con éxito</p>}
-      <p>¿Ya tienes una cuenta? <Link to={"/Login"}>Inicia sesión aquí</Link></p>
+      {formSubmitted && password === confirmPassword && <p className="success-message"></p>}
+      <p>¿Ya tienes una cuenta? <a href="./login.js">Iniciar sesión</a></p>
     </div>
   );
 

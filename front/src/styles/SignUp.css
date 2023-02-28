@@ -1,0 +1,145 @@
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    overflow: auto;
+  }
+  
+  .register-container h1 {
+    text-align: center;
+    left: 364px;
+    top: 158px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FBC02D;
+  }
+  
+  .nombres{
+    display: flex;
+    padding: 0px 10px 0px 10px;
+  }
+  
+  .form.group{
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+  .form-group label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500; 
+    font-size: 12px;
+    line-height: 14px;
+    color: #383B58;
+    text-align: right;
+    display: flex;
+  } 
+  
+  .nombreDiv {
+    padding: 10px;
+  }
+  .apellidoDiv{
+    padding: 10px;
+  }
+  .emailDiv {
+    padding:  0px 44px 0px 20px;
+  }
+  .passwordDiv{
+    padding: 10px 44px 0px 20px;
+  }
+  .passwordConfirmDiv{
+    padding: 10px 44px 30px 20px;
+  }
+  
+  .form-group input {
+    display: block;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  
+  .form-group input[class="nombre"] {
+    display: block;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    width: 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  
+  .form-group input[class="apellido"] {
+    display: block;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    width: 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  
+  .crearCuenta{
+    background-color: #FBC02D;
+    border: none;
+    color: white; 
+    Width : 206px;
+    Height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+  }
+    
+  
+  .crearCuenta:hover {
+  
+    cursor: pointer;
+    background-color: #607D8B;
+   
+  }
+  
+  p {
+    margin-top: 0rem;
+    font-size: 0.9rem;
+  }
+  
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  input[type=password].error {
+    border: 2px solid red;
+  }
+  
+  .password-match {
+    border: 2px solid #e74c3c;
+  }
+  
+  .password-mismatch-message {
+    color: #e74c3c;
+    margin: 0.5rem 0 0 0;
+  }
