@@ -8,6 +8,7 @@ const cardsJSON = cards;
 
 export const Suggestions = () => {
   return (
+    
     <div className='Suggestions'>
         <h2 style={{fontSize:"1.5rem"}}>Sugerencias</h2>
         <div className='cards-container'>
