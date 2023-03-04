@@ -34,7 +34,6 @@ public class Producto {
     @Column(name="imagen")
     private String imagen;
 
-    @Column(name="categoria")
     @ManyToOne
     @JoinColumn(name="idcategorias")
     private Categoria categoria;
@@ -54,7 +53,6 @@ public class Producto {
     private Set<Caracteristica> caracteristicas;
 
 
-    @Column(name="ciudades")
     @ManyToOne
     @JoinColumn(name="idciudades")
     private Ciudad ciudad;
