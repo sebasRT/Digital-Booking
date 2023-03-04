@@ -1,10 +1,14 @@
 package com.example.booking.DTO;
 
+import com.example.booking.entity.Caracteristica;
+import com.example.booking.entity.Categoria;
+import com.example.booking.entity.Ciudad;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -26,7 +30,7 @@ public class ProductoDTO {
     @Size(min=2, message = "La imagen no puede tener menos de dos caracteres")
     private String imagen;
 
-    private String categoria;
+    private Categoria categoria;
 
     @NotEmpty(message = "La disponibilidad no puede estar vacía")
     @Size(min=2, message = "La disponibilidad no puede tener menos de dos caracteres")
@@ -35,6 +39,10 @@ public class ProductoDTO {
     @NotEmpty(message = "Las políticas no pueden estar vacías")
     @Size(min=10, message = "Las políticas no pueden tener menos de diez caracteres")
     private String politicas;
+
+    private Set<Caracteristica> caracteristicas;
+
+    private Ciudad ciudad;
 
 
 }
