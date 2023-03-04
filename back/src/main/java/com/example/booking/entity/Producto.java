@@ -1,5 +1,6 @@
 package com.example.booking.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,10 +13,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name="productos")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Producto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idproductos;
 
     @Column(name="titulo")
@@ -31,7 +33,9 @@ public class Producto {
     private String imagen;
 
     @Column(name="categoria")
-    private String categoria;
+    @ManyToOne
+    @JoinColumn(name="idcategoria")
+    private Categoria categoria;
 
     @Column(name="disponibilidad")
     private String disponibilidad;
@@ -39,7 +43,7 @@ public class Producto {
     @Column(name="politicas")
     private String politicas;
 
-    public Producto (String titulo, String ubicacion, String descripcion, String imagen, String categoria, String disponibilidad, String politicas){
+    public Producto (String titulo, String ubicacion, String descripcion, String imagen,  Categoria categoria, String disponibilidad, String politicas){
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
