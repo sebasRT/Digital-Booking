@@ -8,46 +8,51 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name="categorias")
+@Table(name="ciudades")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Categoria {
+public class Ciudad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idcategorias;
+    private long idciudades;
 
-    @Column(name="titulo")
-    private String titulo;
+    @Column(name="nombre")
+    @NotNull
+    private String nombre;
 
-    @Column(name="descripcion")
-    private String descripcion;
+    @Column(name="direccion")
+    @NotNull
+    private String direccion;
 
-    @Column(name="url_imagen")
-    private String url_imagen;
+    @Column(name="barrio")
+    @NotNull
+    private String barrio;
 
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Producto> productos;
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Categoria categoria = (Categoria) o;
-        return idcategorias == categoria.idcategorias;
+        Ciudad ciudad = (Ciudad) o;
+        return idciudades == ciudad.idciudades;
     }
 
     @Override
     public int hashCode() {
         return getClass().hashCode();
     }
+
 }
