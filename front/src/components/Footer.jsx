@@ -10,6 +10,7 @@ export const Footer = () => {
       <p>©2021 Digital Booking</p>
       <div className='socialNetworksContainer'>
         <img src="./src/icons/ig-icon.svg" alt="" className='icon'/>
+        {/* target='_blank' rel='noreferrer'*/}
         <img src="./src/icons/fb-icon.svg" alt="" className='icon' />
         <img src="./src/icons/lkin-icon.svg" alt="" className='icon'/>
         <img src="./src/icons/twitter-icon.svg" alt="" className='icon'/>

@@ -13,8 +13,6 @@
     text-align: center;
     left: 364px;
     top: 158px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
@@ -32,8 +30,6 @@
     text-align: left;
   }
   .form-group label{
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500; 
     font-size: 12px;
     line-height: 14px;
