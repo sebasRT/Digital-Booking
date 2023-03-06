@@ -53,7 +53,7 @@ public class ProductoService implements IProductoService {
         producto.setTitulo(productoDTO.getTitulo());
         producto.setDescripcion(productoDTO.getDescripcion());
         producto.setUbicacion(productoDTO.getUbicacion());
-        producto.setImagen(productoDTO.getImagen());
+        producto.setImagenes(productoDTO.getImagenes());
         producto.setDisponibilidad(productoDTO.getDisponibilidad());
         producto.setPoliticas(productoDTO.getPoliticas());
 
