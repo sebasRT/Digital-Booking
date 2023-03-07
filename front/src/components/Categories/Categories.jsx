@@ -56,7 +56,7 @@ switch (category) {
         <div className='cb'>
 
         <h2 style={{fontSize:"1.4rem",color:"#263238"}}>Buscar por tipo de alojamiento: </h2>
-        <Link to="/products"><button>mostrar todos los productos</button></Link>
+        <Link to="/products" className='showAll'><button>mostrar todos los productos</button></Link>
         </div>
       <div className='categories-container' >
   
@@ -73,32 +73,32 @@ switch (category) {
 ;  
     break;
 case "Hoteles":
-return (<>
+return (<div className='cont'>
   {filter(category,handleCategory2)}
   {filter2}
-</>
+</div>
   )
     break;
 
 case "Hosteles":
-  return(<>
+  return(<div className='cont'>
     {filter(category,handleCategory2)}
     {filter2}
-  </>
+  </div>
     
   )
     break;
 
 case "Departamentos":
   return(
-    <>{filter(category,handleCategory2)} {filter2}</>
+    <div className='cont'>{filter(category,handleCategory2)} {filter2}</div>
     
   )
     break;
 
 case "Bed&Breakfast":
   return(
-    <>{filter("Bed & Breakfast",handleCategory2)} {filter2}</>
+    <div className='cont'>{filter("Bed & Breakfast",handleCategory2)} {filter2}</div>
   )
     break;
   default:

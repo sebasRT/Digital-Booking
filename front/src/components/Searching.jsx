@@ -10,6 +10,7 @@ const categ = Object.keys(categoriesJSON).map(cat => ({
   value: cat,
   label: categoriesJSON[cat].name
 }));
+
 const cities = [{value: "Medellin" , label:"Medellin"},
                 {value: "Guatape" , label:"Guatape"},
                 {value: "Bogota" , label:"Bogota"},
@@ -27,6 +28,7 @@ export const Searching = () => {
 
   function handleChange(selectedOption, { name }) {
     setFormValues({ ...formValues, [name]: selectedOption.value });
+    console.log(formValues);
   }
  
   const handleChangeCalendar = (value)=>{
@@ -44,11 +46,15 @@ export const Searching = () => {
       <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
     <form className='searchingForm' onSubmit={handleSubmit}>
       
-    <Select className='placeInput' name='location' placeholder='¿Where are we going?' onChange={handleChange} options={cities} ></Select>
-    <Select className='placeInput' name='category' placeholder='Category' onChange={handleChange} options={categ} ></Select>
+    <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} ></Select>
+    <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} ></Select>
     
       <Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar>
-      <button type="submit" className='searchButton' ><Link to= {`/results`}>Buscar</Link></button>
+      <button type="submit" className='searchButton' >
+        <Link to= {
+          `/results?location=${formValues.location}&category=${formValues.category.replace(/ /g, "+")}&date=${formValues.chechInOut}`
+      }>Buscar</Link>
+      </button>
     </form>
   </div>
   )

@@ -1,12 +1,13 @@
 import React from 'react'
 import Card from '../Card';
 import fakeFiltered from "./fakeFiltered"
-
+// import "../../styles/Categories.css"
 const filteredJSON = fakeFiltered;
 export const CategoriesFilter = ({cate}) => {
     
   return (
-    Object.keys(filteredJSON).map((e)=>{ const el = filteredJSON[e]
+<div className='cards-container'>
+   { Object.keys(filteredJSON).map((e)=>{ const el = filteredJSON[e]
         return <Card 
         key={el.id}
         id= {el.id}
@@ -16,5 +17,7 @@ export const CategoriesFilter = ({cate}) => {
         location ={el.location}
         description ={el.description} ></Card>
 })
+}
+</div>
   )
 }
