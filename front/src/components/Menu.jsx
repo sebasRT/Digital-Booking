@@ -22,8 +22,6 @@ export const Menu = () => {
       <button className='menuButton' onClick={openHandle} ><img src="./src/icons/menu.svg" id="menuButton"/></button>
       <div className={`dropdown-menu ${open? "active": "unactive"}`} id="dm">
           <Button1 link={'/login'} text={"login"}></Button1>
-  
-            
           <Button1 link={'signUp'} text={'sign up'}></Button1>
         </div>
     </div>
