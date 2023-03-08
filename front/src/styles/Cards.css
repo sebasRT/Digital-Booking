@@ -20,19 +20,31 @@
     flex-direction: row;
     width: 100%;
   }
+
+  .icon-star{
+   
+     /* font-weight: 700; */
+     width: 1rem;
+     margin-left: 5px;
+     color:black;
+      
+  
+  }
   
   .name-hotel {
     /* width: 189px; */
     /* height: 35px; */
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     /* flex-wrap: wrap; */
   }
   .starts {
-    /* font-weight: 700; */
-    /* font-size: 14px; */
+    font-weight: 700;
+    font-size: 14px;
     line-height: 18px;
+    width: 50px;
     color: #fbc02d;
+   
   }
   .icon-heart{
   float:right;
