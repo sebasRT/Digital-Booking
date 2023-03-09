@@ -63,7 +63,7 @@ build_frontend :
         - ./front/build/
 
 deploy_Frontend:
-   stage: 
+   stage: deploy
    image: python:latest 
    script:
       - cd /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build
