@@ -3,6 +3,7 @@ package com.example.booking.DTO;
 import com.example.booking.entity.Caracteristica;
 import com.example.booking.entity.Categoria;
 import com.example.booking.entity.Ciudad;
+import com.example.booking.entity.Imagen;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,9 +27,7 @@ public class ProductoDTO {
 
     private String descripcion;
 
-    @NotEmpty(message = "La imagen no puede estar vacía y debe ser una URL")
-    @Size(min=2, message = "La imagen no puede tener menos de dos caracteres")
-    private String imagen;
+    private Set<Imagen> imagenes;
 
     private Categoria categoria;
 

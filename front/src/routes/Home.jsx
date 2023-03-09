@@ -12,7 +12,11 @@ export const Home = () => {
 
       <Searching></Searching>
       <Categories></Categories>
-      <Suggestions></Suggestions>
+      <h2 style={{fontSize:"1.5rem"}}>Sugerencias</h2>
+      <Suggestions>
+    
+      
+      </Suggestions>
     </div>
   
   )

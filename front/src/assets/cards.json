@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
       "category": "Hotel",
       "title": "Dorado la 70",
       "location": "medellin",
@@ -14,50 +14,38 @@
     {
       "id": "2",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
-      "category": "Apartamento",
-      "title": "Loma Verde",
-      "location": "Medellin",
-      "description": "Los Apartamentos Loma Verde están ubicados en Medellín, a 1,2 km del parque Lleras y a 1,5 km del parque El Poblado, y ofrecen alojamientos con WiFi gratuita, jardín con piscina al aire libre y vistas a la montaña.",
-      "features":["Sauna",
-                  "WiFi",
-                  "Parqueadero"]
+      "category": "Casa",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
     {
       "id": "3",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
-      "category": "Hostel",
-      "title": "LimaLimon",
-      "location": "Bogota",
-      "description": "LimaLimón Bogotá es un distinguido Hostel ubicado en pleno centro histórico de la ciudad, en el hermoso barrio de La Candelaria. Nos caracterizamos por la calidez de la atención y la comodidad.",
-      "features":["Sauna",
-                  "Jacuzzi",
-                  "WiFi"]
+      "category": "Apartamento",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
     {
       "id": "4",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
-      "category": "Bed & Breakfast",
-      "title": "Bahia San Andres",
-      "location": "San Andres",
-      "description": "El Bahia San Andres Hospedaje se encuentra en San Andrés, a 60 metros de la playa de Los Almendros, y ofrece mostrador de información turística y habitaciones para no fumadores.",
-      "features":["Aire acondicionado",
-      "Bar",
-      "WiFi"]
+      "category": "Hostel",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
     {
       "id": "5",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
-      "category": "Hostel",
-      "title": "Ibis Bogota",
-      "location": "Bogota",
-      "description": "El Hotel Ibis Bogotá Museo ofrece habitaciones con muebles modernos de madera, aire acondicionado y baño privado. Todas disponen de suelo de parqué y grandes ventanas.",
-      "features":["Barbacoa",
-      "Campo de golf",
-      "Piscina"]
+      "category": "Hotel",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
     {
       "id": "6",
-      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
       "category": "Apartamento",
       "title": "La Curva",
       "location": "Cali",
@@ -69,156 +57,19 @@
     {
       "id": "7",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
-      "category": "Hostel",
-      "title": "Distrito Hostel",
-      "location": "Santa Marta",
-      "description": "El mejor Hostel se encuentra a 2,8 km de la playa de Lipe, a menos de 1 km del Museo del Oro de Santa Marta y a 10 minutos a pie del parque Simón Bolívar.",
-      "features":["Bar",
-      "Transporte"]
+      "category": "HoteL",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
   
     {
       "id": "8",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Bed & Breakfast",
-      "title": "Vistayrona",
-      "location": "Santa Marta",
-      "description": "El Vistayrona ofrece alojamiento en Santa Marta, a 1,4 km de la playa de Los Naranjos, y cuenta con bañera de hidromasaje. Ofrece jardín y terraza.",
-      "features":["Parqueadero",
-      "Bar",
-      "WiFi"]
-    },
-    
-    {
-      "id": "9",
-      "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
-      "category": "Hotel",
-      "title": "Movich Buro 26",
-      "location": "Bogota",
-      "description": "El Movich Buró 26 está situado a solo 5 minutos del aeropuerto internacional de El Dorado de Bogotá. El establecimiento ofrece WiFi gratuita.",
-      "features":["Gimnasio",
-                  "Spa",
-                  "Bar"]
-    },
-  
-    {
-      "id": "10",
-      "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
-      "category": "Apartamento",
-      "title": "Portal del rodeo",
-      "location": "Medellin",
-      "description": "Los apartamentos del Portal del Rodeo cuentan con aire acondicionado, zona de cocina totalmente equipada, baño privado, minibar, TV LCD por cable, zona de comedor y zona de estar.",
-      "features":["Barbacoa",
-                  "WiFi",
-                  "Parqueadero"]
-    },
-    {
-      "id": "11",
-      "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
-      "category": "Hostel",
-      "title": "Masaya Hostel",
-      "location": "Santa Marta",
-      "description": "Las habitaciones del Hostal Masaya Santa Marta tienen una decoración minimalista con vigas de madera y suelo de baldosa. Están equipadas con aire acondicionado y TV de pantalla plana.",
-      "features":["Piscina",
-                  "Bar",
-                  "WiFi"]
-    },
-    {
-      "id": "12",
-      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
-      "category": "Bed & Breakfast",
-      "title": "Casa Ruta Sur",
-      "location": "Cali",
-      "description": "El Casa Ruta Sur está a solo 5 minutos en coche del zoológico de Cali, a 10 minutos a pie del Museo La Tertulia y a 45 minutos en coche del aeropuerto internacional Alfonso Bonilla Aragón.",
-      "features":["Aire acondicionado",
-      "Bar",
-      "WiFi"]
-    },
-    {
-      "id": "13",
-      "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
-      "category": "Hotel",
-      "title": "Las vegas Hostel",
-      "location": "Guatape",
-      "description": "El Hotel Las Vegas se encuentra en Guatapé, a 3,3 km de Piedra del Peñol, y ofrece salón compartido, terraza y vistas a la ciudad. Algunos alojamientos tienen balcón con vistas a la montaña.",
-      "features":["WiFi"]
-    },
-    {
-      "id": "14",
-      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
-      "category": "Apartamento",
-      "title": "Casa Azul",
-      "location": "Manizales",
-      "description": "La Casa Azul se encuentra en Manizales, a 4,3 km de la estación del teleférico de Manizales, y ofrece alojamiento con WiFi gratuita y terraza.",
-      "features":["Parqueadero",
-      "Wifi"]
-    },
-  
-    {
-      "id": "15",
-      "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
-      "category": "Hostel",
-      "title": "La Isla Inn",
-      "location": "San Andres",
-      "description": "La isla inn se encuentra en San Andrés, a 2,4 km de la playa de Parceras y a 6,9 km de La Loma. El establecimiento se encuentra a 7,6 km de la cueva de Morgan, a 8,3 km de San Luis y a 10 km de la bahía del Cove.",
-      "features":["Aire acondicionado",
-      "Transporte"]
-    },
-  
-    {
-      "id": "16",
-      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Bed & Breakfast",
-      "title": "Balcones Casona",
-      "location": "Guatape",
-      "description": "El Balcones de la Casona se encuentra en Guatapé, a 4,4 km de Piedra del Peñol, y ofrece alojamiento con jardín, aparcamiento privado gratuito y bar. También cuenta con mostrador de información turística.",
-      "features":["Parqueadero",
-      "Bar",
-      "WiFi"]
-    },
-    {
-      "id": "17",
-      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Hotel",
-      "title": "Hotel Carretero",
-      "location": "Manizales",
-      "description": "El Carretero Hotel sirve un desayuno bufé todos los días. El restaurante El Escorial propone platos regionales. Si prefiere beber algo, podrá dirigirse al bar El Refugio o al pub de estilo inglés.",
-      "features":["Gimnasio",
-      "Restaurante",
-      "WiFi"]
-    },
-    {
-      "id": "18",
-      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Apartamento",
-      "title": "Miss Leila",
-      "location": "San Andres",
-      "description": "El Miss Leila ofrece alojamiento con balcón y WiFi gratuita en San Andrés, a 1,2 km de la playa de San Luis, a 1,9 km de la playa de Cocoplum Bay y a 6,4 km de la bahía de San Andrés. ",
-      "features":["Aire acondicionado",
-      "Bar",
-      "WiFi"]
-    },
-    {
-      "id": "19",
-      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Hostel",
-      "title": "Medellín Vibes",
-      "location": "Medellin",
-      "description": "El Medellín Vibes Hostel se encuentra en Medellín y ofrece piscina al aire libre, jardín, salón compartido y restaurante. Además, hay servicio de habitaciones y solárium. Ofrece recepción 24 horas.",
-      "features":["Bar",
-      "Restaurante",
-      "Piscina"]
-    },
-    {
-      "id": "20",
-      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Bed & Breakfast",
-      "title": "Casablanca",
-      "location": "Cali",
-      "description": "El Casablanca Hostel Cali dispone de conexión WiFi gratuita y cocina compartida y está situado en la avenida 7 Norte, en Santa Mónica Residencial, a solo 6 km del centro de la ciudad de Cali.",
-      "features":[
-      "Bar",
-      "WiFi"]
+      "category": "Casa",
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     }
     
   ]

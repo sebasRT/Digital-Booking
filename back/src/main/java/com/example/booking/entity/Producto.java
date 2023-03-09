@@ -1,5 +1,6 @@
 package com.example.booking.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -31,8 +32,9 @@ public class Producto {
     @Column(name="descripcion")
     private String descripcion;
 
-    @Column(name="imagen")
-    private String imagen;
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Imagen> imagenes;
 
     @ManyToOne
     @JoinColumn(name="idcategorias")
@@ -57,11 +59,10 @@ public class Producto {
     @JoinColumn(name="idciudades")
     private Ciudad ciudad;
 
-    public Producto (String titulo, String ubicacion, String descripcion, String imagen,  Categoria categoria, String disponibilidad, String politicas){
+    public Producto (String titulo, String ubicacion, String descripcion,  Categoria categoria, String disponibilidad, String politicas){
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
-        this.imagen = imagen;
         this.categoria = categoria;
         this.disponibilidad = disponibilidad;
         this.politicas = politicas;
