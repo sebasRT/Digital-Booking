@@ -29,8 +29,6 @@ build_backend:
         expire_in: 1 week
         paths:
             - back/target/booking-0.0.1-SNAPSHOT.jar
-    only:
-        - back
 
 build_frontend :
     stage: build
@@ -63,8 +61,6 @@ deploy_Backend:
         - scp -o StrictHostKeyChecking=no back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/proyecto
         - ssh -o StrictHostKeyChecking=no ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start consoleapp.service"
         - echo "Finished deploying the app."
-    only:
-        - back
 
 deploy_Frontend:
    stage: deploy
