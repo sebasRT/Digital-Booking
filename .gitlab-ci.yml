@@ -48,3 +48,21 @@ deploy_Backend:
         - scp -o StrictHostKeyChecking=no back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/proyecto
         - ssh -o StrictHostKeyChecking=no ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start back.service"
         - echo "Finished deploying the app."
+---
+
+stages:
+    - build
+    - deploy
+
+build_frontend :
+    stage: build
+    image: node:latest
+    script:
+        - cd front
+        - npm install
+        - npm run build
+    artifacts:
+        expire_in: 1 week
+        name: react_build
+        paths:
+        - ./front/build/
