@@ -48,11 +48,6 @@ deploy_Backend:
         - scp -o StrictHostKeyChecking=no back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/proyecto
         - ssh -o StrictHostKeyChecking=no ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start back.service"
         - echo "Finished deploying the app."
----
-
-stages:
-    - build
-    - deploy
 
 build_frontend :
     stage: build
@@ -66,3 +61,17 @@ build_frontend :
         name: react_build
         paths:
         - ./front/build/
+
+deploy_Frontend:
+   stage: 
+   image: python:latest 
+   script:
+      - cd /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build
+      - ls
+      - pwd   
+      - cd /builds/ctd/proyecto-integrador-1022/0222-ft-c1/grupo-11
+      - ls
+      - pip install awscli   
+      - aws configure set aws_secret_key_id $AWS_ACCESS_KEY_ID
+      - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+      - aws s3 sync /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build s3://back-end-grupo-11
