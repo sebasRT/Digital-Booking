@@ -1,14 +1,11 @@
 [
     {
       "id": "1",
-      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
+      "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
       "category": "Hotel",
-      "title": "Dorado la 70",
-      "location": "medellin",
-      "description": "Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva.",
-      "features":["Gimnasio",
-                  "Terraza Bar",
-                  "Turco "]
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
   
     {
@@ -45,13 +42,11 @@
     },
     {
       "id": "6",
-      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
+      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
       "category": "Apartamento",
-      "title": "La Curva",
-      "location": "Cali",
-      "description": "La Curva Apartamentos se encuentra a 1,1 km del parque Panamericano y ofrece alojamiento con terraza, bar y cocina compartida.",
-      "features":["Bar",
-      "Wifi"]
+      "title": "Hermitage Hotel",
+      "location": "A 940 m del centro",
+      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     },
   
     {
@@ -71,6 +66,5 @@
       "location": "A 940 m del centro",
       "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
     }
-    
   ]
   

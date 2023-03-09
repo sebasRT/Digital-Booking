@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import { Categories } from '../components/Categories';
+import { Categories } from '../components/Categories/Categories';
 import { Searching } from '../components/Searching';
 import { Suggestions } from '../components/Suggestions';
 
@@ -12,7 +12,11 @@ export const Home = () => {
 
       <Searching></Searching>
       <Categories></Categories>
-      <Suggestions></Suggestions>
+      <h2 style={{fontSize:"1.5rem"}}>Sugerencias</h2>
+      <Suggestions>
+    
+      
+      </Suggestions>
     </div>
   
   )

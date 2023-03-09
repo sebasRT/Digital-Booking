@@ -1,14 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export const Button1 = ({link,text}) => {
-
+const activeStyle ={color: "#FBC02D",}
   return (
     <div className='sessionButton'>
 
-    <Link to={link}>
+    <NavLink to={link}
+     style={({ isActive }) =>
+             isActive ? activeStyle : {color: "#263238",}
+            }>
     <h4>{text}</h4>
-    </Link>
+    </NavLink>
     </div>
   )
 }
