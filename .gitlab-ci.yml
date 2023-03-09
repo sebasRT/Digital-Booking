@@ -83,4 +83,4 @@ deploy_Frontend:
       - pip install awscli   
       - aws configure set aws_secret_key_id $AWS_ACCESS_KEY_ID
       - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-      - aws s3 sync /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build s3://grupo4c1frontend
+      - aws s3 sync /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build s3://back-end-grupo-11
