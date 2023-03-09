@@ -73,37 +73,37 @@ export const SignUp = () => {
         <div className='nombres'>
         <div className="form-group">
           <div className='nombreDiv'>
-          <label htmlFor="first-name" class="textTitulosInputs">Nombre</label>
-          <input type="text" class ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <label htmlFor="first-name" className="textTitulosInputs">Nombre</label>
+          <input type="text" className ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
           </div>
         </div>
         <div className="form-group">
           <div className='apellidoDiv'>
-          <label htmlFor="last-name" class="textTitulosInputs" >Apellido</label>
-          <input type="text" class="apellido" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <label htmlFor="last-name" className="textTitulosInputs" >Apellido</label>
+          <input type="text" className="apellido" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
           </div>
         </div>
         </div>  
         <div className="form-group">
           <div className='emailDiv'>
-          <label htmlFor="email" class="textTitulosInputs" >Correo electrónico</label>
-          <input type="email" class="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label htmlFor="email" className="textTitulosInputs" >Correo electrónico</label>
+          <input type="email" className="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
         </div>
         <div className="form-group">
           <div className='passwordDiv'>
-          <label htmlFor="password" class="textTitulosInputs">Contraseña</label>
+          <label htmlFor="password" className="textTitulosInputs">Contraseña</label>
           <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} className={passwordClass} />
           </div>
         </div>
         <div className="form-group">
           <div className='passwordConfirmDiv'>
-          <label htmlFor="confirm-password" class="textTitulosInputs" >Confirmar contraseña</label>
+          <label htmlFor="confirm-password" className="textTitulosInputs" >Confirmar contraseña</label>
           <input type="password" id="confirm-password" name="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} className={passwordClass} />
           </div>
           {formSubmitted && password !== confirmPassword && <p className="password-mismatch-message error">Las contraseñas no coinciden</p>}
         </div>
-        <button type="submit" class="crearCuenta" >Crear cuenta</button>
+        <button type="submit" className="crearCuenta" >Crear cuenta</button>
       </form>
       {formSubmitted && password === confirmPassword && <p className="success-message"></p>}
       <p>¿Ya tienes una cuenta? <a href="./login.js">Iniciar sesión</a></p>

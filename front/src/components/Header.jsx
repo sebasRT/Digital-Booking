@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { GlobalContext } from '../assets/global.context'
 import { useMedia } from '../hooks/useMedia'
 import { Button1 } from './Button1'
 import { Menu } from './menu'
@@ -17,7 +16,7 @@ const Header = () => {
       <Link to='/' className='logo'>
       
         <img src="./logo1.svg" alt="DigitalBooking"  />
-        <p>sentite como en tu hogar</p>
+        <p>sientete como en tu hogar</p>
 
       </Link>
 
