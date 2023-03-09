@@ -58,8 +58,8 @@ deploy_Backend:
         - chmod 700 ~/.ssh
     script:
         - echo "Deploying started..."
-        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop consoleapp.service"
-        - scp back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/console-app/
+        - ssh -o StrictHostKeyChecking=no ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop consoleapp.service"
+        - scp -o StrictHostKeyChecking=no back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/console-app/
         - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start consoleapp.service"
         - echo "Finished deploying the app."
 
