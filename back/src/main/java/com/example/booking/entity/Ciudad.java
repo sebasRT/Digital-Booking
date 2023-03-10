@@ -24,14 +24,6 @@ public class Ciudad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idciudades;
 
-    @Column(name="nombre")
-    @NotNull
-    private String nombre;
-
-    @Column(name="direccion")
-    @NotNull
-    private String direccion;
-
     @Column(name="barrio")
     @NotNull
     private String barrio;

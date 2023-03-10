@@ -63,7 +63,6 @@ public class Producto {
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
-        this.categoria = categoria;
         this.disponibilidad = disponibilidad;
         this.politicas = politicas;
     }
