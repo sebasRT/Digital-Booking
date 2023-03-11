@@ -11,7 +11,7 @@ public class CaracteristicaDTO {
 
     private long idcaracteristicas;
 
-    private String icono;
+    private String descripcion;
 
     @NotEmpty(message = "No puede estar vacío")
     private String imagen;
