@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useMedia } from '../hooks/useMedia'
 import { Button1 } from './Button1'
-import { Menu } from './menu'
+import { Menu } from './Menu'
 
 const Header = () => {
   const isMobile = useMedia();
