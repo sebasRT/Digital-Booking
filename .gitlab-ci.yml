@@ -53,9 +53,15 @@ build_frontend :
     stage: build
     image: node:latest
     script:
+        - echo "Building the app"
         - cd front
-        - npm install
-        - npm run dev
+        - ls
+        - npm --force install
+        - CI=false npm run build
+        - cd build
+        - ls
+        - cd ..
+        - pwd
     artifacts:
         expire_in: 1 week
         name: react_build
