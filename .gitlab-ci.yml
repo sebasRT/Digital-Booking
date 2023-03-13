@@ -66,7 +66,7 @@ build_frontend :
         expire_in: 1 week
         name: react_build
         paths:
-        - ./front
+        - ./front/dist
 
 deploy_Frontend:
    stage: deploy
@@ -75,5 +75,5 @@ deploy_Frontend:
       - pip install awscli   
       - aws configure set aws_secret_key_id $AWS_ACCESS_KEY_ID
       - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-      - aws s3 sync front s3://back-end-grupo-11 
+      - aws s3 sync front/dist s3://back-end-grupo-11 --acl public-read
       
