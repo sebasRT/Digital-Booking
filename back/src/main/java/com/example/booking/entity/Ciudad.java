@@ -24,9 +24,9 @@ public class Ciudad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idciudades;
 
-    @Column(name="barrio")
+    @Column(name="nombre")
     @NotNull
-    private String barrio;
+    private String nombre;
 
 
     @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
