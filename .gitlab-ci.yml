@@ -58,7 +58,7 @@ build_frontend :
         - ls
         - npm --force install
         - CI=false npm run build
-        - cd build
+        - cd dist
         - ls
         - cd ..
         - pwd
