@@ -12,7 +12,11 @@ export const Home = () => {
 
       <Searching category={""} location={""} chechInOut={""}></Searching>
       <Categories></Categories>
-      <Suggestions></Suggestions>
+      <h2 style={{fontSize:"1.5rem"}}>Sugerencias</h2>
+      <Suggestions>
+    
+      
+      </Suggestions>
     </div>
   
   )
