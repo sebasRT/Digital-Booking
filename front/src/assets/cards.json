@@ -1,7 +1,16 @@
 [
     {
       "id": "1",
-      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
+      "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424953292.jpg?k=3ae12ef99bf8ca3dee160bb0663c4553b3ebf8d3a29ecf3a6ebcb93830370a58&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/181907043.jpg?k=834d86f0ec04bf98b9ef2b53f7110fe27784cfd0bc26836b8892ecb35ae97285&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/54092274.jpg?k=1554c3180128b815c2594d0fc42a682158ef088e18d59652cbc0214186062059&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424945472.jpg?k=4ebcb174fbe8b2d0ef63368823f45520a000e31700e188a70d5a93d5999cc2a5&o=&hp=1"
+          },
+
       "category": "Hotel",
       "title": "Dorado la 70",
       "location": "medellin",
@@ -14,38 +23,86 @@
     {
       "id": "2",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
-      "category": "Casa",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164244568.jpg?k=3d4dbd5822ceb556a63567f75ff6423ed102070b63a51e5d7c3846b1d632e498&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164244596.jpg?k=5308beff3d22bf9076360f1e9b2fe66024a4eb49ad379c6c98c5438b8ef02de8&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164244574.jpg?k=3024221ebcb20d600f473f69125eac9842ffa69f682440f753cef42d88d781a8&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164245556.jpg?k=01d7541007fdce12d5235e6e87d87ac2d625c96490a8aa2b8d60d28e6f8c8e6d&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164245547.jpg?k=640a770c2b3dc099fd9b3d920168f90c6bac5edbda53f3b5dfc8cb3fa189683d&o=&hp=1"
+          },
+      "category": "Apartamento",
+      "title": "Loma Verde",
+      "location": "Medellin",
+      "description": "Los Apartamentos Loma Verde están ubicados en Medellín, a 1,2 km del parque Lleras y a 1,5 km del parque El Poblado, y ofrecen alojamientos con WiFi gratuita, jardín con piscina al aire libre y vistas a la montaña.",
+      "features":["Sauna",
+                  "WiFi",
+                  "Parqueadero"]
     },
     {
       "id": "3",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
-      "category": "Apartamento",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/142284823.jpg?k=f83ca030dfd64e25aee1ff03b57a559d68bb4de9534de8859d5d55e5226ed00d&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/143052855.jpg?k=3470f8ff106a456e8b753490dbcbe5d159e4005f5a9f1c0c0a9ac294201ed673&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/346647892.jpg?k=6a2e8bc47d2b970a62965e333a3c85e4de1981528a4f0b27957f1b161987a946&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/190762392.jpg?k=858f61ae91039950dcf16e27ed2460386466d40fdc8c94d9acd697d5b38a4810&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/143052632.jpg?k=a1098c41ef31de0c927ac05d5681de63b5b7c18f0c1e46144d960f86877ac954&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "LimaLimon",
+      "location": "Bogota",
+      "description": "LimaLimón Bogotá es un distinguido Hostel ubicado en pleno centro histórico de la ciudad, en el hermoso barrio de La Candelaria. Nos caracterizamos por la calidez de la atención y la comodidad.",
+      "features":["Sauna",
+                  "Jacuzzi",
+                  "WiFi"]
     },
     {
       "id": "4",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
-      "category": "Hostel",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336958886.jpg?k=3e5d630366800aca5417cba3befc5717ffc4b7c94a7400b13eb6d4e51d9fcb72&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/405192549.jpg?k=e455cf37e0fd191ef835910a6ec27cba2074aa0327a20f1854e737c2b3fed22d&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/389869356.jpg?k=2c7e8151b82be014f4d1b2eb0448291d1312230bc66651b77138bc0880e6ca34&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/389869356.jpg?k=2c7e8151b82be014f4d1b2eb0448291d1312230bc66651b77138bc0880e6ca34&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336293731.jpg?k=195457f98b63bc0d7403be2f08065e5697316d628d331221bf65ea757d349f51&o=&hp=1"
+          },
+      "category": "Bed & Breakfast",
+      "title": "Bahia San Andres",
+      "location": "San Andres",
+      "description": "El Bahia San Andres Hospedaje se encuentra en San Andrés, a 60 metros de la playa de Los Almendros, y ofrece mostrador de información turística y habitaciones para no fumadores.",
+      "features":["Aire acondicionado",
+      "Bar",
+      "WiFi"]
     },
     {
       "id": "5",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
-      "category": "Hotel",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/155882763.jpg?k=924b76862bc63f8d2a77ed53824c6eaec3d1585a97f868805abcc2832139a644&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153477727.jpg?k=71491a88caa3ed3791d087b02ea9142b89df6e404b8a207598a35de94aff2c41&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/155882718.jpg?k=a19dd7eb90116708fd1cb041c259f3f2237e980611b335fffb6244650067c45d&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153577797.jpg?k=42570021b42fd7fa4ba2d1d94ad312f9b3622e7c335b5f59b7698f7f8274c4e5&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153844762.jpg?k=96e33a233c8a60af46e9c5eb289c14df758aeb56a6965e16fd6db83e4d6e83fc&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "Ibis Bogota",
+      "location": "Bogota",
+      "description": "El Hotel Ibis Bogotá Museo ofrece habitaciones con muebles modernos de madera, aire acondicionado y baño privado. Todas disponen de suelo de parqué y grandes ventanas.",
+      "features":["Barbacoa",
+      "Campo de golf",
+      "Piscina"]
     },
     {
       "id": "6",
-      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
+      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122467.jpg?k=64c76e4206563c39c1a19213849314d983266fe92cd93eac9f7e74537a3e3e7a&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/354279601.jpg?k=377f2e44d28b4410b0afe8be1ff91ddcb9ee530ea918289baebb5aa46fbbd652&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325727421.jpg?k=12472eb41afa9c5e840ec92b1162b3380db295ad5fa70c16babeb9ec88c1b562&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122154.jpg?k=79650a49401c07b5bed6c7d31b156fa80ecd6a5474ceeb980f238668f24a106a&o=&hp=1"
+          },
+
       "category": "Apartamento",
       "title": "La Curva",
       "location": "Cali",
@@ -57,19 +114,254 @@
     {
       "id": "7",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
-      "category": "HoteL",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467183.jpg?k=dfaf20bee1b1f55bec829eb6b1a1311de6d1d5178b2d5b988dcbb795e6361ed1&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467406.jpg?k=52046c965e796b6450f4b6bc4a40e86696e6dae60b155e3cf9b8bfbf6f1cfc1a&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467121.jpg?k=723a5be2bfb663502294af2d5a58eb98761fe8d90c4b9c748a13fdeb070695a3&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/382924915.jpg?k=38c29bb18c4a3d2cdea1e9f10b46dda6442a662cbf5af0a13cb7a6fb100df958&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467424.jpg?k=dc2c4b76dc158893a182f7ffc33679d3728fc81002af435e71efef4721e0d4f3&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "Distrito Hostel",
+      "location": "Santa Marta",
+      "description": "El mejor Hostel se encuentra a 2,8 km de la playa de Lipe, a menos de 1 km del Museo del Oro de Santa Marta y a 10 minutos a pie del parque Simón Bolívar.",
+      "features":["Bar",
+      "Transporte"]
     },
   
     {
       "id": "8",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
-      "category": "Casa",
-      "title": "Hermitage Hotel",
-      "location": "A 940 m del centro",
-      "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires. con 2 impresionantes piscinas, una en la terraza y otra al aire libre; habitaciones privadas"
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992691.jpg?k=8675f7a526c39f7a594b5fdb0857c5092863ffa719cda8b7bc062aed65c10527&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992651.jpg?k=725c798f79096f3a2d49e16b8cacd7b8c4ba3306e9ba7864fb513795b9b49bb7&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992658.jpg?k=a04cbfdf38984505cbbb27971b24f440909615a24130b35953f25f087b9e10de&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992696.jpg?k=c97c2360f5b0977962ee626d0a83efc86ef1804ab2091ac5290931e401596328&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992704.jpg?k=6643653203bfb65824306190f654fe8de358b913e6353ad94db2df447a5f501e&o=&hp=1"
+          },
+      "category": "Bed & Breakfast",
+      "title": "Vistayrona",
+      "location": "Santa Marta",
+      "description": "El Vistayrona ofrece alojamiento en Santa Marta, a 1,4 km de la playa de Los Naranjos, y cuenta con bañera de hidromasaje. Ofrece jardín y terraza.",
+      "features":["Parqueadero",
+      "Bar",
+      "WiFi"]
+    },
+    
+    {
+      "id": "9",
+      "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/120625514.jpg?k=8bd8e3655b81771cef068320f3481750c7d50819256cce089f3d8a70f50040af&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/120628891.jpg?k=23b8acf2b154671ea0d4e6567389280bdb4559c86ce0146edf1f8fe443d8c807&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/66926205.jpg?k=616a2604824da199f5925c7e97e7a70978dafa2d18a710ba5426f2292425051b&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/35584592.jpg?k=d5a00bae2a38f193441246676faea32399fbd921c6a4cc8e1f876293413047ab&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/66925918.jpg?k=4e27aaeb954b6b87c77e745927b8a1e1583d477163ff7b188fee73a131d45290&o=&hp=1"
+          },
+      "category": "Hotel",
+      "title": "Movich Buro 26",
+      "location": "Bogota",
+      "description": "El Movich Buró 26 está situado a solo 5 minutos del aeropuerto internacional de El Dorado de Bogotá. El establecimiento ofrece WiFi gratuita.",
+      "features":["Gimnasio",
+                  "Spa",
+                  "Bar"]
+    },
+  
+    {
+      "id": "10",
+      "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133559346.jpg?k=f1f7f182ea748d9755fb0d09d4783bddad75e79c942cd5d538b8357bfb101b16&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325194426.jpg?k=e1fb8313ecb410bfb3db8d9a15fcabf60b67e027b59efbfff2a1e38fb68aa489&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133373538.jpg?k=dffa723dffb15c6a09b41b2ad4fcf93f97bbff59e978e03835e17a0d94acd9f3&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325192088.jpg?k=485fb2295ad37f24b6d4d13f2f0bf8c47f362e7bda59dff7b20740c2021bea5a&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/12561596.jpg?k=5f4097e44256fa1dec0511f798cfd677700d021140d2047c35c83e3dc84a3374&o=&hp=1"
+          },
+      "category": "Apartamento",
+      "title": "Portal del rodeo",
+      "location": "Medellin",
+      "description": "Los apartamentos del Portal del Rodeo cuentan con aire acondicionado, zona de cocina totalmente equipada, baño privado, minibar, TV LCD por cable, zona de comedor y zona de estar.",
+      "features":["Barbacoa",
+                  "WiFi",
+                  "Parqueadero"]
+    },
+    {
+      "id": "11",
+      "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723496.jpg?k=9611210bdc83cd8511a2bff70caa7589a338cd3ef2fd5aa9879cfdd2e55f5f74&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723208.jpg?k=ff45c050bed002709136bb90e6f9d1f87ca7200bf3863e5c351142b9e60ab9ac&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/339091105.jpg?k=9e321cc4b341c355138e4581ce328eef08cbbdc9da54eceb6f98fe4b585464b7&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723463.jpg?k=e5eb0e3d2165e6851ae5f1628cdc199133c287577750ae76cd4d52e935962510&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/339091093.jpg?k=1c541a95e053e28ab9d9f6b9cb636039440806605239c6145b62d4094d7efdc1&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "Masaya Hostel",
+      "location": "Santa Marta",
+      "description": "Las habitaciones del Hostal Masaya Santa Marta tienen una decoración minimalista con vigas de madera y suelo de baldosa. Están equipadas con aire acondicionado y TV de pantalla plana.",
+      "features":["Piscina",
+                  "Bar",
+                  "WiFi"]
+    },
+    {
+      "id": "12",
+      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/206918961.jpg?k=d0078d7a84d5de5bb25ceda25dac3a11b673345265a354c49591ee486a6699e9&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/146108429.jpg?k=03d70b20be3ed8ee707e4035908494abb6ed87b7844000866b3342cfef4acda0&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/146108823.jpg?k=e462f4c8287b057cd424fd890a3285ad556aafd4b2c5b7fd23d774a598765c87&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/97273385.jpg?k=a98a470d2df423c7b85788475dab50b8d30016452e567e02f02ff7b023a9a710&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/206919039.jpg?k=3c1275865f7eb7211a3b8dffd8194bbce619fcda37ecfe9a06ea916a2b0673f3&o=&hp=1"
+          },
+      "category": "Bed & Breakfast",
+      "title": "Casa Ruta Sur",
+      "location": "Cali",
+      "description": "El Casa Ruta Sur está a solo 5 minutos en coche del zoológico de Cali, a 10 minutos a pie del Museo La Tertulia y a 45 minutos en coche del aeropuerto internacional Alfonso Bonilla Aragón.",
+      "features":["Aire acondicionado",
+      "Bar",
+      "WiFi"]
+    },
+    {
+      "id": "13",
+      "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/339368478.jpg?k=8df28a1118c2184c67300ac23a32d638e4e7995918b05feff17128e427de7802&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/275077153.jpg?k=0ea8d2801da664fded9fd922a153d037ae998b50c096e220ab9a4ef6c2de8dae&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/275082088.jpg?k=e5897c08214230b72a85192a81ef25f3bc030e5610ad26e0d5bab133f0cde374&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/275080001.jpg?k=d6bb4d1423628cf9c5d34e04c5e585fa1b958bf6de55bd79d7e4b0baf2cbb280&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/269887041.jpg?k=a645ea62595ae427ce70574a677ae0a035b4991505f9473e29401673caee1dc4&o=&hp=1"
+          },
+      "category": "Hotel",
+      "title": "Las vegas Hostel",
+      "location": "Guatape",
+      "description": "El Hotel Las Vegas se encuentra en Guatapé, a 3,3 km de Piedra del Peñol, y ofrece salón compartido, terraza y vistas a la ciudad. Algunos alojamientos tienen balcón con vistas a la montaña.",
+      "features":["WiFi"]
+    },
+    {
+      "id": "14",
+      "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407754954.jpg?k=649cefd22e8c3fe6969275486c01bbc85779ff2167201bc74d94480d1545face&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336285814.jpg?k=c624abc46c46eda1c5be7e6d6a7435ac2cca11baa1e8ce6b85e750a0a5e6e8f0&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336276415.jpg?k=4c68809e83a8e9e062cb8054e93eefe999ad88e3d3605a6adbc0111d69487cab&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407759191.jpg?k=a443ad5952fe41409dd7aff54b313b88fb2a788e5b93ba832b3681b13d52065f&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407759196.jpg?k=08694be9b590cd3f8d44a68862073386a2a21560e857c01eec1e4658e5f01e09&o=&hp=1"
+          },
+      "category": "Apartamento",
+      "title": "Casa Azul",
+      "location": "Manizales",
+      "description": "La Casa Azul se encuentra en Manizales, a 4,3 km de la estación del teleférico de Manizales, y ofrece alojamiento con WiFi gratuita y terraza.",
+      "features":["Parqueadero",
+      "Wifi"]
+    },
+  
+    {
+      "id": "15",
+      "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/151812895.jpg?k=34a2043595b03d79b971ef172054d009371680daed4a3f61d00d192f6c5a5dfe&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77078427.jpg?k=916274a7b5bea46b651c5787c58f4cfab6aafe8c09268ac1fa6bcf22ddaebc1d&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77079854.jpg?k=4ec7fe928deba40479acedb26e15d1e1a7416d4768b42369f507467737f39f4f&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77079044.jpg?k=5f07ad3f92431363d13aae60f713c79351023885b1e32488ae45bb5d0aca66b5&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77078496.jpg?k=d22524da08c487c385c047421b5fd20ce76f61a875b05d9b2a7504c667285480&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "La Isla Inn",
+      "location": "San Andres",
+      "description": "La isla inn se encuentra en San Andrés, a 2,4 km de la playa de Parceras y a 6,9 km de La Loma. El establecimiento se encuentra a 7,6 km de la cueva de Morgan, a 8,3 km de San Luis y a 10 km de la bahía del Cove.",
+      "features":["Aire acondicionado",
+      "Transporte"]
+    },
+  
+    {
+      "id": "16",
+      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/268456137.jpg?k=67fdc1a86bf62df64e3ed5c47e747510993fdff13d96610f1bab79494f26915c&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/358996872.jpg?k=f1eabc57b1d95f1afcb65f9878e4213c2c6222701bacb684a09a5e89c6f16e22&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/269764271.jpg?k=37861a06ebc29f275704e4b5965db7527e37a9ac2af1709a0159fd2e8a83f9a9&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/187538509.jpg?k=d7d58e1b1b79e125c3f673d0768d752900d48d3910ae6c8fea560be9260b211f&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/216391518.jpg?k=e2eb6faae5024949fa86dcf2ff861e6799a3466b378d1182ae39be051e4be453&o=&hp=1"
+          },
+      "category": "Bed & Breakfast",
+      "title": "Balcones Casona",
+      "location": "Guatape",
+      "description": "El Balcones de la Casona se encuentra en Guatapé, a 4,4 km de Piedra del Peñol, y ofrece alojamiento con jardín, aparcamiento privado gratuito y bar. También cuenta con mostrador de información turística.",
+      "features":["Parqueadero",
+      "Bar",
+      "WiFi"]
+    },
+    {
+      "id": "17",
+      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/94380149.jpg?k=6261c1a029a9319987c49fcc932d138ae1df95e97985dabb5b46d40a6ca677e2&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/93728098.jpg?k=ffb038aa1bd77b9b27041f9d12d0905af80935fc77a95cec789617490c2d6106&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/426181451.jpg?k=93e19c9a399667595d034a9d0387d91fad074600d7d7faf96f159405e156dc47&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/94104172.jpg?k=1d4dc51ae9be57eb84896565a5354c0bf95de6ed712036cafc62d7caf7b8e092&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/422323417.jpg?k=f0edd36a791d63941028dea468a64a2794c0a2cebe782c10c001eb2f3edf7e0b&o=&hp=1"
+          },
+      "category": "Hotel",
+      "title": "Hotel Carretero",
+      "location": "Manizales",
+      "description": "El Carretero Hotel sirve un desayuno bufé todos los días. El restaurante El Escorial propone platos regionales. Si prefiere beber algo, podrá dirigirse al bar El Refugio o al pub de estilo inglés.",
+      "features":["Gimnasio",
+      "Restaurante",
+      "WiFi"]
+    },
+    {
+      "id": "18",
+      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/130719432.jpg?k=f972d716b17e90316d8c5d7b9ae0635643b00c973d1fe2fa6b8e029249f5f47b&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133060564.jpg?k=8d40db8ee02bd08bb9df50ff68387efd93d42d1d3a2bf271ca0e3ce1c183ab38&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133159814.jpg?k=fdf6e82d32c08b5e03404a901efc84c0775f17a6a93ae106012bcf9c9e33de8d&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133062896.jpg?k=24b3e046ee8b267b3dde1eb5b26ee8d3715073c1b0adc21db816df427ddccdf1&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133160395.jpg?k=72034367874bdf05bd40455488ea393a55cc3164266bcfd8bbea4a533c367cdc&o=&hp=1"
+          },
+      "category": "Apartamento",
+      "title": "Miss Leila",
+      "location": "San Andres",
+      "description": "El Miss Leila ofrece alojamiento con balcón y WiFi gratuita en San Andrés, a 1,2 km de la playa de San Luis, a 1,9 km de la playa de Cocoplum Bay y a 6,4 km de la bahía de San Andrés. ",
+      "features":["Aire acondicionado",
+      "Bar",
+      "WiFi"]
+    },
+    {
+      "id": "19",
+      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/289762062.jpg?k=1d60974b78d86b74d4ea488ce728fda39ac7b6729b1bede9e2c08cc290f12231&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164657199.jpg?k=064aec7737ef0cf9ad3eabe4c862fb5eac48ed51d34f0f8c63b13cc532b749d6&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/289756002.jpg?k=80822430235aff60126bf1dc3814aa36633ae14c47ac740b6ee64bdab2d15d2b&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286304002.jpg?k=e00d446f770b86e1dd18335ff87fc91a42cbf8f0056c0498d0b8bb9a1b1e7ec6&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/297112036.jpg?k=2f630550175c0d930558767be045d41d264055b1d208c0a9a93758b5708c7c5c&o=&hp=1"
+          },
+      "category": "Hostel",
+      "title": "Medellín Vibes",
+      "location": "Medellin",
+      "description": "El Medellín Vibes Hostel se encuentra en Medellín y ofrece piscina al aire libre, jardín, salón compartido y restaurante. Además, hay servicio de habitaciones y solárium. Ofrece recepción 24 horas.",
+      "features":["Bar",
+      "Restaurante",
+      "Piscina"]
+    },
+    {
+      "id": "20",
+      "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/197379824.jpg?k=eaf11095711e12f7bdcc0e23f57c6314ea752eb2b82cd1f77c2dbcaa9d173ef3&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/117436266.jpg?k=f1fad52348465444f4758c39c4f80b37df4f39f9cc9675177244211f0bd68bb1&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/112599368.jpg?k=3dcef73aba7bfc161b546cc1af1ddc08d7ef3d22363a6cd14c2dab3cd0aedc58&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/74569457.jpg?k=75160e8fb4a364379f720369f754388e4eb493642c6465ddf6ec87f4e9c23c52&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/74569477.jpg?k=559f264e275c21d7ff2bee6008b39a51aedf2e5fa07fa38ea09b4269c8300a24&o=&hp=1"
+          },
+      "category": "Bed & Breakfast",
+      "title": "Casablanca",
+      "location": "Cali",
+      "description": "El Casablanca Hostel Cali dispone de conexión WiFi gratuita y cocina compartida y está situado en la avenida 7 Norte, en Santa Mónica Residencial, a solo 6 km del centro de la ciudad de Cali.",
+      "features":[
+      "Bar",
+      "WiFi"]
     }
     
   ]
