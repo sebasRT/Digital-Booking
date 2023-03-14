@@ -2,14 +2,14 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react"
 import { useMedia } from "../hooks/useMedia";
 
-const url = "http://localhost:8080/"
+const url = "http://3.128.29.96:8080/"
 
   const requestProducts = await axios.get(`${url}producto`)
   .then(result => result.data)
   .catch((err) => {
     console.log(err);
   });
-  
+
   const requestCategories = await axios.get(`${url}categoria`)
   .then(result =>result.data)
   .catch((err) => {
