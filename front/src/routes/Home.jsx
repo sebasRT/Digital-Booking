@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <div className='route'>
 
-      <Searching></Searching>
+      <Searching category={""} location={""} chechInOut={""}></Searching>
       <Categories></Categories>
       <Suggestions></Suggestions>
     </div>

@@ -89,7 +89,7 @@ case "Hosteles":
   )
     break;
 
-case "Departamentos":
+case "Apartamentos":
   return(
     <div className='cont'>{filter(category,handleCategory2)} {filter2}</div>
     

@@ -2,6 +2,15 @@
     {
       "id": "1",
       "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424953292.jpg?k=3ae12ef99bf8ca3dee160bb0663c4553b3ebf8d3a29ecf3a6ebcb93830370a58&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/181907043.jpg?k=834d86f0ec04bf98b9ef2b53f7110fe27784cfd0bc26836b8892ecb35ae97285&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/54092274.jpg?k=1554c3180128b815c2594d0fc42a682158ef088e18d59652cbc0214186062059&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424945472.jpg?k=4ebcb174fbe8b2d0ef63368823f45520a000e31700e188a70d5a93d5999cc2a5&o=&hp=1"
+          },
+
       "category": "Hotel",
       "title": "Dorado la 70",
       "location": "medellin",
@@ -14,6 +23,13 @@
     {
       "id": "2",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Apartamento",
       "title": "Loma Verde",
       "location": "Medellin",
@@ -25,6 +41,13 @@
     {
       "id": "3",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "LimaLimon",
       "location": "Bogota",
@@ -36,6 +59,13 @@
     {
       "id": "4",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Bed & Breakfast",
       "title": "Bahia San Andres",
       "location": "San Andres",
@@ -47,6 +77,13 @@
     {
       "id": "5",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "Ibis Bogota",
       "location": "Bogota",
@@ -58,6 +95,14 @@
     {
       "id": "6",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
+        "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122467.jpg?k=64c76e4206563c39c1a19213849314d983266fe92cd93eac9f7e74537a3e3e7a&o=&hp=1",
+        "img3":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/354279601.jpg?k=377f2e44d28b4410b0afe8be1ff91ddcb9ee530ea918289baebb5aa46fbbd652&o=&hp=1",
+        "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325727421.jpg?k=12472eb41afa9c5e840ec92b1162b3380db295ad5fa70c16babeb9ec88c1b562&o=&hp=1",
+        "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122154.jpg?k=79650a49401c07b5bed6c7d31b156fa80ecd6a5474ceeb980f238668f24a106a&o=&hp=1"
+          },
+
       "category": "Apartamento",
       "title": "La Curva",
       "location": "Cali",
@@ -69,6 +114,13 @@
     {
       "id": "7",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "Distrito Hostel",
       "location": "Santa Marta",
@@ -80,6 +132,13 @@
     {
       "id": "8",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Bed & Breakfast",
       "title": "Vistayrona",
       "location": "Santa Marta",
@@ -92,6 +151,13 @@
     {
       "id": "9",
       "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hotel",
       "title": "Movich Buro 26",
       "location": "Bogota",
@@ -104,6 +170,13 @@
     {
       "id": "10",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Apartamento",
       "title": "Portal del rodeo",
       "location": "Medellin",
@@ -115,6 +188,13 @@
     {
       "id": "11",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "Masaya Hostel",
       "location": "Santa Marta",
@@ -126,6 +206,13 @@
     {
       "id": "12",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Bed & Breakfast",
       "title": "Casa Ruta Sur",
       "location": "Cali",
@@ -137,6 +224,13 @@
     {
       "id": "13",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hotel",
       "title": "Las vegas Hostel",
       "location": "Guatape",
@@ -146,6 +240,13 @@
     {
       "id": "14",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Apartamento",
       "title": "Casa Azul",
       "location": "Manizales",
@@ -157,6 +258,13 @@
     {
       "id": "15",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "La Isla Inn",
       "location": "San Andres",
@@ -168,6 +276,13 @@
     {
       "id": "16",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Bed & Breakfast",
       "title": "Balcones Casona",
       "location": "Guatape",
@@ -179,6 +294,13 @@
     {
       "id": "17",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hotel",
       "title": "Hotel Carretero",
       "location": "Manizales",
@@ -190,6 +312,13 @@
     {
       "id": "18",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Apartamento",
       "title": "Miss Leila",
       "location": "San Andres",
@@ -201,6 +330,13 @@
     {
       "id": "19",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Hostel",
       "title": "Medellín Vibes",
       "location": "Medellin",
@@ -212,6 +348,13 @@
     {
       "id": "20",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "images":{
+        "img1":"",
+        "img2":"",
+        "img3":"",
+        "img4":"",
+        "img5":""
+          },
       "category": "Bed & Breakfast",
       "title": "Casablanca",
       "location": "Cali",
