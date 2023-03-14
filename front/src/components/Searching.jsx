@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import { Calendar } from './Calendar'
 import "../styles/Searching.css"
 import Select from 'react-select'
-import categories from "../assets/categories.json"
 import { Form, Link, redirect } from 'react-router-dom'
-
-const categoriesJSON = categories;
-const categ = Object.keys(categoriesJSON).map(cat => ({
-  value: cat,
-  label: categoriesJSON[cat].name
-}));
+import { GlobalContext } from '../assets/global.context'
 
 const cities = [{value: "Medellin" , label:"Medellin"},
                 {value: "Guatape" , label:"Guatape"},
@@ -20,6 +14,17 @@ const cities = [{value: "Medellin" , label:"Medellin"},
                 {value: "Santa+Marta" , label:"Santa Marta"}]
 
 export const Searching = ({location,category,chechInOut}) => {
+  const {products,categories} = useContext(GlobalContext);
+const categoriesJSON = categories;
+
+// const categ = useMemo(() => {
+  const categ = Object.keys(categoriesJSON).map(cat => ({
+    value: categoriesJSON[cat].titulo,
+    label: categoriesJSON[cat].titulo
+  }));
+//   return categ
+// }, [])
+
   const [formValues, setFormValues] = useState({
     location: location,
     category: category,

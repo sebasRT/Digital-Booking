@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Header from './components/Header'
 import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
 import { Footer } from './components/Footer'
@@ -8,6 +8,7 @@ import { SignUp } from './routes/SignUp'
 import { Products } from './routes/Products'
 import { Results } from './routes/Results'
 import Product from './routes/Product'
+import { GlobalContext } from './assets/global.context'
 
 
 const router = createBrowserRouter(
@@ -31,9 +32,8 @@ const router = createBrowserRouter(
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  
-  
+  const {products} = useContext(GlobalContext);
+  console.log(products);
   return (
     <RouterProvider router={router}></RouterProvider>
   )

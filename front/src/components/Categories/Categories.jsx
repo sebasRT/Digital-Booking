@@ -1,20 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import categories from "../../assets/categories.json"
+import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { CategoryCard } from './CategoryCard';
 import "../../styles/Categories.css"
 import Select from 'react-select'
 import { CategoriesFilter } from './CategoriesFilter';
 import { Link } from 'react-router-dom';
+import { GlobalContext } from '../../assets/global.context';
 
 
 
-const categoriesJSON = categories;
-const categ = Object.keys(categoriesJSON).map(cat => ({
-  value: cat.replace(/ /g, ""),
-  label: categoriesJSON[cat].name
-}));
-console.log(categ);
-const filter =(c,handle)=> 
+const filter =(c,handle,categ)=> 
         <div className="filter" >
           <h2  style={{fontSize:"1.4rem",color:"#263238"}}>Buscar por tipo de alojamiento: </h2>
           <Select className='selector' placeholder={c} options={categ} onChange={handle}></Select>
@@ -27,7 +21,16 @@ export const Categories = () => {
   
 const [category, setCategorie] = useState('d')
 const [filter2, setFilter2] =  useState(<CategoriesFilter></CategoriesFilter>);
+const {products,categories} = useContext(GlobalContext);
+const categoriesJSON = categories;
 
+// const categ = useMemo(() => {
+  const categ = Object.keys(categoriesJSON).map(cat => ({
+    value: categoriesJSON[cat].titulo,
+    label: categoriesJSON[cat].titulo
+  }));
+//   return categ
+// }, [])
 
 
 const handleCategory =useCallback( e =>{
@@ -63,7 +66,7 @@ switch (category) {
           {Object.keys(categoriesJSON).map(cat=>{const cate = categoriesJSON[cat];
           return(
         
-              <CategoryCard key={cat} id={cat} img={cate.img} description={cate.description} numbers={cate.numbers} name={cat} onClick={handleCategory}></CategoryCard>
+              <CategoryCard key={cate.idcategorias} id={cate.idcategorias} img={cate.url_imagen} description={cate.description} numbers={cate.numbers} name={cate.titulo} onClick={handleCategory}></CategoryCard>
               )})
           }
       </div>
@@ -74,7 +77,7 @@ switch (category) {
     break;
 case "Hoteles":
 return (<div className='cont'>
-  {filter(category,handleCategory2)}
+  {filter(category,handleCategory2,categ)}
   {filter2}
 </div>
   )
@@ -82,7 +85,7 @@ return (<div className='cont'>
 
 case "Hosteles":
   return(<div className='cont'>
-    {filter(category,handleCategory2)}
+    {filter(category,handleCategory2,categ)}
     {filter2}
   </div>
     
@@ -91,14 +94,14 @@ case "Hosteles":
 
 case "Apartamentos":
   return(
-    <div className='cont'>{filter(category,handleCategory2)} {filter2}</div>
+    <div className='cont'>{filter(category,handleCategory2,categ)} {filter2}</div>
     
   )
     break;
 
 case "Bed&Breakfast":
   return(
-    <div className='cont'>{filter("Bed & Breakfast",handleCategory2)} {filter2}</div>
+    <div className='cont'>{filter("Bed & Breakfast",handleCategory2,categ)} {filter2}</div>
   )
     break;
   default:
