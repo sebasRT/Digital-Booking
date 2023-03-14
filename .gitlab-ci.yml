@@ -30,16 +30,36 @@ build_backend:
         paths:
             - back/target/booking-0.0.1-SNAPSHOT.jar
 
+deploy_Backend:
+    stage: deploy
+    image: alpine:3.11
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H "$DEPLOY_SERVER_IP" >> ~/.ssh/known_hosts
+        - chmod 644 ~/.ssh/known_hosts
+    script:
+        - echo "Deploying started..."
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop back.service"
+        - scp back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/proyecto
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start back.service"
+        - echo "Finished deploying the app."
+
 build_frontend :
     stage: build
     image: node:latest
     script:
         - echo "Building the app"
         - cd front
-        - ls 
+        - ls
         - npm --force install
         - CI=false npm run build
-        - cd build 
+        - cd dist
         - ls
         - cd ..
         - pwd
@@ -47,40 +67,14 @@ build_frontend :
         expire_in: 1 week
         name: react_build
         paths:
-        - ./front/build/
-
-deploy_Backend:
-    stage: deploy
-    needs: [build_backend]
-    image: alpine:3.11
-    before_script:
-        - apk update && apk add openssh-client bash
-        - mkdir -p ~/ssh
-        - chmod 700 ~/ssh
-        - eval $(ssh-agent -s)
-        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-        - touch ~/ssh/config
-        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/ssh/config
-        - ssh-keyscan -H "$DEPLOY_SERVER_IP" >> ~/ssh/known_hosts
-        - chmod 644 ~/ssh/known_hosts
-    script:
-        - echo "Deploying started..."
-        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop consoleapp.service"
-        - scp back/target/booking-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/console-app/
-        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start consoleapp.service"
-        - echo "Finished deploying the app."
+        - ./front/dist
 
 deploy_Frontend:
    stage: deploy
-   needs: [build_frontend]
    image: python:latest 
    script:
-      - cd /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build
-      - ls
-      - pwd   
-      - cd /builds/ctd/proyecto-integrador-1022/0222-ft-c1/grupo-11
-      - ls
       - pip install awscli   
       - aws configure set aws_secret_key_id $AWS_ACCESS_KEY_ID
       - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-      - aws s3 sync /builds/ctd/hispanos/proyecto-integrador-1/proyecto-integrador-0223/0621pt-c7/grupo-11/front/build s3://back-end-grupo-11
+      - aws s3 sync front/dist s3://back-end-grupo-11 --acl public-read
+      

@@ -28,14 +28,6 @@ public class Ciudad {
     @NotNull
     private String nombre;
 
-    @Column(name="direccion")
-    @NotNull
-    private String direccion;
-
-    @Column(name="barrio")
-    @NotNull
-    private String barrio;
-
 
     @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
