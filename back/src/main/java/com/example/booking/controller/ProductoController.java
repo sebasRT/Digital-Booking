@@ -62,4 +62,10 @@ public class ProductoController {
         }
     }
 
+    //Productos aleatorios
+    @Operation(summary = "Get list of random productos")
+    @GetMapping("/random")
+    public ResponseEntity<Iterable<ProductoDTO>> findRandomProductos() {
+        return ResponseEntity.ok(iProductoService.findRandomProductos());
+    }
 }
