@@ -86,7 +86,7 @@ public class ProductoService implements IProductoService {
 
         // crea una lista de productos random
         List<ProductoDTO> productoRandomList = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 8; i++) {
             int random = (int) (Math.random() * productoDTOList.size());
             productoRandomList.add(productoDTOList.get(random));
         }
