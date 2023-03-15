@@ -1,23 +1,9 @@
-import { counter } from "@fortawesome/fontawesome-svg-core";
+
 import axios from "axios";
 import { createContext, useEffect, useState } from "react"
 import { useMedia } from "../hooks/useMedia";
 
 const url = "http://localhost:8080/"
-
-  
-  const requestProducts =async()=> await axios.get(`${url}producto`)
-  .then(result => result.data)
-  .catch((err) => {
-    console.log(err);})
-
-
-  const requestCategories =async()=> await axios.get(`${url}categoria`)
-    .then(result =>result.data)
-    .catch((err) => {
-      console.log(err);})
-
-
   
 let chargedCounter = 0; 
 export const GlobalContext = createContext();
@@ -56,7 +42,7 @@ export const GlobalProvider = ({children}) => {
   
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,cha}}>
       {children}
     </GlobalContext.Provider>
    
