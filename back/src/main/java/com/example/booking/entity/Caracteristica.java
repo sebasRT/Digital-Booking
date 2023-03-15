@@ -18,9 +18,9 @@ public class Caracteristica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idcaracteristicas;
 
-    @Column(name="icono")
+    @Column(name="Descripcion")
     @Nullable
-    private String icono;
+    private String descripcion;
 
     @Column(name="imagen")
     private String imagen;

@@ -3,24 +3,24 @@ import { faStar,faLocationDot,faWifi,faPersonSwimming,faHeart } from "@fortaweso
 import "../styles/Cards.css"
 import React from 'react'
 import { Link } from "react-router-dom";
-const Card = (props) => {
+const Card = ({url,category,title,location,description,id}) => {
   return (
-    <Link to={`/product/${props.id}`}>
+    <Link to={`/product/${id}`} >
     
-      <section className="container-card">
-        <div  className="container-img" style={{backgroundImage:`url(${props.url})`, backgroundSize:"cover", backgroundPosition:"center"}}>
+      <section className="container-card" >
+        <div  className="container-img" style={{backgroundImage:`url(${url})`, backgroundSize:"cover", backgroundPosition:"center"}}>
           <FontAwesomeIcon className="icon-heart" icon={faHeart} />
           {/* <img
             className="container-img"
-            src={props.url}
+            src={url}
           /> */}
         </div>
         <div className="container-detail">
           <div className="card-head c">
             <div className="name-hotel">
-              <span className="starts">{props.category}</span>
-              <FontAwesomeIcon className="icon-star" icon={faStar} />
-              <h1 className="title">{props.title}</h1>
+              <span className="starts">{category}</span>
+              <FontAwesomeIcon className="icon-star" icon={faStar}/>
+              <h1 className="title">{title}</h1>
             </div>
             <div className="ranking-card c">
               <button className="calification-card">9</button>
@@ -29,8 +29,8 @@ const Card = (props) => {
           </div>
           <div className="location-card c">
             <FontAwesomeIcon className="icon-location" icon={faLocationDot}/>
-            <p className="description-location">{props.location} </p>
-            <a className="location-mapa" href=" ">MOSTRAR EN EL MAPA</a>
+            <p className="description-location">{location} </p>
+            {/* <a className="location-mapa" href=" ">MOSTRAR EN EL MAPA</a> */}
           </div>
           <div className="icons-locations c">
           <FontAwesomeIcon className="icon-wifi" icon={faWifi}/>
@@ -38,7 +38,7 @@ const Card = (props) => {
           </div>
           <div className="description-card c">
             <p>
-            {props.description} 
+            {description} 
             </p>
           </div>
             <button className="button-card c">ver mas </button>

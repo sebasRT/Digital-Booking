@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <div className='route'>
 
-      <Searching></Searching>
+      <Searching category={""} location={""} chechInOut={""}></Searching>
       <Categories></Categories>
       <h2 style={{fontSize:"1.5rem"}}>Sugerencias</h2>
       <Suggestions>

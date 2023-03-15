@@ -39,12 +39,10 @@
     /* flex-wrap: wrap; */
   }
   .starts {
+
     font-weight: 700;
     font-size: 14px;
-    line-height: 18px;
-    width: 50px;
-    color: #fbc02d;
-   
+  
   }
   .icon-heart{
   float:right;
@@ -116,7 +114,17 @@
     color: #263238;
     height: 20px;
   }
-
+  .starts {
+    font-style: normal;
+   font-weight: 700;
+   font-size: 1rem;
+   line-height: 18px;
+   color:#fbc02d;}  
+  .icon-star {
+    color: #fbc02d;
+    width: 15px;
+    margin-left:5px;
+  }
   .button-card {
     width: 100%;
     background-color: #fbc02d;

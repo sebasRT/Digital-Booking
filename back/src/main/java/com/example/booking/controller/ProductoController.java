@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Producto", description = "Producto API")
 @RestController
 @RequestMapping("/producto")
+@CrossOrigin(origins = "*")
+
 public class ProductoController {
 
     @Autowired

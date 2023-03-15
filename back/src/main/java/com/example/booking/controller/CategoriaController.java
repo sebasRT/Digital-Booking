@@ -13,6 +13,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Categoria", description = "Categoria API")
 @RestController
 @RequestMapping("/categoria")
+@CrossOrigin(origins = "*")
 public class CategoriaController {
 
     @Autowired

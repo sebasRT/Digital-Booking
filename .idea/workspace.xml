@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88c55f87-87b9-4d06-9463-9692de5a173b" name="Changes" comment="Datos a produccion de front">
+    <list default="true" id="458c06df-5af9-42af-a1e5-7432a8d191aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/global.context.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/global.context.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,6 @@
     </option>
   </component>
   <component name="ProjectId" id="2M78WlGXsKhvJ8F6KHsnu5uJprh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,8 +42,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop/grupo-11/back",
+    "last_opened_file_path": "C:/Users/rtseb/OneDrive/Documentos/grupo-11",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
@@ -49,32 +52,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88c55f87-87b9-4d06-9463-9692de5a173b" name="Changes" comment="" />
+      <changelist id="458c06df-5af9-42af-a1e5-7432a8d191aa" name="Changes" comment="" />
       <created>1677107316815</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677107316815</updated>
       <workItem from="1677107321821" duration="103000" />
       <workItem from="1677108265629" duration="20000" />
-      <workItem from="1678337275675" duration="188000" />
-      <workItem from="1678337489394" duration="9000" />
-      <workItem from="1678373918329" duration="1279000" />
+      <workItem from="1678407880014" duration="1036000" />
+      <workItem from="1678486803747" duration="127000" />
+      <workItem from="1678577598222" duration="19000" />
+      <workItem from="1678668729409" duration="886000" />
     </task>
-    <task id="LOCAL-00001" summary="Datos a produccion">
-      <created>1678337402733</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678337402733</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Datos a produccion de front">
-      <created>1678373968057</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678373968057</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,9 +80,15 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Datos a produccion" />
-    <MESSAGE value="Datos a produccion de front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datos a produccion de front" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/back/src/main/java/com/example/booking/BookingApplication.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
