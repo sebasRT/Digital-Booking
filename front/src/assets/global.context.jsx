@@ -42,7 +42,7 @@ export const GlobalProvider = ({children}) => {
   
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,cha}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged}}>
       {children}
     </GlobalContext.Provider>
    
