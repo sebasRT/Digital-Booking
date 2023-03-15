@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import cards from "../assets/cards.json"
+import { GlobalContext } from '../assets/global.context';
 import Card from '../components/Card';
 import { Searching } from '../components/Searching';
-
-const cardsJSON = cards;
 
 export const Results = () => {
   const {search} = useLocation();
   const query = new URLSearchParams(search);
+  const [location, setLocation] = useState();
+  const [category, setCategory] = useState();
+  const [date, setDate] = useState();
+  const {products} = useContext(GlobalContext);
 
-  const location= query.get("location");
-  const category= query.get("category");
-  const date= query.get("date");
+  useEffect(() => {
+    setCategory(query.get("category"));
+    setDate(query.get("date"));
+    setLocation(query.get("location")); 
+    console.log(location,category,date);
+  })
+  
 
-
+  const productsFiltered = useMemo(
+    ()=>products.filter((e,i)=> { return e.categoria.idcategorias == category || e.ciudad.idciudades == location; })
+    , [products,location,date,category])
+    console.log(productsFiltered);
   return (
-    <div className='Results-container' >
+    <div className='Results-container ' >
     <Searching location={location} category={category} chechInOut={date}></Searching>
+    <div className='cards-container cont'>
+      {
+        Object.keys(productsFiltered).map((e)=> {const product = productsFiltered[e];
+          return (<Card key={product.idproductos} title={product.titulo} id={product.idproductos} category={product.categoria.titulo} description={product.descripcion} location={product.ciudad.nombre}></Card>)})
+      }
+    </div>
     <div className='categories-container'>
-      <Card category={""} title={""} url={""} id={""} description={""}></Card>
     </div>
     </div>
   )

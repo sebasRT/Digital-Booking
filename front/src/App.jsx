@@ -33,7 +33,6 @@ const router = createBrowserRouter(
 
 function App() {
   const {products} = useContext(GlobalContext);
-  console.log(products);
   return (
     <RouterProvider router={router}></RouterProvider>
   )
