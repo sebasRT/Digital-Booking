@@ -76,4 +76,20 @@ public class ProductoService implements IProductoService {
     private ProductoDTO mapDTO(Producto producto) {
         return mapper.convertValue(producto, ProductoDTO.class);
     }
+
+    // trae 5 productos random
+    @Override
+    public Iterable<ProductoDTO> findRandomProductos() {
+        // trae todos los productos
+        List<ProductoDTO> productoDTOList = new ArrayList<>();
+        iProductoRepository.findAll().forEach(producto -> productoDTOList.add(mapDTO(producto)));
+
+        // crea una lista de productos random
+        List<ProductoDTO> productoRandomList = new ArrayList<>();
+        for (int i = 0; i < 8; i++) {
+            int random = (int) (Math.random() * productoDTOList.size());
+            productoRandomList.add(productoDTOList.get(random));
+        }
+        return productoRandomList;
+    }
 }
