@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import Header from './components/Header'
 import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
 import { Footer } from './components/Footer'
@@ -32,8 +32,6 @@ const router = createBrowserRouter(
 
 
 function App() {
-  const {products} = useContext(GlobalContext);
-  console.log(products);
   return (
     <RouterProvider router={router}></RouterProvider>
   )
