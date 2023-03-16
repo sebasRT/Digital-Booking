@@ -12,10 +12,11 @@ export const GlobalProvider = ({children}) => {
   const isMobile = useMedia();
   const [products, setProducts] = useState("")
   const [categories, setcategories] = useState("")
+  const [productsRandom, setproductsRandom] = useState("")
   const [charged, setCharged] = useState(false)
 
   const handleCharged =()=>{
-    if (chargedCounter > 3) {
+    if (chargedCounter > 5) {
       setCharged(true)
     }
   }
@@ -28,6 +29,14 @@ export const GlobalProvider = ({children}) => {
       setProducts(response.data)
     }
     getProducts()
+
+    async function getProductsRandom (){
+      const response = await axios.get(`${url}producto/random`)
+      chargedCounter = chargedCounter+1; 
+      handleCharged()
+      setproductsRandom(response.data)
+    }
+    getProductsRandom()
 
     async function getCategories (){
       const response = await axios.get(`${url}categoria`)
@@ -42,7 +51,7 @@ export const GlobalProvider = ({children}) => {
   
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom}}>
       {children}
     </GlobalContext.Provider>
    
