@@ -1,25 +1,27 @@
 import React, { useContext, useMemo, useState } from 'react'
 import { Calendar } from './Calendar'
 import "../styles/Searching.css"
+import "../styles/Categories.css"
+
 import Select from 'react-select'
 import { Form, Link, redirect } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context'
 
-const cities = [{value: "Medellin" , label:"Medellin"},
-                {value: "Guatape" , label:"Guatape"},
-                {value: "Bogota" , label:"Bogota"},
-                {value: "San+Andres" , label:"San Andres"},
-                {value: "Cali" , label:"Cali"},
-                {value: "Manizales" , label:"Manizales"},
-                {value: "Santa+Marta" , label:"Santa Marta"}]
+const cities = [{value: "1" , label:"Medellin"},
+                {value: "6" , label:"Guatape"},
+                {value: "2" , label:"Bogota"},
+                {value: "3" , label:"San Andres"},
+                {value: "4" , label:"Cali"},
+                {value: "7" , label:"Manizales"},
+                {value: "5" , label:"Santa Marta"}]
 
 export const Searching = ({location,category,chechInOut}) => {
-  const {products,categories} = useContext(GlobalContext);
+  const {categories} = useContext(GlobalContext);
 const categoriesJSON = categories;
 
 // const categ = useMemo(() => {
   const categ = Object.keys(categoriesJSON).map(cat => ({
-    value: categoriesJSON[cat].titulo,
+    value: categoriesJSON[cat].idcategorias,
     label: categoriesJSON[cat].titulo
   }));
 //   return categ
@@ -42,7 +44,7 @@ const categoriesJSON = categories;
   }
 
   const handleSubmit = (e)=>{
-    // e.preventDefault();
+    
 
   }
 
@@ -51,13 +53,13 @@ const categoriesJSON = categories;
       <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
     <Form className='searchingForm' method="get" action="/results" onSubmit={handleSubmit}>
       
-    <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} ></Select>
-    <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} ></Select>
+    <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>
+    <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
     
       <Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar>
       <button type="button" className='searchButton'>
         <Link to= {
-          `/results?location=${formValues.location}&category=${formValues.category.replace(/ /g, "+")}&date=${formValues.chechInOut}`
+          `/results?location=${formValues.location}&category=${formValues.category}&date=${formValues.chechInOut}`
       }onClick={handleSubmit}>Buscar</Link>
       </button>
     </Form>

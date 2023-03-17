@@ -1,29 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/Suggestions.css" 
 
 import Card from '../components/Card';
 
 import cards from "../assets/cards.json"
+import { GlobalContext } from '../assets/global.context';
 const cardsJSON = cards;
 
 export const Suggestions = () => {
+
+  const {productsRandom} = useContext(GlobalContext);
+  
+  console.log(productsRandom);
   return (
     
     <div className='Suggestions'>
         
         <div className='cards-container'>
 
-    {Object.keys(cardsJSON).map(product =>{
-        const pro = cardsJSON[product];
+    {
+    Object.keys(productsRandom).map(product =>{
+        const pro = productsRandom[product];
         return(
             <Card 
-            key={product}
-            id= {pro.id}
-            url= {pro.url}
-            category= {pro.category}
-            title= {pro.title}
-            location ={pro.location}
-            description ={pro.description}
+            key={pro.idproductos}
+            id= {pro.idproductos}
+            url= {pro.categoria.url_}
+            category= {pro.categoria.titulo}
+            title= {pro.titulo}
+            location ={pro.ubicacion}
+            description ={pro.descripcion}
             />
             )
         })}

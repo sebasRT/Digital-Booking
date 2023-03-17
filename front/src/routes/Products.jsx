@@ -1,12 +1,42 @@
-import React from 'react'
-import { Suggestions } from '../components/Suggestions'
+import React, { useContext } from 'react'
+// import { Suggestions } from '../components/Suggestions'
 import "../styles/Products.css"
+import { GlobalContext } from '../assets/global.context';
+import Card from '../components/Card';
+import "../styles/Suggestions.css" 
+import "../styles/Cards.css"
+
+
 
 export const Products = () => {
+
+  const {products} = useContext(GlobalContext);
+  console.log(products)
   return (
     <div>
       <h2>Productos</h2>
-      <Suggestions/>
+      <div className='Suggestions'>
+      <div className='cards-container'>
+        
+      {
+    Object.keys(products).map(product =>{
+        const pro = products[product];
+        return(
+
+          
+            <Card 
+            key={pro.idproductos}
+            id= {pro.idproductos}
+            url= {pro.categoria.url_}
+            category= {pro.categoria.titulo}
+            title= {pro.titulo}
+            location ={pro.ubicacion}
+            description ={pro.descripcion}
+            />
+            )
+        })}
+      </div>
+      </div>  
     </div>
 
   )

@@ -19,30 +19,30 @@
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
-
   }
 
   .icon-star{
+   
      /* font-weight: 700; */
      width: 1rem;
      margin-left: 5px;
      color:black;
       
+  
   }
   
   .name-hotel {
     /* width: 189px; */
     /* height: 35px; */
-
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     /* flex-wrap: wrap; */
   }
   .starts {
-    line-height: 18px;
-    width: 50px;
-    color: #fbc02d;
-   
+
+    font-weight: 700;
+    font-size: 14px;
+  
   }
   .icon-heart{
   float:right;
@@ -121,7 +121,7 @@
    line-height: 18px;
    color:#fbc02d;}  
   .icon-star {
-    color: #fbc02d;
+    color: black;
     width: 15px;
     margin-left:5px;
   }
