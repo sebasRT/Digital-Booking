@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -27,7 +28,7 @@ public class ProductoDTO {
 
     private String descripcion;
 
-    private Set<Imagen> imagenes;
+    private List<Imagen> imagenes;
 
     private Categoria categoria;
 

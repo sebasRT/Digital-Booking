@@ -1,6 +1,5 @@
 package com.example.booking.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -32,9 +32,8 @@ public class Producto {
     @Column(name="descripcion")
     private String descripcion;
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonIgnore
-    private Set<Imagen> imagenes;
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
+    private List<Imagen> imagenes;
 
     @ManyToOne
     @JoinColumn(name="idcategorias")

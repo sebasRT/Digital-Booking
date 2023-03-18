@@ -32,6 +32,7 @@ public class Imagen {
 
     @ManyToOne
     @JoinColumn(name="idproductos")
+    @JsonIgnore
     private Producto producto;
 
     @Override
