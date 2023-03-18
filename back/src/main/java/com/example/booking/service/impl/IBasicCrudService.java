@@ -1,5 +1,7 @@
 package com.example.booking.service.impl;
 
+import java.util.Optional;
+
 public interface IBasicCrudService<T> {
 
     T create(T t);
