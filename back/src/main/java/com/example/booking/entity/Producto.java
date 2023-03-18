@@ -32,7 +32,7 @@ public class Producto {
     @Column(name="descripcion")
     private String descripcion;
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.MERGE)
     private List<Imagen> imagenes;
 
     @ManyToOne
