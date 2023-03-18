@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\":\"Hoteles\",\r\n    \"descripcion\": \"Categoria Hotel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Departamentos\",\r\n    \"descripcion\": \"Categoria Departamentos\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,10 +21,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/categoria/register",
+					"raw": "http://3.128.29.96:8080/categoria/register",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"3",
+						"128",
+						"29",
+						"96"
 					],
 					"port": "8080",
 					"path": [
@@ -41,10 +44,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/categoria",
+					"raw": "http://3.128.29.96:8080/categoria",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"3",
+						"128",
+						"29",
+						"96"
 					],
 					"port": "8080",
 					"path": [
@@ -69,15 +75,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/categoria/2",
+					"raw": "http://3.128.29.96:8080/categoria/5",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"3",
+						"128",
+						"29",
+						"96"
 					],
 					"port": "8080",
 					"path": [
 						"categoria",
-						"2"
+						"5"
 					]
 				}
 			},

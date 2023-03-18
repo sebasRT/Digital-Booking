@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "0a396d37-09e0-4e03-8d8d-feba991e38db",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20449814"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://3.128.29.96:8080/producto",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://3.128.29.96:8080/producto/id/1",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Dorado la 700\",\r\n    \"ubicacion\": \"Blvr. Libertadores De América #70 #44B-66\",\r\n    \"descripcion\": \"Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva\",\r\n    \"imagenes\": [\r\n        {\r\n            \"idimagenes\": 1,\r\n            \"titulo\": \"Dorado la 70\",\r\n            \"url\": \"https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white\"\r\n        }\r\n    ],\r\n    \"categoria\": {\r\n        \"idcategorias\": 1,\r\n        \"titulo\": \"Hoteles\",\r\n        \"descripcion\": \"Hoteles de Colombia\",\r\n        \"url_imagen\": \"https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white\"\r\n    },\r\n    \"disponibilidad\": \"SI\",\r\n    \"politicas\": null,\r\n    \"caracteristicas\": [\r\n        {\r\n            \"idcaracteristicas\": 1,\r\n            \"descripcion\": \"[\\\"Gimnasio\\\",\\\"Terraza Bar\\\",\\\"Turco\\\"]\",\r\n            \"imagen\": null\r\n        }\r\n    ],\r\n    \"ciudad\": {\r\n        \"idciudades\": 1,\r\n        \"nombre\": \"Medellin\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/producto/register",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Dorado la 700000\",\r\n    \"ubicacion\": \"Blvr. Libertadores De América #70 #44B-66\",\r\n    \"descripcion\": \"Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva\",\r\n    \"imagenes\": [\r\n        {\r\n            \"idimagenes\": 1,\r\n            \"titulo\": \"Dorado la 70\",\r\n            \"url\": \"https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white\"\r\n        }\r\n    ],\r\n    \"categoria\": {\r\n        \"idcategorias\": 1,\r\n        \"titulo\": \"Hoteles\",\r\n        \"descripcion\": \"Hoteles de Colombia\",\r\n        \"url_imagen\": \"https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white\"\r\n    },\r\n    \"disponibilidad\": \"SI\",\r\n    \"politicas\": null,\r\n    \"caracteristicas\": [\r\n        {\r\n            \"idcaracteristicas\": 1,\r\n            \"descripcion\": \"[\\\"Gimnasio\\\",\\\"Terraza Bar\\\",\\\"Turco\\\"]\",\r\n            \"imagen\": null\r\n        }\r\n    ],\r\n    \"ciudad\": {\r\n        \"idciudades\": 1,\r\n        \"nombre\": \"Medellin\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/producto/25",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://3.128.29.96:8080/producto/24",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"24"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
