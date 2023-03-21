@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "../styles/Login.css"
 export const Login = () => {
 
@@ -34,7 +35,7 @@ export const Login = () => {
         </div>
         <button type="submit">Ingresar</button>
       </form>
-      <p>¿Aun no tienes cuenta? <a href="#">Regístrate</a></p>
+      <p>¿Aun no tienes cuenta? <Link to="/signUp">Regístrate</Link></p>
     </div>
   );
 

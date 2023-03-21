@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import "../styles/SignUp.css"
 
 export const SignUp = () => {
@@ -105,7 +106,7 @@ export const SignUp = () => {
         <button type="submit" className="crearCuenta" >Crear cuenta</button>
       </form>
       {formSubmitted && password === confirmPassword && <p className="success-message"></p>}
-      <p>¿Ya tienes una cuenta? <a href="./login.js">Iniciar sesión</a></p>
+      <p>¿Ya tienes una cuenta? <Link to="/login"> Logueate</Link></p>
     </div>
   );
 
