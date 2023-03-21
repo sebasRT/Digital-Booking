@@ -29,21 +29,14 @@ export const SignUp = () => {
       setPassword('');
       setConfirmPassword('');
       setFormSubmitted(false);
-
-      fetch('./data.json')
-        .then(response => response.json())
-        .then(data => {
-          const formDataList = data ? data : [];
-          formDataList.push(formData);
-          const formDataJSON = JSON.stringify(formDataList);
-          return fetch('./data.json', {
-            method: 'POST',
-            body: formDataJSON,
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          })
-        })
+  
+      fetch('TU_API_URL', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
         .then(response => {
           if (!response.ok) {
             throw new Error('Error saving form data');
@@ -55,6 +48,7 @@ export const SignUp = () => {
         });
     }
   };
+  
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
