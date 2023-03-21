@@ -9,6 +9,7 @@ import { Products } from './routes/Products'
 import { Results } from './routes/Results'
 import Product from './routes/Product'
 import { GlobalContext } from './assets/global.context'
+import ReservaTemplate from './routes/ReservaTemplate'
 
 
 const router = createBrowserRouter(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
     <Route path='/products'element={<Products></Products>}></Route>
     <Route path='/product/:id' element={<Product></Product>}></Route>
     <Route path='/results' element={<Results></Results>}></Route>
+    <Route path='/reservaTemplate' element={<ReservaTemplate></ReservaTemplate>}></Route>
   </Route>
 
   )
