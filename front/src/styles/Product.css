@@ -1,0 +1,53 @@
+@import url("leaflet/dist/leaflet.css");
+.bookingSpace{
+    width: 90vw;
+    display: grid;
+    gap: 20px  ;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+}
+.buttonPlace{
+    text-align: center;
+}
+@media screen and (min-width: 870px){
+    .bookingSpace{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.imageimg1{
+    grid-area: myArea;
+}
+.images-container{
+    margin: auto;
+    height: 400px;
+    width: 90vw;
+    display: grid;
+    grid:
+  'myArea myArea . .'
+  'myArea myArea . .';
+    gap: 1rem;
+    grid-column: 50rem;  
+}
+.image{
+    min-width:100%;
+    min-height: 100%;
+}
+
+.description-container{
+    margin: auto;
+    width: 90vw;
+}
+#map{
+    height: 500px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+  
+  
+  }
+  .leaflet-container{
+    z-index: 0;
+    position: relative;
+    height: 100%;
+  }
+  

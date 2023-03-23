@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-
 import { GlobalContext } from '../assets/global.context';
 import Card from '../components/Card';
 import { Searching } from '../components/Searching';

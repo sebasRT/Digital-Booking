@@ -7,9 +7,9 @@ import { Menu } from './Menu'
 const Header = () => {
   const isMobile = useMedia();
 
-  const [hidden, sethidden] = useState({position:"sticky", top:"0px"})
+  const [hidden, setHidden] = useState({position:"sticky", top:"0px"})
   const handleHidden = ()=>{
-  sethidden({position: "absolute", top:"-100px"})
+  setHidden({position: "absolute", top:"-100px"})
   }
   return (
     <header style={hidden}>
@@ -25,8 +25,8 @@ const Header = () => {
         isMobile ?(
           <Menu></Menu>
         ):(          <>
-          <Button1 link={'/login'} text={"login"}></Button1>
-          <Button1 link={'signUp'} text={'sign up'}></Button1>
+          <Button1 link={'signUp'} text={"Crea Cuenta"}></Button1>
+          <Button1 link={'login'} text={'Ingresa'}></Button1>
           </>  
           )
         }

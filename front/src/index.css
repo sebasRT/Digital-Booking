@@ -3,7 +3,6 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
-
 p{
   padding: 0;
   margin: 0%;
@@ -40,19 +39,18 @@ header{
   transition: top 2s;
 }
 .sessionButtonsContainer{
-  width: 25vw;
-  display: flex;
-  flex-direction: row ;
+  width: 35vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   padding-right: 6%;
+  
 }
 .sessionButton{
-  align-self: center;
   margin: 3%;
-  width: 100%;
   height: fit-content;
   font-size: 1vw;
-  text-align: center;
+  text-align:center;
   border-radius: 3px;
   border-style:solid;
   border-color: #FBC02D;
@@ -67,7 +65,7 @@ header{
   font-size: 1rem;
 }
 .sessionButton > a >h4{
-  margin: 3%;
+  margin: 3%; 
  
 }
 .logo{
