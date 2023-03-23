@@ -1,14 +1,15 @@
-.contenedor-form {
-    display: flex;
-  }
+
   .formulario {
     box-sizing: border-box;
-    order: 0.0625rem solid #dfe4ea;
+    border: 0.0625rem solid #dfe4ea;
     background: #ffffff;
     padding: 1rem;
     border: 0.0625rem solid #dfe4ea;
     box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
+    width: 847px;
+    height: 217px;
+    display:flex;
   }
   
   .contenedor-form h3 {
@@ -21,12 +22,12 @@
     opacity: 1;
     box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
     border-radius: 0.3125rem;
-    width: 100%;
-    padding: 0.5rem;
     border-radius: 0.3125rem;
     margin-bottom: 1rem;
     font-size: 1.125rem;
     cursor: pointer;
+    width: 388px;
+    height: 40px;
   }
   
   input::-webkit-input-placeholder {
@@ -37,22 +38,17 @@
   
   #ciudad {
     background: #ffffff;
+    border: none;
   }
   .box-email {
     border: none;
   }
   
-  .input-vacuna{
-    font-size: 1rem;
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    gap:8px;
-    
-  }
+ 
   
-  form input[type="radio"]{float:left; width: 20px; margin-right: 10px;}
-  .input-vacuna label{float: left; width: 100px;}
+  
+  /* form input[type="radio"]{float:left; width: 20px; margin-right: 10px;}
+  .input-vacuna label{float: left; width: 100px;} */
   
   
   /* Modelo adaptativo tablet */
@@ -84,8 +80,7 @@
       font-size: 1.2rem;
     }
     .input-box {
-      width: 50%;
-      padding: 0.625rem;
+     display: block;
     }
   
   }

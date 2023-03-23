@@ -1,6 +1,5 @@
 .detalle {
-    left: 0rem;
-    top: 0rem;
+    
     border-radius: 0.5rem;
     background: #ffffff;
     border: 0.0625rem solid #dfe4ea;
@@ -10,6 +9,10 @@
     top: 0rem;
     border-radius: 0.5rem;
     margin-top: 2.5rem;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 10;
   }
   .detalle img {
     height: 16.8125rem;
@@ -17,31 +20,34 @@
     width: 100%;
     left: 0rem;
   }
-  .detalle__titulo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    color: var(--color-dos);
-    padding: 1.5rem 0rem 1.125rem 1.3125rem;
+  
+  .buton {
+    Width:300px;
+    Height:40px;
+    margin: 0px 0px;
+    background-color: #fbc02d;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
   }
-  .detalle_estrellas p {
+ .detalle_estrellas p {
     display: none;
   }
-  .detalle__datos {
-    padding: 0.9375rem 1rem 0rem 1rem;
-  }
+  
   .detalle_estrellas {
     padding-top: 0.4375rem;
     font-size: 0.875rem;
   }
-  .detalle__datos > p {
+  .detalle__datos{
     font-family: "Quicksand";
     font-style: normal;
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: var(--color-dos);
-    opacity: 0.5;
+    color:black;
+    
   }
   .detalle__datos h3 {
     font-weight: 700;
@@ -49,11 +55,22 @@
     line-height: 1.75rem;
     color: var(--color-dos);
   }
+  .check{
+    padding: 20px;
+  }
+ .check p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family:"Poppins" ;
+ }
+
   
   .detalle_ubicacion {
     display: flex;
     gap: 0.5rem;
-    padding-top: 1.0625rem;
+    padding:20px;
   }
   .detalle_ubicacion p {
     font-weight: 500;
@@ -62,9 +79,19 @@
     color: var(--color-dos);
     padding-bottom: 2.6875rem;
   }
-  
+   .detalle__categoria{
+    font-weight: 700;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: black;
+   }
+   .container-buton{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   }
   /* Modelo adaptativo tablet */
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     .detalle {
       display: flex;
     }
@@ -78,7 +105,7 @@
       font-size: 1.5rem;
     }
   }
-  
+   */
   /* Modelo adaptativo destokp */
   @media screen and (min-width: 992px) {
     .detalle {
@@ -92,3 +119,11 @@
       padding: 2.6875rem 1.3125rem 0rem 1.3125rem;
     }
   }
+  .detalle_ubicacion p {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: var(--color-dos);
+    padding-bottom: 2.6875rem;
+  }
+ 

@@ -8,6 +8,7 @@ import "../styles/Product.css"
 import cards from "../assets/cards.json" 
 import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
+import Politicas from '../components/Politicas'
 
 
 
@@ -97,7 +98,7 @@ const Product = () => {
           <Map coordinates={[]}></Map>
           
       </div>
-
+     <Politicas></Politicas> 
 
     </div>
   )

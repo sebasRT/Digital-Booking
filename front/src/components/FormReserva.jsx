@@ -2,11 +2,14 @@ import React from 'react'
 import '../styles/FormReserva.css'
 const FormReserva = () => {
   return (
-    <div className="contenedor-form">
+
+
+    
     <div className="formulario">
       <form className="form" >
         <div className="input-box">
           <label htmlFor="nombre">Nombre</label>
+          <br />
           <input
             type="text"
             name="nombre"
@@ -18,6 +21,7 @@ const FormReserva = () => {
 
         <div className="input-box">
           <label htmlFor="apellido">Apellido</label>
+          <br />
           <input
             type="text"
             name="apellido"
@@ -29,6 +33,7 @@ const FormReserva = () => {
 
         <div className="input-box">
           <label htmlFor="email">Correo electronico</label>
+          <br />
           <input
             className="box-email"
             type="email"
@@ -41,6 +46,7 @@ const FormReserva = () => {
 
         <div className="input-box">
           <label htmlFor="ciudad">Ciudad</label>
+           <br />
           <input
             type="text"
             name="ciudad"
@@ -51,7 +57,7 @@ const FormReserva = () => {
         </div>
       </form>
     </div>
-  </div>
+  
   )
 }
 
