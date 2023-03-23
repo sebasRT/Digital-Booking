@@ -74,4 +74,5 @@ public class CategoriaService implements ICategoriaService {
     private CategoriaDTO mapDTO(Categoria categoria) {
         return mapper.convertValue(categoria, CategoriaDTO.class);
     }
+
 }
