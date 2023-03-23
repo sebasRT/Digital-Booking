@@ -11,7 +11,8 @@ export const Calendar = ({name,onChange,value}) => {
   return (
    
    
-            <DatePicker
+            <DatePicker 
+            containerStyle={{width:'300px'}}
             placeholder='Check In - Check Out'
             name={name}
             range
@@ -25,3 +26,4 @@ export const Calendar = ({name,onChange,value}) => {
             ></DatePicker>
   )
 }
+

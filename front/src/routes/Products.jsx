@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 // import { Suggestions } from '../components/Suggestions'
-import "../styles/Products.css"
+
 import { GlobalContext } from '../assets/global.context';
 import Card from '../components/Card';
 import "../styles/Suggestions.css" 
@@ -27,7 +27,7 @@ export const Products = () => {
             <Card 
             key={pro.idproductos}
             id= {pro.idproductos}
-            url= {pro.categoria.url_}
+            url= {pro.categoria.url_imagen}
             category= {pro.categoria.titulo}
             title= {pro.titulo}
             location ={pro.ubicacion}
