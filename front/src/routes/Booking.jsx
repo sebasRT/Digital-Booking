@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context';
 import DetalleReserva from '../components/DetalleReserva';
 import FormReserva from '../components/FormReserva';
-import SelectReserva from '../components/selectReserva';
+import SelectReserva from '../components/SelectReserva';
 import Politicas from '../components/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"

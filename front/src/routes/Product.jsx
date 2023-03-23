@@ -57,7 +57,8 @@ const Product = () => {
       </div> 
 
       <div className='description-container'>
-        <h3>aquí va titulo de descripcion</h3>
+        {/* <h3>aquí va titulo de descripcion</h3> */}
+        <br />
            {product.descripcion}
       </div>
 
