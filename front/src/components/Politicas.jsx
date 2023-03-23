@@ -4,7 +4,7 @@ import "../styles/Politicas.css";
 const politicas = () => {
   return (
     <div className='container-politicas'>
-      <h2>Que tienes que saber</h2>
+      <h2>Qué tienes que saber</h2>
       
       <hr className='linea'/>
       <div className='containes-datos-politica'>

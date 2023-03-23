@@ -14,7 +14,7 @@ body{
 }
 
 #app{
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   width: 100vw;
@@ -54,6 +54,7 @@ header{
   border-radius: 3px;
   border-style:solid;
   border-color: #FBC02D;
+  
 }
 
 .sessionButton :hover{

@@ -24,11 +24,15 @@ width: 100%;
     width: 100%;
     height: 60px;
     padding-left: 40px;
+    color: white;
+    margin:0;
+    line-height: 0rem;
+   
     
 }
 .hh3{
     padding-left: 30px;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 
@@ -38,6 +42,8 @@ font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 18px;
+color: white;
+padding-top:10px;
 }
 
 .contenedor-select{

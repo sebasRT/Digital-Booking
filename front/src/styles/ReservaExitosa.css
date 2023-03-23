@@ -5,6 +5,7 @@
     Width :638px;
     Height:302px;
     margin-top: 80px;
+    background-color: white;
     
    
     
@@ -36,4 +37,9 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.fondo{
+    display: flex;
+    justify-content: center;
 }

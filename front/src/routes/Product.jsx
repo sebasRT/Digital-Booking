@@ -37,13 +37,13 @@ const Product = () => {
   return (
     <div>
 
-      <div className="product-title">
+      <div className="hiden">
 
-        <span>{product.categoria.titulo}</span>
+        <p>{product.categoria.titulo}</p>
         <h2>{product.titulo}</h2>
 
       </div>
-
+      <div className='div-contenedor'>
       <div className='images-zone'>
         <div className='buttons'></div>
         <div className='images-container'>
@@ -64,7 +64,7 @@ const Product = () => {
       <br />
       <div className='features'>
         <h2>¿Que ofrece este sitio?</h2>
-
+<hr />
         {//aquí deberían ir todos los servicios que ofrece el sitio
         }
       </div>
@@ -83,7 +83,7 @@ const Product = () => {
           </Calendar>
         </div>
         <div className='buttonPlace'>
-          <h3>reserva ahora</h3>
+          <h3>Agrega tus fechas de viaje para tener precios exactos</h3>
           {isLogged ? <Button1 link={`/booking/${id}`} text="Iniciar reserva"></Button1> : (<div>
             <Button1 link={"/login"} text={"Ingresa"}></Button1>
           <br />
@@ -95,12 +95,14 @@ const Product = () => {
       </div>
       <div className='location'>
            <h3>¿Donde vas a estar?</h3>
+           <hr />
            <span>{product.ciudad.nombre}</span>
           <Map coordinates={coordinates}></Map>
           
       </div>
-      <Politicas></Politicas> 
+      </div>
 
+      <Politicas></Politicas> 
 
     </div>
   )

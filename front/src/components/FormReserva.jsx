@@ -14,7 +14,7 @@ const FormReserva = () => {
             type="text"
             name="nombre"
             id="nombre"
-            placeholder= "Nombre"
+            placeholder= "paula"
             disabled
           />
         </div>
@@ -26,7 +26,7 @@ const FormReserva = () => {
             type="text"
             name="apellido"
             id="Apellido"
-            placeholder="Apellido"
+            placeholder="castillo"
             disabled
           />
         </div>
@@ -40,7 +40,7 @@ const FormReserva = () => {
             name="email"
             id="email"
             disabled
-            placeholder="Email"
+            placeholder="paulacas2204@gmail.com"
           />
         </div>
 
