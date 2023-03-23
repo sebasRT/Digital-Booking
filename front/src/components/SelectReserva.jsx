@@ -1,6 +1,6 @@
 import React from 'react'
 import Select from 'react-select';
-import '../styles/selectReserva.css'
+import '../styles/SelectReserva.css'
 // import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const SelectReserva = () => {
