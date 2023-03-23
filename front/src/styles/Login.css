@@ -91,3 +91,25 @@
     text-decoration: underline;
   }
   
+button.botonIngreso {
+    background-color: #FBC02D;
+    border: none;  
+    color: white; 
+    width : 206px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+  }
+  
+  button.botonIngreso:hover {
+    cursor: pointer;
+    background-color: #607D8B;
+  }
