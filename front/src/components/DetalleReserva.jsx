@@ -56,8 +56,8 @@ const DetalleReserva = () => {
                 /> */}
              </div>
             <div className='container-buton'>
-              <Link>
-            <button className="buton" link={`reservaExitosa`}text="Confirmar Reserva">Confirmar reserva</button>
+              <Link to={"/reservaExitosa"}>
+            <button className="buton" text="Confirmar Reserva">Confirmar reserva</button>
             </Link>
             </div>
            

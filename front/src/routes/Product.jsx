@@ -11,15 +11,6 @@ import { useLogged } from '../hooks/useLogged'
 import Politicas from '../components/Politicas'
 
 
-import { GlobalContext } from '../assets/global.context'
-import { Button1 } from '../components/Button1'
-import { useMedia } from '../hooks/useMedia'
-import "../styles/Product.css"
-import cards from "../assets/cards.json" 
-import Map from '../components/Map'
-import { useLogged } from '../hooks/useLogged'
-
-
 
 const Product = () => {
     const isLogged = useLogged(); //esta funcion me comprueba si el usuario ya esta loggueado o no
