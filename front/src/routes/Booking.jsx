@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context';
+import { Calendar } from '../components/Calendar';
 
 //  product= { "idproductos": 1,
 //   "titulo": "Dorado la 70",
@@ -34,12 +35,13 @@ const Booking = () => {
     const product = products.find((e)=>e.idproductos == id );
 
   return (
-    <div>Booking : {id}
+    <div >Booking : {id}
     <h2>
       {product.titulo} <br />
       {product.categoria.titulo} <br />
       {product.ciudad.nombre} <br />
       {product.descripcion} <br />
+      <Calendar></Calendar>
     </h2>
     </div>
   )

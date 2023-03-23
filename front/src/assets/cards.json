@@ -3,7 +3,7 @@
     {
       "id": "1",
       "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
-
+      "coordinates":{"lat":6.251133645936441,"long":-75.58813550350084},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424953292.jpg?k=3ae12ef99bf8ca3dee160bb0663c4553b3ebf8d3a29ecf3a6ebcb93830370a58&o=&hp=1",
@@ -24,6 +24,7 @@
     {
       "id": "2",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
+      "coordinates":{"lat":6.211378917463872,"long":-75.56067348815687},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164244568.jpg?k=3d4dbd5822ceb556a63567f75ff6423ed102070b63a51e5d7c3846b1d632e498&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164244596.jpg?k=5308beff3d22bf9076360f1e9b2fe66024a4eb49ad379c6c98c5438b8ef02de8&o=&hp=1",
@@ -42,6 +43,7 @@
     {
       "id": "3",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
+      "coordinates":{"lat":4.596903105865055, "long":-74.06916991884852},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/142284823.jpg?k=f83ca030dfd64e25aee1ff03b57a559d68bb4de9534de8859d5d55e5226ed00d&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/143052855.jpg?k=3470f8ff106a456e8b753490dbcbe5d159e4005f5a9f1c0c0a9ac294201ed673&o=&hp=1",
@@ -60,6 +62,7 @@
     {
       "id": "4",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "coordinates":{"lat" :12.576565644665825,"long":-81.70204942458483},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336958886.jpg?k=3e5d630366800aca5417cba3befc5717ffc4b7c94a7400b13eb6d4e51d9fcb72&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/405192549.jpg?k=e455cf37e0fd191ef835910a6ec27cba2074aa0327a20f1854e737c2b3fed22d&o=&hp=1",
@@ -78,6 +81,7 @@
     {
       "id": "5",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
+      "coordinates":{"lat":4.614940889622414,"long":-74.06888734583245},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/155882763.jpg?k=924b76862bc63f8d2a77ed53824c6eaec3d1585a97f868805abcc2832139a644&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153477727.jpg?k=71491a88caa3ed3791d087b02ea9142b89df6e404b8a207598a35de94aff2c41&o=&hp=1",
@@ -96,6 +100,7 @@
     {
       "id": "6",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "coordinates":{"lat":3.438774349812405, "long":-76.54229820350533},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/428264294.jpg?k=9185b3d1be01cfc841ca0ea4832102f390157bb1ddc48618fbe9eadaec5b43dc&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122467.jpg?k=64c76e4206563c39c1a19213849314d983266fe92cd93eac9f7e74537a3e3e7a&o=&hp=1",
@@ -115,6 +120,7 @@
     {
       "id": "7",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
+      "coordinates":{"lat":11.239006399995413, "long":-74.21222684580017},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467183.jpg?k=dfaf20bee1b1f55bec829eb6b1a1311de6d1d5178b2d5b988dcbb795e6361ed1&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467406.jpg?k=52046c965e796b6450f4b6bc4a40e86696e6dae60b155e3cf9b8bfbf6f1cfc1a&o=&hp=1",
@@ -133,6 +139,7 @@
     {
       "id": "8",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":11.286572404402456, "long":-73.89607624579978},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992691.jpg?k=8675f7a526c39f7a594b5fdb0857c5092863ffa719cda8b7bc062aed65c10527&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992651.jpg?k=725c798f79096f3a2d49e16b8cacd7b8c4ba3306e9ba7864fb513795b9b49bb7&o=&hp=1",
@@ -152,6 +159,7 @@
     {
       "id": "9",
       "url": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white",
+      "coordinates":{"lat":4.689992354881172, "long":-74.13010270165226},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/120625514.jpg?k=8bd8e3655b81771cef068320f3481750c7d50819256cce089f3d8a70f50040af&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/120628891.jpg?k=23b8acf2b154671ea0d4e6567389280bdb4559c86ce0146edf1f8fe443d8c807&o=&hp=1",
@@ -171,6 +179,7 @@
     {
       "id": "10",
       "url": "https://cache.marriott.com/marriottassets/marriott/CUZLC/cuzlc-archway-door-4886-hor-clsc.jpg?downsize=2880px:*",
+      "coordinates":{"lat":6.210966851717556, "long":-75.59565466117299},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133559346.jpg?k=f1f7f182ea748d9755fb0d09d4783bddad75e79c942cd5d538b8357bfb101b16&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325194426.jpg?k=e1fb8313ecb410bfb3db8d9a15fcabf60b67e027b59efbfff2a1e38fb68aa489&o=&hp=1",
@@ -189,6 +198,7 @@
     {
       "id": "11",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/d9/b5/d9b5a8ac8f4f1c99eec8489b46d0032f.jpg",
+      "coordinates":{"lat":11.244772258065796, "long":-74.2105488323082},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723496.jpg?k=9611210bdc83cd8511a2bff70caa7589a338cd3ef2fd5aa9879cfdd2e55f5f74&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723208.jpg?k=ff45c050bed002709136bb90e6f9d1f87ca7200bf3863e5c351142b9e60ab9ac&o=&hp=1",
@@ -207,6 +217,7 @@
     {
       "id": "12",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "coordinates":{"lat":3.4470424352015923, "long":-76.53955414583326},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/206918961.jpg?k=d0078d7a84d5de5bb25ceda25dac3a11b673345265a354c49591ee486a6699e9&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/146108429.jpg?k=03d70b20be3ed8ee707e4035908494abb6ed87b7844000866b3342cfef4acda0&o=&hp=1",
@@ -225,6 +236,7 @@
     {
       "id": "13",
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/7d/0a/50/palacio-del-inka-a-luxury.jpg",
+      "coordinates":{"lat":6.233835434269176, "long":-75.16116830350092},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/339368478.jpg?k=8df28a1118c2184c67300ac23a32d638e4e7995918b05feff17128e427de7802&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/275077153.jpg?k=0ea8d2801da664fded9fd922a153d037ae998b50c096e220ab9a4ef6c2de8dae&o=&hp=1",
@@ -241,6 +253,7 @@
     {
       "id": "14",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763221/763221853/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
+      "coordinates":{"lat":5.052553665019746, "long":-75.48591234583174},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407754954.jpg?k=649cefd22e8c3fe6969275486c01bbc85779ff2167201bc74d94480d1545face&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336285814.jpg?k=c624abc46c46eda1c5be7e6d6a7435ac2cca11baa1e8ce6b85e750a0a5e6e8f0&o=&hp=1",
@@ -259,6 +272,7 @@
     {
       "id": "15",
       "url": "https://hotelspiwakchipichape.backhotelite.com/cache/58/4f/584fb3751f6aaf762a852787704c09f2.jpg",
+      "coordinates":{"lat":12.583240556190843, "long":-81.69553773229606},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/151812895.jpg?k=34a2043595b03d79b971ef172054d009371680daed4a3f61d00d192f6c5a5dfe&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77078427.jpg?k=916274a7b5bea46b651c5787c58f4cfab6aafe8c09268ac1fa6bcf22ddaebc1d&o=&hp=1",
@@ -277,6 +291,7 @@
     {
       "id": "16",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":6.238612275003647, "long":-75.15522513233414},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/268456137.jpg?k=67fdc1a86bf62df64e3ed5c47e747510993fdff13d96610f1bab79494f26915c&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/358996872.jpg?k=f1eabc57b1d95f1afcb65f9878e4213c2c6222701bacb684a09a5e89c6f16e22&o=&hp=1",
@@ -295,6 +310,7 @@
     {
       "id": "17",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":5.067566247448576, "long":-75.50767124583176},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/94380149.jpg?k=6261c1a029a9319987c49fcc932d138ae1df95e97985dabb5b46d40a6ca677e2&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/93728098.jpg?k=ffb038aa1bd77b9b27041f9d12d0905af80935fc77a95cec789617490c2d6106&o=&hp=1",
@@ -313,6 +329,7 @@
     {
       "id": "18",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":12.532608724783927, "long":-81.70802116937155},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/130719432.jpg?k=f972d716b17e90316d8c5d7b9ae0635643b00c973d1fe2fa6b8e029249f5f47b&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133060564.jpg?k=8d40db8ee02bd08bb9df50ff68387efd93d42d1d3a2bf271ca0e3ce1c183ab38&o=&hp=1",
@@ -331,6 +348,7 @@
     {
       "id": "19",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":6.209669317949896, "long":-75.576134190009},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/289762062.jpg?k=1d60974b78d86b74d4ea488ce728fda39ac7b6729b1bede9e2c08cc290f12231&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164657199.jpg?k=064aec7737ef0cf9ad3eabe4c862fb5eac48ed51d34f0f8c63b13cc532b749d6&o=&hp=1",
@@ -349,6 +367,7 @@
     {
       "id": "20",
       "url": "https://www.amenitiz.com/wp-content/uploads/2022/10/rrcibe846jo71ryoxahw-650x488.jpg",
+      "coordinates":{"lat":3.4666764815806586, "long":-76.53177779001336},
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/197379824.jpg?k=eaf11095711e12f7bdcc0e23f57c6314ea752eb2b82cd1f77c2dbcaa9d173ef3&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/117436266.jpg?k=f1fad52348465444f4758c39c4f80b37df4f39f9cc9675177244211f0bd68bb1&o=&hp=1",

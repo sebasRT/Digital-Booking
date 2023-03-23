@@ -17,10 +17,11 @@ const Product = () => {
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
     const allCards = cards
+ 
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
     const cardsImages = allCards.find((e)=> e.id == id).images
-
+    const coordinates = allCards.find((e)=> e.id == id).coordinates
     const date2 = new Date(2023,2,22);
     const media = useMedia();
     const today = new Date()
@@ -94,7 +95,7 @@ const Product = () => {
       <div className='location'>
            <h3>¿Donde vas a estar?</h3>
            <span>{product.ciudad.nombre}</span>
-          <Map coordinates={[]}></Map>
+          <Map coordinates={coordinates}></Map>
           
       </div>
 
