@@ -1,50 +1,60 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context';
+import DetalleReserva from '../components/DetalleReserva';
+import FormReserva from '../components/FormReserva';
+import SelectReserva from '../components/selectReserva';
+import Politicas from '../components/Politicas';
+import { useMedia } from '../hooks/useMedia';
+import "../styles/Booking.css"
 import { Calendar } from '../components/Calendar';
 
-//  product= { "idproductos": 1,
-//   "titulo": "Dorado la 70",
-//   "ubicacion": "Blvr. Libertadores De América #70 #44B-66",
-//   "descripcion": "Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva",
-//   "imagenes": [],
-//   "categoria": {
-//       "idcategorias": 1,
-//       "titulo": "Hoteles",
-//       "descripcion": "Hoteles de Colombia",
-//       "url_imagen": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white"
-//   },
-//   "disponibilidad": "SI",
-//   "politicas": null,
-//   "caracteristicas": [
-//       {
-//           "idcaracteristicas": 1,
-//           "descripcion": "[\"Gimnasio\",\"Terraza Bar\",\"Turco\"]",
-//           "imagen": null
-//       }
-//   ],
-//   "ciudad": {
-//       "idciudades": 1,
-//       "nombre": "Medellin"
-//   }
 
- // }
 const Booking = () => {
-    const {id}= useParams()
-    const {products} = useContext(GlobalContext);
-    const product = products.find((e)=>e.idproductos == id );
+  const {id}= useParams()
+  const {products} = useContext(GlobalContext);
+  const product = products.find((e)=>e.idproductos == id );
 
+  const date2 = new Date(2023,2,22);
+    const media = useMedia();
+    const today = new Date()
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+
+  const [values, setValues] = useState([today, tomorrow,date2 ])
   return (
-    <div >Booking : {id}
-    <h2>
-      {product.titulo} <br />
-      {product.categoria.titulo} <br />
-      {product.ciudad.nombre} <br />
-      {product.descripcion} <br />
+    
+<div className='contenedor-main'>
+    <div className='hiden'>
+      <p>{product.categoria.titulo}
+      </p>
+        <h2>{product.titulo}</h2> 
+        </div>
+        <h3 className='hh3'>Completa tus datos</h3>
+      <div className='contenedor-reserva'>
+      
+      <FormReserva ></FormReserva>
+      <DetalleReserva />
+      <h3>Selecciona tu fecha de reserva</h3>
+      <div className='contenedor-calendario' >
+
+      <br />
       <Calendar></Calendar>
-    </h2>
+      </div>
+      <h3>Selecciona tu horario de llegada </h3>
+      <div className='contenedor-select'>
+      <br />
+        <SelectReserva></SelectReserva>
+      </div>
+      </div>
+      
+      
+        <Politicas></Politicas>
+      
     </div>
-  )
-}
+  );
+};
+
 
 export default Booking

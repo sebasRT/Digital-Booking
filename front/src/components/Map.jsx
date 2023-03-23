@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 
-const Map = ({coordinates}) => {
+const Map = ({coordinates,title}) => {
 
   const coo = [coordinates.lat,coordinates.long];  //este valor se debería colocar en el map (center y position) una vez 
                                                //las coordenadas de cada sitio estén en el back            
@@ -13,9 +13,9 @@ const Map = ({coordinates}) => {
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
   <Marker position={coo}>
-    {/* <Popup>
-       aqui se puede poner info llamativa del sitio
-    </Popup> */}
+   <Popup>
+       {title}
+    </Popup>
   </Marker>
 </MapContainer>
     </div>

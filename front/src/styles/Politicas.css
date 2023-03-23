@@ -1,0 +1,37 @@
+.container-politicas{
+    
+    width: 100%;
+    background-color: white;
+    
+
+}
+
+/* .containes-datos-politica{
+    
+} */
+
+.linea{
+    height: 0px;
+    border-color: #fbc02d;
+    background-color: #fbc02d;
+
+}
+
+.columna1{
+    width:300px;
+    margin-bottom: 40px;
+    /* display: inline-block; */
+    margin: 20px;
+
+}
+p{
+   margin:15px; 
+}
+.containes-datos-politica{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+
+

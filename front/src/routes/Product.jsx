@@ -8,6 +8,16 @@ import "../styles/Product.css"
 import cards from "../assets/cards.json" 
 import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
+import Politicas from '../components/Politicas'
+
+
+import { GlobalContext } from '../assets/global.context'
+import { Button1 } from '../components/Button1'
+import { useMedia } from '../hooks/useMedia'
+import "../styles/Product.css"
+import cards from "../assets/cards.json" 
+import Map from '../components/Map'
+import { useLogged } from '../hooks/useLogged'
 
 
 
@@ -27,8 +37,8 @@ const Product = () => {
     const today = new Date()
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
-
-
+ 
+    
     // Una vez las fechas disponibles estén en el back: cambiar este array por la info en el back
     //                                             ||
     const [values, setValues] = useState([today, tomorrow,date2 ])
@@ -98,6 +108,7 @@ const Product = () => {
           <Map coordinates={coordinates}></Map>
           
       </div>
+      <Politicas></Politicas> 
 
 
     </div>

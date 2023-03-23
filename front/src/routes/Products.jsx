@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 // import { Suggestions } from '../components/Suggestions'
-import "../styles/Products.css"
+
 import { GlobalContext } from '../assets/global.context';
 import Card from '../components/Card';
 import "../styles/Suggestions.css" 
