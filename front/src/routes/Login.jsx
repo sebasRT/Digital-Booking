@@ -44,7 +44,9 @@ export const Login = () => {
           <input type="password" id="password" name="password" />
           </div>
         </div>
-        <button type="submit">Ingresar</button>
+        <Link to='/' >
+        <button type="submit"  link={'Home'}className='botReserva'>Ingresar</button>
+        </Link>
       </form>
       <p>¿Aun no tienes cuenta? <Link to="/signUp">Regístrate</Link></p>
     </div>

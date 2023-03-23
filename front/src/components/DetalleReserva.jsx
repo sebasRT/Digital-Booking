@@ -38,11 +38,11 @@ const DetalleReserva = () => {
            
             </div>
             <div className='check'>
-              <hr />
+              <hr className='lin' />
               <p>check in</p>
-              <hr />
+              <hr className='lin'/>
               <p>check out</p>
-              <hr />
+              <hr className='lin' />
                 {/* <Select
                 className="select"
                 placeholder="check in"
