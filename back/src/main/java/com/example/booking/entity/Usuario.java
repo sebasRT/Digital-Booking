@@ -58,4 +58,7 @@ public class Usuario{
     public Usuario() {
     }
 
+    public Usuario(Long idusuarios) {
+        this.idusuarios = idusuarios;
+    }
 }

@@ -30,7 +30,7 @@ public class WebSecurityConfig {
         return http
                 .csrf().disable()
                 .authorizeRequests()
-                .requestMatchers( "/producto/**")
+                .requestMatchers( "/producto/**","/categoria/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
