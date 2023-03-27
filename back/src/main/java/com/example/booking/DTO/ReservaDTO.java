@@ -1,18 +1,23 @@
 package com.example.booking.DTO;
 
-import lombok.*;
+import com.example.booking.entity.Producto;
+import com.example.booking.entity.Usuario;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class ReservaDTO {
-    private Long Id;
-    private String horaComienzo;
-    private String fechaInicial;
-    private String fechaFinal;
-    private ProductoDTO producto;
-    private ClienteDTO clienteDTO;
 
+    private long idreservas;
+
+    private String hora_inicio;
+
+    private String fecha_inicio;
+
+    private String fecha_fin;
+
+    private Usuario idusuario;
+
+    private Producto idproducto;
 }

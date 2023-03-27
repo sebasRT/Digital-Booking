@@ -1,116 +1,101 @@
 package com.example.booking.service;
 
-import com.example.booking.DTO.ClienteDTO;
-import com.example.booking.DTO.ProductoDTO;
-import com.example.booking.DTO.ReservaCompletaDTO;
-import com.example.booking.entity.Cliente;
-import com.example.booking.entity.Producto;
-import com.example.booking.entity.Reserva;
-import com.example.booking.exception.ResourceNotFoundException;
-import org.modelmapper.ModelMapper;
 import com.example.booking.DTO.ReservaDTO;
+import com.example.booking.entity.Reserva;
+import com.example.booking.entity.Usuario;
+import com.example.booking.exception.ResourceNotFoundException;
 import com.example.booking.repository.IReservaRepository;
 import com.example.booking.service.impl.IReservaService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ReservaService implements IReservaService {
+
     @Autowired
-    IReservaRepository iReservaRepository;
+    private IReservaRepository reservaRepository;
+
     @Autowired
-    ObjectMapper mapper;
-    @Autowired
-    ModelMapper modelMapper;
-    @Autowired
-    ProductoService serviceProducto;
-    @Autowired
-    ClienteService serviceCliente;
+    private ObjectMapper objectMapper;
+
+    public static final String ENTITY_NOT_FOUND_MESSAGE  = "No se encontro la reserva con el id indicado";
+
     @Override
     public ReservaDTO create(ReservaDTO reservaDTO) {
         if (reservaDTO == null) {
-            throw new ResourceNotFoundException("Reserva", "id", reservaDTO.getId());
+            throw new ResourceNotFoundException("Reserva", "id", reservaDTO.getIdreservas());
+        }
+
+        //Si no existe el usuario, lanzar excepcion
+        if (reservaDTO.getIdusuario() == null) {
+            throw new ResourceNotFoundException("Usuario", "id", reservaDTO.getIdusuario().getIdusuarios());
+        }
+
+        //Si no existe el producto, lanzar excepcion
+        if (reservaDTO.getIdproducto() == null) {
+            throw new ResourceNotFoundException("Producto", "id", reservaDTO.getIdproducto().getIdproductos());
         }
 
         Reserva reserva = mapEntity(reservaDTO);
-        return mapDTO(iReservaRepository.save(reserva));
-    }
-    @Override
-    public ReservaDTO save(ReservaDTO reservaDTO) {
-        ProductoDTO productoDTO = serviceProducto.findOne(reservaDTO.getProducto().getIdproductos());
-        ClienteDTO clienteDTO = serviceCliente.findOne(reservaDTO.getClienteDTO().getIdclientes());
-        if(productoDTO!=null&&clienteDTO!=null){
-            Reserva reserva = mapper.convertValue(reservaDTO,Reserva.class);
-            reserva.setHoraComienzo(mapper.convertValue(reserva.getHoraComienzo(), Date.class));
-            reserva.setProducto(mapper.convertValue(productoDTO, Producto.class));
-            reserva.setCliente(mapper.convertValue(clienteDTO, Cliente.class));
-            ReservaDTO reservaCreated = mapper.convertValue(iReservaRepository.save(reserva),ReservaDTO.class);
-            reservaCreated.setProducto(mapper.convertValue(productoDTO, ProductoDTO.class));
-            reservaCreated.setClienteDTO(mapper.convertValue(clienteDTO,ClienteDTO.class));
-            return reservaCreated;
-        }else {
-            return null;
-        }
-    }
-    private Reserva mapEntity(ReservaDTO reservaDTO) {
-        return mapper.convertValue(reservaDTO, Reserva.class);
-    }
-
-    private ReservaDTO mapDTO(Reserva reserva) {
-        return mapper.convertValue(reserva, ReservaDTO.class);
+        return mapDTO(reservaRepository.save(reserva));
     }
 
     @Override
     public ReservaDTO findOne(Long id) {
-        Reserva reserva = iReservaRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Reserca", "Id", id));
+        Reserva reserva = reservaRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Reserva", "Id", id));
+
         return mapDTO(reserva);
     }
 
     @Override
-    public List<ReservaDTO> findAll() {
-        Collection<Reserva> reserva = iReservaRepository.findAll();
-        return modelMapper.map(reserva,new TypeToken<List<ReservaDTO>>() {}.getType());
+    public Iterable<ReservaDTO> findAll() {
+        List<ReservaDTO> reservaDTOList = new ArrayList<>();
+        reservaRepository.findAll().forEach(reserva -> reservaDTOList.add(mapDTO(reserva)));
+        return reservaDTOList;
     }
 
     @Override
     public ReservaDTO update(ReservaDTO reservaDTO, Long id) {
-        if(findOne(reservaDTO.getId())!=null){
-            return save(reservaDTO);
-        }
-        return null;
+        Reserva reserva = reservaRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Reserva", "Id", id));
+
+        reserva.setHora_inicio(reservaDTO.getHora_inicio());
+        reserva.setFecha_inicio(reservaDTO.getFecha_inicio());
+        reserva.setFecha_fin(reservaDTO.getFecha_fin());
+        reserva.setIdproducto(reservaDTO.getIdproducto());
+        reserva.setIdusuario(reservaDTO.getIdusuario());
+
+        return mapDTO(reservaRepository.save(reserva));
     }
 
     @Override
     public void delete(Long id) {
-        if(findOne(id)!=null){
-            iReservaRepository.deleteById(id);
-        }
-    }
-    @Override
-    public List<ReservaDTO> findAllReservationsByProduct(Long producto_id){
-        if (serviceProducto.findOne(producto_id)!=null){
-            Collection<Reserva> reservaList = iReservaRepository.findAllReservationsByProduct(producto_id);
-            return modelMapper.map(reservaList,new TypeToken<List<ReservaDTO>>() {}.getType());
-        }else {
-            return null;
-        }
-    }
-    @Override
-    public List<ReservaCompletaDTO> findAllReservationsByUser(Long cliente_id){
 
-        Collection<Reserva> reservaList = iReservaRepository.findAllReservationsByUser(cliente_id);
+        Reserva reserva = reservaRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Reserva", "Id", id));
 
-        if (reservaList != null){
-            return modelMapper.map(reservaList,new TypeToken<List<ReservaCompletaDTO>>() {}.getType());
-        }else {
-            return null;
-        }
+        reservaRepository.delete(reserva);
+
+    }
+
+    @Override
+    public Iterable<ReservaDTO> findByProductoId(Long id) {
+
+        List<ReservaDTO> reservaDTOList = new ArrayList<>();
+        reservaRepository.findByIdproducto(id).forEach(reserva -> reservaDTOList.add(mapDTO(reserva)));
+        return reservaDTOList;
+    }
+
+    private ReservaDTO mapDTO(Reserva reserva) {
+        return objectMapper.convertValue(reserva, ReservaDTO.class);
+    }
+
+    private Reserva mapEntity(ReservaDTO reservaDTO) {
+        return objectMapper.convertValue(reservaDTO, Reserva.class);
     }
 }

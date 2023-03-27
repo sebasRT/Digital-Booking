@@ -27,6 +27,11 @@ public class ProductoService implements IProductoService {
             throw new ResourceNotFoundException("Producto", "id", productoDTO.getIdproductos());
         }
 
+        //Si no existe la categoria no se puede crear el producto
+        if (productoDTO.getCategoria() == null) {
+            throw new ResourceNotFoundException("Categoria", "id", productoDTO.getCategoria().getIdcategorias());
+        }
+
         Producto producto = mapEntity(productoDTO);
         return mapDTO(iProductoRepository.save(producto));
     }
