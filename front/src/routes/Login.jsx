@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/Login.css"
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/Login.css';
 
 export const Login = () => {
-
   const handleSubmit = async (event) => {
     event.preventDefault();
   
@@ -13,18 +13,19 @@ export const Login = () => {
   
     const data = { email, password };
   
-    try {
-      const response = await axios.post('https://ejemplo.com/api/login', data);
+    // Obtener los datos guardados en localStorage
+    const storedData = JSON.parse(localStorage.getItem('formData'));
   
-      console.log(response.data);
-      // aquí puedes guardar la información de sesión del usuario en el estado global de tu aplicación
-  
-    } catch (error) {
-      console.error(error);
+    if (storedData && email === storedData.email && password === storedData.password) {
+      // Si los datos coinciden, redireccionar al usuario a la página de inicio
+      window.location.href = '/products';
+    } else {
+      // Si los datos no coinciden o no hay datos guardados, mostrar mensaje de error
+      alert('Correo electrónico o contraseña incorrectos');
     }
   
-    event.target.email.value = "";
-    event.target.password.value = "";
+    event.target.email.value = '';
+    event.target.password.value = '';
   };
   
 
@@ -34,20 +35,19 @@ export const Login = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <div className='emailDivLogin'>
-          <label htmlFor="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" />
+            <label htmlFor="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" />
           </div>
         </div>
         <div className="form-group">
           <div className="passwordDivLogin">
-          <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" />
+            <label htmlFor="password">Contraseña</label>
+            <input type="password" id="password" name="password" />
           </div>
         </div>
-        <button type="submit">Ingresar</button>
+        <button type="submit" className='botonIngreso'>Ingresar</button>
       </form>
       <p>¿Aun no tienes cuenta? <Link to="/signUp">Regístrate</Link></p>
     </div>
   );
-
-}
+};

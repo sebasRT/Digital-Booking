@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/SignUp.css"
+
+import '../styles/SignUp.css';
 
 export const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -20,88 +21,78 @@ export const SignUp = () => {
         lastName,
         email,
         password,
-        confirmPassword
+        confirmPassword,
       };
       console.table(formData);
+
+      localStorage.setItem('formData', JSON.stringify(formData));
+
       setFirstName('');
       setLastName('');
       setEmail('');
       setPassword('');
       setConfirmPassword('');
       setFormSubmitted(false);
-  
-      fetch('TU_API_URL', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Error saving form data');
-          }
-          console.log('Data saved successfully');
-        })
-        .catch(error => {
-          console.log('Error:', error);
-        });
+      alert('Los datos se han enviado correctamente');
     }
+
   };
-  
 
   const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+  setPassword(event.target.value);
   };
-
+  
   const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
+  setConfirmPassword(event.target.value);
   };
-
+  
   const passwordClass = formSubmitted && password !== confirmPassword ? 'error' : '';
-
+  
   return (
-    <div className="register-container">
-      <h1>Crear cuenta</h1>
-      <form onSubmit={handleSubmit}>
-        <div className='nombres'>
-        <div className="form-group">
-          <div className='nombreDiv'>
-          <label htmlFor="first-name" className="textTitulosInputs">Nombre</label>
-          <input type="text" className ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-          </div>
-        </div>
-        <div className="form-group">
-          <div className='apellidoDiv'>
-          <label htmlFor="last-name" className="textTitulosInputs" >Apellido</label>
-          <input type="text" className="apellido" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-          </div>
-        </div>
-        </div>  
-        <div className="form-group">
-          <div className='emailDiv'>
-          <label htmlFor="email" className="textTitulosInputs" >Correo electrónico</label>
-          <input type="email" className="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          </div>
-        </div>
-        <div className="form-group">
-          <div className='passwordDiv'>
-          <label htmlFor="password" className="textTitulosInputs">Contraseña</label>
-          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} className={passwordClass} />
-          </div>
-        </div>
-        <div className="form-group">
-          <div className='passwordConfirmDiv'>
-          <label htmlFor="confirm-password" className="textTitulosInputs" >Confirmar contraseña</label>
-          <input type="password" id="confirm-password" name="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} className={passwordClass} />
-          </div>
-          {formSubmitted && password !== confirmPassword && <p className="password-mismatch-message error">Las contraseñas no coinciden</p>}
-        </div>
-        <button type="submit" className="crearCuenta" >Crear cuenta</button>
-      </form>
-      {formSubmitted && password === confirmPassword && <p className="success-message"></p>}
-      <p>¿Ya tienes una cuenta? <Link to="/login"> Logueate</Link></p>
-    </div>
-  );
+  <div className="register-container">
+  <h1>Crear cuenta</h1>
+  <form onSubmit={handleSubmit}>
+  <div className='nombres'>
+  <div className="form-group">
+  <div className='nombreDiv'>
+  <label htmlFor="first-name" className="textTitulosInputs">Nombre</label>
+  <input type="text" className ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+  </div>
+  </div>
+  <div className="form-group">
+  <div className='apellidoDiv'>
+  <label htmlFor="last-name" className="textTitulosInputs" >Apellido</label>
+  <input type="text" className="apellido" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+  </div>
+  </div>
+  </div>
+  <div className="form-group">
+  <div className='emailDiv'>
+  <label htmlFor="email" className="textTitulosInputs" >Correo electrónico</label>
+  <input type="email" className="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+  </div>
+  </div>
+  <div className="form-group">
+  <div className='passwordDiv'>
+  <label htmlFor="password" className="textTitulosInputs">Contraseña</label>
+  <input type="password" className={password + ' password'} id="password" name="password" value={password} onChange={handlePasswordChange} />
 
-}
+</div>
+</div>
+<div className="form-group">
+<div className='passwordDiv'>
+<label htmlFor="confirm-password" className="textTitulosInputs">Confirmar contraseña</label>
+<input type="password" className={passwordClass + ' confirmPassword'} id="confirm-password" name="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
+{formSubmitted && password !== confirmPassword && <span className="errorMessage">Las contraseñas no coinciden</span>}
+</div>
+</div>
+<div className='submitDiv'>
+<button type="submit" className='submit-button'>Crear cuenta</button>
+</div>
+</form>
+<p>¿Ya tienes una cuenta? <Link to="/login"> Logueate</Link></p>
+</div>
+);
+};
+
+export default SignUp;
