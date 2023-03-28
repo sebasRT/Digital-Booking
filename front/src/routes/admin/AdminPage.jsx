@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context'
 import ProductCard from './ProductCard';
 
@@ -7,8 +8,9 @@ const AdminPage = () => {
     
   return (
     <div id='adminPage'>
-        <div className='cards-container'>
 
+<Link to="create" ><button className='createButton'></button></Link>
+        <div className='cards-container'>
     {Object.keys(products).map((product)=>{const pro = products[product];
     return <ProductCard key={`product${pro.idproductos}`} 
                         id={pro.idproductos}

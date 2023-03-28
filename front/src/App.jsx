@@ -11,6 +11,8 @@ import Booking from './routes/Booking'
 import ReservaExitosa from './routes/ReservaExitosa'
 import ScrollToTop from './assets/ScrollToTop'
 import AdminPage from './routes/admin/AdminPage'
+import ProductEditor from './routes/admin/ProductEditor'
+import CreateProduct from './routes/admin/CreateProduct'
 
 
 
@@ -37,8 +39,8 @@ const router = createBrowserRouter(
 
     {/* ------------------- Rutas de Administrador ---------------- */}
     <Route path='/admin' element={<AdminPage></AdminPage>}></Route>
-    <Route path='/admin/edit/:id'></Route>
-    <Route path='/admin/create'></Route>
+    <Route path='/admin/edit/:id' element={<ProductEditor></ProductEditor>}></Route>
+    <Route path='/admin/create' element={<CreateProduct></CreateProduct>}></Route>
   </Route>
 
   )

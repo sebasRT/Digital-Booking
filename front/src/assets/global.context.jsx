@@ -57,7 +57,7 @@ export const GlobalProvider = ({children}) => {
   
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,isLogged}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,isLogged,url}}>
       {children}
     </GlobalContext.Provider>
    
