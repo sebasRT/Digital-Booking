@@ -2,20 +2,31 @@ import React, { useContext, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context';
-import DetalleReserva from '../components/DetalleReserva';
-import FormReserva from '../components/FormReserva';
-import SelectReserva from '../components/SelectReserva';
+import DetalleReserva from '../components/booking/DetalleReserva';
+import FormReserva from '../components/booking/FormReserva';
+import SelectReserva from '../components/booking/SelectReserva';
 import Politicas from '../components/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"
-import { Calendar } from '../components/Calendar';
+import { Calendar, DateObject } from 'react-multi-date-picker';
 
 
 const Booking = () => {
   const {id}= useParams()
   const {products} = useContext(GlobalContext);
   const product = products.find((e)=>e.idproductos == id );
+  const [checkIn, setCheckIn] = useState("selecciona la fecha")
+  const [checkOut, setCheckOut] = useState("selecciona la fecha")
 
+  const handleCheck =(e) => {
+    if(e[1] != undefined){
+      const dateIn = new DateObject(e[0]).format()
+      const dateOut = new DateObject(e[1]).format();
+      setCheckIn(dateIn);
+      setCheckOut(dateOut)
+    }
+
+  }
   const date2 = new Date(2023,2,22);
     const media = useMedia();
     const today = new Date()
@@ -35,12 +46,24 @@ const Booking = () => {
       <div className='contenedor-reserva'>
       
       <FormReserva ></FormReserva>
-      <DetalleReserva />
+      <DetalleReserva checkIn={checkIn} checkOut={checkOut}/>
       <h3>Selecciona tu fecha de reserva</h3>
       <div className='contenedor-calendario' >
 
       <br />
-      <Calendar></Calendar>
+      <div className='calendar'>
+
+    <Calendar
+      minDate={new Date()}
+      range
+      rangeHover
+      numberOfMonths={media? 1 : 2}
+      onChange={handleCheck}
+      className={`yellow`}
+      >
+      
+    </Calendar>
+        </div>
       </div>
       <h3>Selecciona tu horario de llegada </h3>
       <div className='contenedor-select'>

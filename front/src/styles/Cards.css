@@ -4,7 +4,7 @@
   background-color: white;
   border-radius: 10px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: row;
   filter:drop-shadow(0px 3px 3px #DFE4EA);
   font-size: 1vw;

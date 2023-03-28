@@ -6,7 +6,7 @@ import { useLogged } from "../hooks/useLogged";
 import { useMedia } from "../hooks/useMedia";
 
 
-const url = "http://localhost:8080/"
+const url = "http://3.128.29.96:8080/"
   
 let chargedCounter = 0; 
 export const GlobalContext = createContext();

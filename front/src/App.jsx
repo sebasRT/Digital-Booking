@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import Header from './components/Header'
 import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
 import { Footer } from './components/Footer'
@@ -8,18 +7,20 @@ import { SignUp } from './routes/SignUp'
 import { Products } from './routes/Products'
 import { Results } from './routes/Results'
 import Product from './routes/Product'
-import { GlobalContext } from './assets/global.context'
 import Booking from './routes/Booking'
 import ReservaExitosa from './routes/ReservaExitosa'
+import ScrollToTop from './assets/ScrollToTop'
+import AdminPage from './routes/admin/AdminPage'
 
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<div id='app'>
+
     <Header></Header>
     <Outlet></Outlet>
-  
+    <ScrollToTop></ScrollToTop>
     <Footer></Footer></div>}>
 
     <Route path='/' element= {<Home></Home>}></Route>
@@ -28,9 +29,16 @@ const router = createBrowserRouter(
     <Route path='/products'element={<Products></Products>}></Route>
     <Route path='/product/:id' element={<Product></Product>}></Route>
     <Route path='/results' element={<Results></Results>}></Route>
-    <Route path='booking/:id' element={<Booking></Booking>}></Route>
+
+    {/* ------------------ Rutas de reservación ------------------- */}
+
+    <Route path='/booking/:id' element={<Booking></Booking>}></Route>
     <Route path='/reservaExitosa' element={<ReservaExitosa></ReservaExitosa>}></Route>
 
+    {/* ------------------- Rutas de Administrador ---------------- */}
+    <Route path='/admin' element={<AdminPage></AdminPage>}></Route>
+    <Route path='/admin/edit/:id'></Route>
+    <Route path='/admin/create'></Route>
   </Route>
 
   )

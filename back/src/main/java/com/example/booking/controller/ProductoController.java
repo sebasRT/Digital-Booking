@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 
 public class ProductoController {
-
     @Autowired
     IProductoService iProductoService;
 
