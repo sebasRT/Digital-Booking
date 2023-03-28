@@ -28,6 +28,8 @@ public class ProductoDTO {
 
     private String descripcion;
 
+    private String imagenPrincipal;
+
     private List<Imagen> imagenes;
 
     private Categoria categoria;

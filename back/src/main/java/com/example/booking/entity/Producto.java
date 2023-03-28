@@ -32,6 +32,9 @@ public class Producto {
     @Column(name="descripcion")
     private String descripcion;
 
+    @Column(name="imagen_principal")
+    private String imagenPrincipal;
+
     @OneToMany(mappedBy = "producto", cascade = CascadeType.MERGE)
     private List<Imagen> imagenes;
 
