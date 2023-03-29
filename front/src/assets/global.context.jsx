@@ -1,7 +1,6 @@
 
 import axios from "axios";
 import { createContext, useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
 import { useLogged } from "../hooks/useLogged";
 import { useMedia } from "../hooks/useMedia";
 
