@@ -35,7 +35,7 @@ public class Producto {
     @Column(name="imagen_principal")
     private String imagenPrincipal;
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.MERGE)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private List<Imagen> imagenes;
 
     @ManyToOne
@@ -48,7 +48,7 @@ public class Producto {
     @Column(name="politicas")
     private String politicas;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "caracteristicas_has_productos",
             joinColumns = @JoinColumn(name = "idproductos"),

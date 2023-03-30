@@ -20,4 +20,10 @@ public class ImagenDTO {
     private String url;
 
     private Producto producto;
+
+    public ImagenDTO(String titulo, String url, Producto producto) {
+        this.titulo = titulo;
+        this.url = url;
+        this.producto = producto;
+    }
 }

@@ -20,4 +20,10 @@ public class CategoriaDTO {
     private String descripcion;
 
     private String url_imagen;
+
+    public CategoriaDTO(String titulo, String descripcion, String url_imagen) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.url_imagen = url_imagen;
+    }
 }

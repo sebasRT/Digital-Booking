@@ -47,4 +47,16 @@ public class ProductoDTO {
     private Ciudad ciudad;
 
 
+    public ProductoDTO(String titulo, String ubicacion, String descripcion, String imagenPrincipal, List<Imagen> imagenes, Categoria categoria, String disponibilidad, String politicas, Set<Caracteristica> caracteristicas, Ciudad ciudad) {
+        this.titulo = titulo;
+        this.ubicacion = ubicacion;
+        this.descripcion = descripcion;
+        this.imagenPrincipal = imagenPrincipal;
+        this.imagenes = imagenes;
+        this.categoria = categoria;
+        this.disponibilidad = disponibilidad;
+        this.politicas = politicas;
+        this.caracteristicas = caracteristicas;
+        this.ciudad = ciudad;
+    }
 }
