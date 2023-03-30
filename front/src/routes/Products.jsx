@@ -11,7 +11,7 @@ import "../styles/Cards.css"
 export const Products = () => {
 
   const {products} = useContext(GlobalContext);
-  console.log(products)
+  
   return (
     <div>
       <h2>Productos</h2>

@@ -92,7 +92,7 @@
     display: flex;
    }
   /* Modelo adaptativo tablet */
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     .detalle {
       display: flex;
     }
@@ -105,7 +105,7 @@
     .detalle__datos h3 {
       font-size: 1.5rem;
     }
-  }
+  } */
   
   /* Modelo adaptativo destokp */
   @media screen and (min-width: 992px) {
