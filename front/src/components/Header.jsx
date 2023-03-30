@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { useMedia } from '../hooks/useMedia'
 import { Button1 } from './Button1'
 import { Menu } from './Menu'
+import { useLogged } from '../hooks/useLogged';
 
 const Header = () => {
   const isMobile = useMedia();
+  const {logged,user} = useLogged();
 
   const [hidden, setHidden] = useState({position:"sticky", top:"0px"})
   const handleHidden = ()=>{
@@ -20,17 +22,19 @@ const Header = () => {
 
       </Link>
 
-    <div className='sessionButtonsContainer'>
-      {
+    
+      { logged ? <Menu></Menu> :
+        
         isMobile ?(
           <Menu></Menu>
-        ):(          <>
+        ):(     <div className='sessionButtonsContainer'>
           <Button1 link={'signUp'} text={"Crea Cuenta"}></Button1>
           <Button1 link={'login'} text={'Ingresa'}></Button1>
-          </>  
+                </div>
+          
           )
         }
-    </div> 
+   
     <button className='quitHeader' onClick={handleHidden}>X</button> 
     </header>
   )

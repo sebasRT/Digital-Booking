@@ -29,7 +29,7 @@ body{
   min-height: 100vh;}
 /* -----------------------------------|HEADER STYLES|------------------------------------- */
 header{
-  z-index: 100;
+  z-index: 1;
   background-color: #FFFBE2;
   width: 100%;
   position: sticky;
@@ -45,6 +45,9 @@ header{
   justify-content: space-around;
   padding-right: 6%;
   
+}
+.menu{
+  margin-right: 100px;
 }
 .sessionButton{
   margin: 3%;

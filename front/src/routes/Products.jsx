@@ -27,7 +27,7 @@ export const Products = () => {
             <Card 
             key={pro.idproductos}
             id= {pro.idproductos}
-            url= {pro.categoria.url_imagen}
+            url= {pro.imagenPrincipal}
             category= {pro.categoria.titulo}
             title= {pro.titulo}
             location ={pro.ubicacion}

@@ -1,21 +1,28 @@
 .dropdown-menu{
     display:grid;
     gap: 10px;
-    background-color: #FFFBE2;
-    width: 80vw;    
+    background-color: #FFFBE2; 
     padding: 10vw;
-    margin-top: 10px;
+    margin-top: 15px;
     position:absolute;
     transition: left 1s;
+    filter:drop-shadow(0px 3px 3px  #737578);
+    border-radius: 5px;
   }
   
   .dropdown-menu.active{
-    left: 0px;
+    left: 60%;
   }
   .dropdown-menu.unactive{
     left: 100vw;
 
   }
+  @media screen and (max-width: 670px){
+    .dropdown-menu.active{
+      left: 0px;
+    }
+  
+ }
   .menuButton{
     background-color: transparent;
     border-style: none;
