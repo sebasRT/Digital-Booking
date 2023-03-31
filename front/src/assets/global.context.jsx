@@ -18,7 +18,7 @@ const cities = [{value: "1" , label:"Medellin"},
 
 export const GlobalContext = createContext();
 
-export const GlobalProvider = ({children}) => {  
+export const GlobalProvider = ({children}) => {
 
   const isMobile = useMedia();
 
@@ -37,7 +37,7 @@ export const GlobalProvider = ({children}) => {
   useEffect(() => {
     async function getProducts (){
       const response = await axios.get(`${url}producto`)
-      chargedCounter = chargedCounter+1; 
+      chargedCounter = chargedCounter+1;
       handleCharged()
       setProducts(response.data)
     }
@@ -45,7 +45,7 @@ export const GlobalProvider = ({children}) => {
 
     async function getProductsRandom (){
       const response = await axios.get(`${url}producto/random`)
-      chargedCounter = chargedCounter+1; 
+      chargedCounter = chargedCounter+1;
       handleCharged()
       setproductsRandom(response.data)
     }
@@ -53,20 +53,20 @@ export const GlobalProvider = ({children}) => {
 
     async function getCategories (){
       const response = await axios.get(`${url}categoria`)
-      chargedCounter = chargedCounter+1; 
+      chargedCounter = chargedCounter+1;
       handleCharged()
       setcategories(response.data)
     }
     getCategories()
 
-    // async function 
+    // async function
   }, [])
-  
+
   return (
 
     <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities}}>
       {children}
     </GlobalContext.Provider>
-   
+
   )
 }
