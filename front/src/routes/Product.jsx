@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Calendar } from 'react-multi-date-picker'
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context'
@@ -18,7 +18,13 @@ const Product = () => {
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
     const allCards = cards
- 
+
+    const ref = useRef();
+
+    useEffect(() => {
+      ref.current.scrollTop = 0;
+    },[ref]);
+
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
     const cardsImages = allCards.find((e)=> e.id == id).images
@@ -35,7 +41,7 @@ const Product = () => {
     const [values, setValues] = useState([today, tomorrow,date2 ])
 
   return (
-    <div>
+    <div ref={ref}>
 
       <div className="hiden">
 

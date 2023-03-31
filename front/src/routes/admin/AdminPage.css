@@ -1,0 +1,18 @@
+.icon{
+    font-size: 4rem;
+    align-self: center;
+    margin: 10px;
+    color: #FBC02D;
+}
+
+.createButton{
+    height: 50px;
+    width: 50px;
+}
+.product-editor{
+    top: 100px;
+}
+.editableProducts-box{
+    width: 90vw;
+    margin: auto;
+}

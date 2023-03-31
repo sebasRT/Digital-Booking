@@ -3,16 +3,16 @@ import { faLocationDot, faStar} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Select from 'react-select';
-import { GlobalContext } from '../assets/global.context';
-import '../styles/DetalleReserva.css';
+import { GlobalContext } from '../../assets/global.context';
+import '../../styles/DetalleReserva.css';
 
 
-const DetalleReserva = () => {
+const DetalleReserva = ({checkIn, checkOut}) => {
 
     const {id}= useParams()
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
+  
   return (
     <div className="detalle">
       <div className="detalle_contenedro--uno">
@@ -38,11 +38,11 @@ const DetalleReserva = () => {
            
             </div>
             <div className='check'>
-              <hr />
-              <p>check in</p>
-              <hr />
-              <p>check out</p>
-              <hr />
+              <hr className='lin' />
+              <p>Check- In:  <span>{checkIn}</span></p>
+              <hr className='lin'/>
+              <p>check-Out:  <span>{checkOut}</span></p>
+              <hr className='lin' />
                 {/* <Select
                 className="select"
                 placeholder="check in"

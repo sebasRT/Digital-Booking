@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/FormReserva.css'
+import '../../styles/FormReserva.css'
 const FormReserva = () => {
   return (
 

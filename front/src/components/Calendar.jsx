@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-multi-date-picker'
-import "react-multi-date-picker/styles/colors/yellow.css"
+import "../styles/Calendar.css"
 import { useMedia } from '../hooks/useMedia'
 
 export const Calendar = ({name,onChange,value}) => {
@@ -11,7 +11,8 @@ export const Calendar = ({name,onChange,value}) => {
   return (
    
    
-            <DatePicker 
+            <DatePicker
+              
             containerStyle={{width:'300px'}}
             placeholder='Check In - Check Out'
             name={name}
