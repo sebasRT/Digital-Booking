@@ -31,7 +31,7 @@ export const GlobalProvider = ({children}) => {
   const [charged, setCharged] = useState(false)
 
   const handleCharged =()=>{
-    if (chargedCounter > 5) {
+    if (chargedCounter > 2) {
       setCharged(true)
     }
   }
