@@ -67,4 +67,11 @@ public class ProductoController {
     public ResponseEntity<Iterable<ProductoDTO>> findRandomProductos() {
         return ResponseEntity.ok(iProductoService.findRandomProductos());
     }
+
+    //Productos por id de ciudad
+    @Operation(summary = "Get list of productos for id ciudad")
+    @GetMapping("/ciudad/{id}")
+    public ResponseEntity<Iterable<ProductoDTO>> findAllProductosByCiudadId(@PathVariable Long id) {
+        return ResponseEntity.ok(iProductoService.findByCiudadId(id));
+    }
 }
