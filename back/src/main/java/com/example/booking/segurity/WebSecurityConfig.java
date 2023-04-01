@@ -70,7 +70,7 @@ public class WebSecurityConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(org.springframework.web.servlet.config.annotation.CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("*http://127.0.0.1:5173").allowedMethods("*").maxAge(3600);
+                registry.addMapping("/**").allowedOrigins("http://127.0.0.1:5173").allowedMethods("*").maxAge(3600);
             }
         };
     }
