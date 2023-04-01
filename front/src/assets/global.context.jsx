@@ -20,6 +20,8 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
 
+  localStorage.setItem("email","fconiglio100@gmail.com")
+  localStorage.setItem("password","password")
   const isMobile = useMedia();
 
   
@@ -29,7 +31,7 @@ export const GlobalProvider = ({children}) => {
   const [charged, setCharged] = useState(false)
 
   const handleCharged =()=>{
-    if (chargedCounter > 5) {
+    if (chargedCounter > 2) {
       setCharged(true)
     }
   }

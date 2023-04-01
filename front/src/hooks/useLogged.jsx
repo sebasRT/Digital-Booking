@@ -13,7 +13,7 @@ export const useLogged = () => {
     
 useEffect(() => {
   const jsonUser = JSON.stringify(user);
-  axios.get(`${url}login`,jsonUser).then((e)=>{
+  axios.post(`${url}login`,jsonUser).then((e)=>{
     console.log(e.data);
   })
 }, [])
