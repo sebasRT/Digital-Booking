@@ -40,7 +40,7 @@ public class WebSecurityConfig {
                 .cors(Customizer.withDefaults())
                 .csrf().disable()
                 .authorizeRequests()
-                .requestMatchers( "/producto/**","/categoria/**")
+                .requestMatchers( "/producto/**","/categoria/**","/usuarioCliente/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
