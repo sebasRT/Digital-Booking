@@ -1,7 +1,6 @@
 package com.example.booking.segurity;
 
 import lombok.AllArgsConstructor;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,9 +12,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -70,7 +66,7 @@ public class WebSecurityConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(org.springframework.web.servlet.config.annotation.CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://127.0.0.1:5173").allowedMethods("*").maxAge(3600);
+                registry.addMapping("/**").allowedOrigins("http://back-end-grupo-11.s3-website.us-east-2.amazonaws.com").allowedMethods("*").maxAge(3600);
             }
         };
     }
