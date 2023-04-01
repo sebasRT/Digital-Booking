@@ -29,6 +29,9 @@ public class WebSecurityConfig {
         jwtAuthenticationFilter.setAuthenticationManager(authenticationManager);
         jwtAuthenticationFilter.setFilterProcessesUrl("/login");
 
+        //agregar habilitar cors
+        http.cors();
+
         return http
                 .csrf().disable()
                 .authorizeRequests()
