@@ -20,6 +20,8 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
 
+  localStorage.setItem("email","fconiglio100@gmail.com")
+  localStorage.setItem("password","password")
   const isMobile = useMedia();
 
   
