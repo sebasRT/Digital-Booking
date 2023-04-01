@@ -11,12 +11,12 @@ export const useLogged = () => {
       }
     )
     
-// useEffect(() => {
-//   const jsonUser = JSON.stringify(user);
-//   axios.get(`${url}login`,jsonUser).then((e)=>{
-//     console.log(e.data);
-//   })
-// }, [])
+useEffect(() => {
+  const jsonUser = JSON.stringify(user);
+  axios.get(`${url}login`,jsonUser).then((e)=>{
+    console.log(e.data);
+  })
+}, [])
 
   return ({logged,user})
 }

@@ -9,7 +9,7 @@ import cards from "../assets/cards.json"
 import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
 import Politicas from '../components/Politicas'
-
+import disponibilidades from '../assets/disponibilidades.json'
 
 
 const Product = () => {
@@ -17,6 +17,7 @@ const Product = () => {
     const {id} = useParams()
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
+    const disponibilidad = disponibilidades[id]
     const allCards = cards
 
     const ref = useRef();
@@ -34,11 +35,11 @@ const Product = () => {
     const today = new Date()
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
- 
+    const availableDays = allCards.find((e)=> e.id == id).disponibilidad
     
     // Una vez las fechas disponibles estén en el back: cambiar este array por la info en el back
     //                                             ||
-    const [values, setValues] = useState([today, tomorrow,date2 ])
+    const [values, setValues] = useState(disponibilidad)
 
   return (
     <div ref={ref}>
