@@ -11,7 +11,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/54092274.jpg?k=1554c3180128b815c2594d0fc42a682158ef088e18d59652cbc0214186062059&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/424945472.jpg?k=4ebcb174fbe8b2d0ef63368823f45520a000e31700e188a70d5a93d5999cc2a5&o=&hp=1"
           },
-
+      "disponibilidad": ["2022-03-29","2022-03-01","2022-03-03","2022-03-03","2022-03-03","2022-03-03"],
       "category": "Hotel",
       "title": "Dorado la 70",
       "location": "medellin",
@@ -32,6 +32,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164245556.jpg?k=01d7541007fdce12d5235e6e87d87ac2d625c96490a8aa2b8d60d28e6f8c8e6d&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/164245547.jpg?k=640a770c2b3dc099fd9b3d920168f90c6bac5edbda53f3b5dfc8cb3fa189683d&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Apartamento",
       "title": "Loma Verde",
       "location": "Medellin",
@@ -51,6 +52,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/190762392.jpg?k=858f61ae91039950dcf16e27ed2460386466d40fdc8c94d9acd697d5b38a4810&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/143052632.jpg?k=a1098c41ef31de0c927ac05d5681de63b5b7c18f0c1e46144d960f86877ac954&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "LimaLimon",
       "location": "Bogota",
@@ -63,6 +65,7 @@
       "id": "4",
       "url": "https://madison-saint-jean-de-luz-saint-jean-pied-de-port.hotelmix.es/data/Photos/r3584x1618/7632/763224/763224376/Hotel-Spa-Madison-Saint-Jean-De-Luz-Exterior.JPEG",
       "coordinates":{"lat" :12.576565644665825,"long":-81.70204942458483},
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "images":{
         "img1":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/336958886.jpg?k=3e5d630366800aca5417cba3befc5717ffc4b7c94a7400b13eb6d4e51d9fcb72&o=&hp=1",
         "img2":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/405192549.jpg?k=e455cf37e0fd191ef835910a6ec27cba2074aa0327a20f1854e737c2b3fed22d&o=&hp=1",
@@ -89,6 +92,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153577797.jpg?k=42570021b42fd7fa4ba2d1d94ad312f9b3622e7c335b5f59b7698f7f8274c4e5&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/153844762.jpg?k=96e33a233c8a60af46e9c5eb289c14df758aeb56a6965e16fd6db83e4d6e83fc&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "Ibis Bogota",
       "location": "Bogota",
@@ -109,6 +113,7 @@
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/420122154.jpg?k=79650a49401c07b5bed6c7d31b156fa80ecd6a5474ceeb980f238668f24a106a&o=&hp=1"
           },
 
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Apartamento",
       "title": "La Curva",
       "location": "Cali",
@@ -128,6 +133,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/382924915.jpg?k=38c29bb18c4a3d2cdea1e9f10b46dda6442a662cbf5af0a13cb7a6fb100df958&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286467424.jpg?k=dc2c4b76dc158893a182f7ffc33679d3728fc81002af435e71efef4721e0d4f3&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "Distrito Hostel",
       "location": "Santa Marta",
@@ -147,6 +153,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992696.jpg?k=c97c2360f5b0977962ee626d0a83efc86ef1804ab2091ac5290931e401596328&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/419992704.jpg?k=6643653203bfb65824306190f654fe8de358b913e6353ad94db2df447a5f501e&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Bed & Breakfast",
       "title": "Vistayrona",
       "location": "Santa Marta",
@@ -167,6 +174,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/35584592.jpg?k=d5a00bae2a38f193441246676faea32399fbd921c6a4cc8e1f876293413047ab&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/66925918.jpg?k=4e27aaeb954b6b87c77e745927b8a1e1583d477163ff7b188fee73a131d45290&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hotel",
       "title": "Movich Buro 26",
       "location": "Bogota",
@@ -187,6 +195,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/325192088.jpg?k=485fb2295ad37f24b6d4d13f2f0bf8c47f362e7bda59dff7b20740c2021bea5a&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/12561596.jpg?k=5f4097e44256fa1dec0511f798cfd677700d021140d2047c35c83e3dc84a3374&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Apartamento",
       "title": "Portal del rodeo",
       "location": "Medellin",
@@ -206,6 +215,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/390723463.jpg?k=e5eb0e3d2165e6851ae5f1628cdc199133c287577750ae76cd4d52e935962510&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/339091093.jpg?k=1c541a95e053e28ab9d9f6b9cb636039440806605239c6145b62d4094d7efdc1&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "Masaya Hostel",
       "location": "Santa Marta",
@@ -225,6 +235,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/97273385.jpg?k=a98a470d2df423c7b85788475dab50b8d30016452e567e02f02ff7b023a9a710&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/206919039.jpg?k=3c1275865f7eb7211a3b8dffd8194bbce619fcda37ecfe9a06ea916a2b0673f3&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Bed & Breakfast",
       "title": "Casa Ruta Sur",
       "location": "Cali",
@@ -244,6 +255,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/275080001.jpg?k=d6bb4d1423628cf9c5d34e04c5e585fa1b958bf6de55bd79d7e4b0baf2cbb280&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/269887041.jpg?k=a645ea62595ae427ce70574a677ae0a035b4991505f9473e29401673caee1dc4&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hotel",
       "title": "Las vegas Hostel",
       "location": "Guatape",
@@ -261,6 +273,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407759191.jpg?k=a443ad5952fe41409dd7aff54b313b88fb2a788e5b93ba832b3681b13d52065f&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/407759196.jpg?k=08694be9b590cd3f8d44a68862073386a2a21560e857c01eec1e4658e5f01e09&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Apartamento",
       "title": "Casa Azul",
       "location": "Manizales",
@@ -280,6 +293,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77079044.jpg?k=5f07ad3f92431363d13aae60f713c79351023885b1e32488ae45bb5d0aca66b5&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/77078496.jpg?k=d22524da08c487c385c047421b5fd20ce76f61a875b05d9b2a7504c667285480&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "La Isla Inn",
       "location": "San Andres",
@@ -299,6 +313,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/187538509.jpg?k=d7d58e1b1b79e125c3f673d0768d752900d48d3910ae6c8fea560be9260b211f&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/216391518.jpg?k=e2eb6faae5024949fa86dcf2ff861e6799a3466b378d1182ae39be051e4be453&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Bed & Breakfast",
       "title": "Balcones Casona",
       "location": "Guatape",
@@ -318,6 +333,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/94104172.jpg?k=1d4dc51ae9be57eb84896565a5354c0bf95de6ed712036cafc62d7caf7b8e092&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/422323417.jpg?k=f0edd36a791d63941028dea468a64a2794c0a2cebe782c10c001eb2f3edf7e0b&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hotel",
       "title": "Hotel Carretero",
       "location": "Manizales",
@@ -337,6 +353,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133062896.jpg?k=24b3e046ee8b267b3dde1eb5b26ee8d3715073c1b0adc21db816df427ddccdf1&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/133160395.jpg?k=72034367874bdf05bd40455488ea393a55cc3164266bcfd8bbea4a533c367cdc&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Apartamento",
       "title": "Miss Leila",
       "location": "San Andres",
@@ -356,6 +373,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/286304002.jpg?k=e00d446f770b86e1dd18335ff87fc91a42cbf8f0056c0498d0b8bb9a1b1e7ec6&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/297112036.jpg?k=2f630550175c0d930558767be045d41d264055b1d208c0a9a93758b5708c7c5c&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Hostel",
       "title": "Medellín Vibes",
       "location": "Medellin",
@@ -375,6 +393,7 @@
         "img4":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/74569457.jpg?k=75160e8fb4a364379f720369f754388e4eb493642c6465ddf6ec87f4e9c23c52&o=&hp=1",
         "img5":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/74569477.jpg?k=559f264e275c21d7ff2bee6008b39a51aedf2e5fa07fa38ea09b4269c8300a24&o=&hp=1"
           },
+      "disponibilidad": ["2022-02-29","2022-03-01","2022-03-02"],
       "category": "Bed & Breakfast",
       "title": "Casablanca",
       "location": "Cali",

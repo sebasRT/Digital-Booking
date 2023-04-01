@@ -45,17 +45,19 @@ const categoriesJSON = categories;
   return (
     <div className='searching'>
       <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
-    <Form className='searchingForm' method="get" action="/results" onSubmit={handleSubmit}>
+      <Form className='searchingForm' method="get" action="/results" onSubmit={handleSubmit}>
       
-    <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>
-    <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
+          <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>
     
-      <Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar>
-      <button type="button" className='searchButton'>
-        <Link to= {
-          `/results?location=${formValues.location}&category=${formValues.category}&date=${formValues.chechInOut}`
-      }onClick={handleSubmit}>Buscar</Link>
-      </button>
+          <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
+    
+          <div className='placeInput'><Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar></div>
+
+          <button type="button" className='searchButton'>
+            <Link to= {
+            `/results?location=${formValues.location}&category=${formValues.category}&date=${formValues.chechInOut}`
+            }onClick={handleSubmit} style={{color:"white"}}>Buscar</Link>
+          </button>
     </Form>
   </div>
   )
