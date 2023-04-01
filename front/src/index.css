@@ -136,7 +136,10 @@ footer > p{
     font-size: 2vh;
   }
 }
-
+a{
+  text-decoration: none;
+  color:black;
+}
 @media screen and (max-width: 480px){
   .icon{
     width: 0.8rem;
