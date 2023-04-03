@@ -13,6 +13,7 @@ import ScrollToTop from './assets/ScrollToTop'
 import AdminPage from './routes/admin/AdminPage'
 import ProductEditor from './routes/admin/ProductEditor'
 import CreateProduct from './routes/admin/CreateProduct'
+import CreacionExitosa from './routes/CreacionExitosa'
 
 
 
@@ -50,6 +51,7 @@ const router = createBrowserRouter(
     <Route path='/admin' element={<AdminPage></AdminPage>}></Route>
     <Route path='/admin/edit/:id' element={<ProductEditor></ProductEditor>}></Route>
     <Route path='/admin/create' element={<CreateProduct></CreateProduct>}></Route>
+    <Route path='/creacionExitosa' element={<CreacionExitosa></CreacionExitosa>}></Route>
   </Route>
   
 

@@ -16,6 +16,9 @@ const cities = [{value: "1" , label:"Medellin" , url:"https://th.bing.com/th/id/
                 {value: "7" , label:"Manizales" , url:"https://www.cronicadelquindio.com/files/noticias/20110226072344.jpg"},
                 {value: "5" , label:"Santa Marta" , url:"https://megaconstrucciones.net/images/urbanismo/foto29/santa-marta-98.jpg"}]
 
+const caracteristica= [{id: "1" , titulo: "Wi-Fi",urlImagen:"./icons/agregar.svg" },
+                        {id: "2" , titulo: "Wi-Fi",urlImagen:"./icons/agregar.svg" }]
+
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
@@ -67,7 +70,7 @@ export const GlobalProvider = ({children}) => {
 
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities,caracteristica}}>
       {children}
     </GlobalContext.Provider>
 
