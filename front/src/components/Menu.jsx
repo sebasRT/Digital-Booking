@@ -9,8 +9,16 @@ import { useMedia } from '../hooks/useMedia';
 export const Menu = () => {
     const [open, setOpen] = useState(false)
     const openHandle = ()=> setOpen(prev => !prev)
-    const {logged,name} = useLogged();
+    const {logged,name,admin} = useLogged();
     const isMobile = useMedia();
+
+    const closeSession = ()=>{
+      localStorage.removeItem("name")
+      localStorage.removeItem("email")
+      localStorage.removeItem("password")
+      window.location.href = '/';
+    }
+
     useEffect(() => {
       const closeDropDown = e => {
         if (e.target.id != "menuButton") {
@@ -30,12 +38,14 @@ export const Menu = () => {
         {
           logged ? (<>
           <Button1 text={name} ></Button1>
-          <Button1 text="Mis reservas" link={`admin`}></Button1>
+          {admin?  <Button1 text="Edita Productos" link={`admin`}></Button1>: <Button1 text="Mis reservas" link={`bookings`}></Button1>}
+          <button onClick={closeSession}>cerrar sesión</button>
           </>
                       ):(<>
           <Button1 link={'/login'} text={"login"}></Button1>
           <Button1 link={'signUp'} text={'sign up'}></Button1>
           </>)
+
         }
         </div>
     </div>

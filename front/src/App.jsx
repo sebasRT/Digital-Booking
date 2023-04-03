@@ -14,7 +14,7 @@ import AdminPage from './routes/admin/AdminPage'
 import ProductEditor from './routes/admin/ProductEditor'
 import CreateProduct from './routes/admin/CreateProduct'
 import CreacionExitosa from './routes/CreacionExitosa'
-
+import UsersBookings from './routes/UsersBookings'
 
 
 const router = createBrowserRouter(
@@ -28,7 +28,6 @@ const router = createBrowserRouter(
 
     <Header></Header>
     <Outlet>
-
     </Outlet>
     <Footer></Footer>
     </div>
@@ -46,7 +45,7 @@ const router = createBrowserRouter(
 
     <Route path='/booking/:id' element={<Booking></Booking>}></Route>
     <Route path='/reservaExitosa' element={<ReservaExitosa></ReservaExitosa>}></Route>
-
+    <Route path='/bookings' element={<UsersBookings></UsersBookings>}></Route>
     {/* ------------------- Rutas de Administrador ---------------- */}
     <Route path='/admin' element={<AdminPage></AdminPage>}></Route>
     <Route path='/admin/edit/:id' element={<ProductEditor></ProductEditor>}></Route>
@@ -63,8 +62,6 @@ function App() {
   return (
     
     <RouterProvider router={router}>    
-    <ScrollRestoration>
-    </ScrollRestoration>
     </RouterProvider>
   
   )

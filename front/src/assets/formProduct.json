@@ -1,0 +1,27 @@
+{
+
+    "titulo": "new",
+    "ubicacion": "Medellin",
+    "descripcion": "Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva.",
+    "imagenPrincipal": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/429254644.jpg?k=9bfd141c05aedc0641cc7e20e8fadb312572f7333b22632a26c22aff02b78129&o=&hp=1",
+    "imagenes": [],
+    "categoria": {
+        "idcategorias": 1,
+        "titulo": "Hoteles",
+        "descripcion": "Hoteles de Colombia",
+        "url_imagen": "https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white"
+    },
+    "disponibilidad": "2022-03-21,2022-03-01,2022-03-03,2022-03-03,2022-03-03,2022-03-03",
+    "politicas": null,
+    "caracteristicas": [
+        {
+            "idcaracteristicas": 1,
+            "descripcion": "Gimnasio,Terraza Bar,Turco",
+            "imagen": null
+        }
+    ],
+    "ciudad": {
+        "idciudades": 1,
+        "nombre": "Medellin"
+    }
+}

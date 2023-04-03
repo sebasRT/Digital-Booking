@@ -1,7 +1,6 @@
 
 import axios from "axios";
 import { createContext, useEffect, useState } from "react"
-import { useLogged } from "../hooks/useLogged";
 import { useMedia } from "../hooks/useMedia";
 
 
@@ -39,6 +38,7 @@ export const GlobalProvider = ({children}) => {
       setCharged(true)
     }
   }
+
 
   useEffect(() => {
     async function getProducts (){

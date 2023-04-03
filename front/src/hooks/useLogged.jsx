@@ -17,11 +17,10 @@ export const useLogged = () => {
 useEffect(() => {
   const jsonUser = JSON.stringify(user);
   axios.post(`${url}login`,jsonUser).then((e)=>{
-  console.log(e.data);
-  setLogged(true)
-  e.data.username == "fconiglio100@gmail.com" ? setAdmin(true): null;})
+  e.status == 200? setLogged(true):setLogged(false);
+  e.data[0] == "fconiglio100@gmail.com" ? setAdmin(true): null;})
   .catch(e=>{console.log(e);})
-},[])
+})
 
   return ({logged,name,admin})
 }

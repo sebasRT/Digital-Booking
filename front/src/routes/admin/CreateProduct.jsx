@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
-
-
+import { useEffect } from 'react';
+import axios from 'axios';
+import formProduct from "../../assets/formProduct.json"
 const CreateProduct = () => {
-
-
+  const [submit, setSubmit] = useState(false)
+  const {url}= useContext(GlobalContext)
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
 
@@ -81,7 +82,8 @@ const CreateProduct = () => {
     const [imagenes, setImagenes] = useState([]);
   
     const[contadorIdImg,setContadorIdImg]= useState(1)
-  
+
+    
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
         setImagenes([...imagenes, {
@@ -115,6 +117,35 @@ const CreateProduct = () => {
     const {cities} = useContext(GlobalContext);
     const {caracteristica}= useContext(GlobalContext);
     
+const [form, setform] = useState()
+
+useEffect(() => {
+
+  const form = {
+    titulo: nombrePropiedad,
+    ubicacion: direccion,
+    descripcion: descripcion,
+    imagenPrincipal: imagenUrl,
+    imagenes: imagenes,
+    categoria: categorias[categoriaId], 
+    politicas: politicasDeCancelacion,
+    caracteristicas: caracteristicas,
+    ciudad: ciudades[ciudadId], 
+  };
+
+setform(form);
+}, [submit])
+
+
+  const submitProduct =()=>{
+    setSubmit(!submit); 
+
+    axios.post(`${url}producto/register`,form)
+    .then(e=>console.log(e))
+    .catch(e=>console.log(e))
+
+  }
+
   return (
 
     <div>
@@ -338,7 +369,7 @@ const CreateProduct = () => {
               </div>
               <div className="contenedor_centrado">
                
-                <button type="submit" className="crearProducto" >Crear</button>
+                <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
                 
               </div>
 
