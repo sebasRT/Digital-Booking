@@ -1,9 +1,12 @@
 
-
+.hiden h2{
+  padding-top: 1.7rem;
+  margin-top: 0;
+}
 
 .creacionProducto__titulo {
   background-color: #e5e5e5;
-  font-family: "Roboto";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
@@ -12,7 +15,8 @@
   font-weight: 700;
   padding-left: 3rem;
   padding-top: 1.8rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
+  margin: 0;
 }
 
 .creacionProducto__subtitulo {
@@ -42,7 +46,7 @@
 }
 
 .creacionProducto__form {
-  font-family: "Roboto";
+  font-family: "Poppins";
   display: flex;
   box-sizing: border-box;
   border: 0.0625rem solid #dfe4ea;
@@ -54,7 +58,7 @@
 }
 
 .creacionProducto__form .crearProducto {
-  background: var(--color-principal);
+  background: #fbc02d ;
   box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.12);
   border-radius: 0.3125rem;
   width: 25%;
@@ -72,7 +76,7 @@
   transition: 240ms;
 }
 .creacionProducto__form .crearProducto:hover {
-  background-color: var(--color-dos);
+  background-color: #31363F;
 }
 .creacionProducto__form .contenedor_centrado {
   width: 100%;
@@ -83,22 +87,22 @@
 }
 
 .creacionProducto__form h3 {
-  color: var(--color-dos);
+  color: #31363F;
   padding: 0.8rem;
 }
 
 .creacionProducto__form input {
-  background: var(--color-cuatro);
+  background: #DFE4EA;
   opacity: 1;
   box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
   border-radius: 0.3125rem;
   width: 100%;
   padding: 0.5rem;
-  border-radius: 0.3125rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
   cursor: pointer;
   background: #ffffff;
+  border: none;
 }
 
 .creacionProducto__form textarea {
@@ -110,7 +114,7 @@
   border-radius: 0.3125rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
-  font-family: "Roboto";
+  font-family: "Poppins";
   cursor: pointer;
   background: #ffffff;
   resize: none;
@@ -119,7 +123,7 @@
 }
 
 .creacionProducto__form select {
-  background: var(--color-cuatro);
+  background:#DFE4EA;
   opacity: 1;
   box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
   border-radius: 0.3125rem;
@@ -135,7 +139,7 @@
 
 input::-webkit-input-placeholder {
   opacity: 0.5;
-  color: var(--color-dos);
+  color:#31363F;
   font-size: 0.875rem;
 }
 
@@ -146,10 +150,10 @@ input::-webkit-input-placeholder {
 line-height: 30px;
 font-weight: 500;
 font-size: 14px;
-color: var(--color-dos);
+color:#31363F;
 }
 .input-box2 label {
-  color: var(--color-dos);
+  color: #31363F;
   font-weight: 500;
   line-height: 0.875rem;
 }
@@ -218,7 +222,7 @@ input.box-elemento-imagen {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 95%;
+    width: 92%;
   }
   .creacionProducto__contenedor__contraste .creacionProducto__felexContainer {
     display: flex;
@@ -246,7 +250,7 @@ input.box-elemento-imagen {
     align-items: center;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
+    font-family: "Poppins";
   }
 
   .creacionProducto_contenedor_checkboxes .input-checkbox input {
@@ -312,6 +316,6 @@ input.box-elemento-imagen {
   }
 
   .pantalla__creacionProducto--contenedor__principal {
-    width: 100%;
+    width: 94%;
   }
 }

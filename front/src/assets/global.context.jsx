@@ -21,16 +21,14 @@ const cities = [{value: "1" , label:"Medellin"},
                 {value: "7" , label:"Manizales"},
                 {value: "5" , label:"Santa Marta"}]
 
+const caracteristica= [{id: "1" , titulo: "Wi-Fi",urlImagen:"./icons/agregar.svg" },
+                        {id: "2" , titulo: "Wi-Fi",urlImagen:"./icons/agregar.svg" }]
 
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
 
   const isMobile = useMedia();
-
-  const isLogged = useLogged();
-
-
 
   
 
@@ -75,7 +73,7 @@ export const GlobalProvider = ({children}) => {
 
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities,caracteristica}}>
       {children}
     </GlobalContext.Provider>
 
