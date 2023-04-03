@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
+import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider, ScrollRestoration } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Home } from './routes/Home'
 import { Login } from './routes/Login'
@@ -18,13 +18,22 @@ import CreateProduct from './routes/admin/CreateProduct'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<div id='app'>
+
+   
+    <Route element={
+
+    <div id='app'>
+
 
     <Header></Header>
-    <Outlet></Outlet>
-    <ScrollToTop></ScrollToTop>
-    <Footer></Footer></div>}>
+    <Outlet>
 
+    </Outlet>
+    <Footer></Footer>
+    </div>
+   
+    }
+    >
     <Route path='/' element= {<Home></Home>}></Route>
     <Route path='/login' element={<Login></Login>}></Route>
     <Route path='/signUp' element={<SignUp></SignUp>}></Route>
@@ -42,6 +51,7 @@ const router = createBrowserRouter(
     <Route path='/admin/edit/:id' element={<ProductEditor></ProductEditor>}></Route>
     <Route path='/admin/create' element={<CreateProduct></CreateProduct>}></Route>
   </Route>
+  
 
   )
 )
@@ -49,7 +59,12 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router}></RouterProvider>
+    
+    <RouterProvider router={router}>    
+    <ScrollRestoration>
+    </ScrollRestoration>
+    </RouterProvider>
+  
   )
 }
 

@@ -9,7 +9,7 @@ import { useMedia } from '../hooks/useMedia';
 export const Menu = () => {
     const [open, setOpen] = useState(false)
     const openHandle = ()=> setOpen(prev => !prev)
-    const {logged,user} = useLogged();
+    const {logged,name} = useLogged();
     const isMobile = useMedia();
     useEffect(() => {
       const closeDropDown = e => {
@@ -29,7 +29,7 @@ export const Menu = () => {
       <div className={`dropdown-menu ${open? "active": "unactive"}`} style={{width: `${isMobile?"80vw": "20vw"}`}} id="dm">
         {
           logged ? (<>
-          <Button1 text={user.email} ></Button1>
+          <Button1 text={name} ></Button1>
           <Button1 text="Mis reservas" link={`admin`}></Button1>
           </>
                       ):(<>

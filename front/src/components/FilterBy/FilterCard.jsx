@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CategoryCard = ({img,description,name,id,onClick}) => {
+export const FilterCard = ({img,description,name,id,onClick}) => {
   return (
     
     <div className={`${id} category`} id={id} onClick={onClick}>

@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect, useMemo, useReducer, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
-import { CategoryCard } from './CategoryCard';
+import { FilterCard } from './FilterCard';
 import "../../styles/Categories.css"
 import Select from 'react-select';
 import { CategoriesFilter } from './CategoriesFilter';
@@ -50,7 +50,7 @@ export const Categories = () => {
       {Object.keys(categoriesJSON).map(cat=>{const cate = categoriesJSON[cat];
       return(
     
-          <CategoryCard key={cate.idcategorias} id={cate.idcategorias} img={cate.url_imagen} name={cate.titulo} onClick={handleCategory}></CategoryCard>
+          <FilterCard key={cate.idcategorias} id={cate.idcategorias} img={cate.url_imagen} name={cate.titulo} onClick={handleCategory}></FilterCard>
           )})
       }
   </div>
