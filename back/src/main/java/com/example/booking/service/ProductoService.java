@@ -98,4 +98,11 @@ public class ProductoService implements IProductoService {
         }
         return productoRandomList;
     }
+
+    @Override
+    public Iterable<ProductoDTO> findByCiudadId(Long id) {
+        List<ProductoDTO> productoDTOList = new ArrayList<>();
+        iProductoRepository.findByIdCiudad(id).forEach(producto -> productoDTOList.add(mapDTO(producto)));
+        return productoDTOList;
+    }
 }
