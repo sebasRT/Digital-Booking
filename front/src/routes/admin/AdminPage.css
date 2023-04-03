@@ -12,3 +12,7 @@
 .product-editor{
     top: 100px;
 }
+.editableProducts-box{
+    width: 90vw;
+    margin: auto;
+}

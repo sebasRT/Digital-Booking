@@ -7,16 +7,10 @@ import Select from 'react-select'
 import { Form, Link, redirect } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context'
 
-const cities = [{value: "1" , label:"Medellin"},
-                {value: "6" , label:"Guatape"},
-                {value: "2" , label:"Bogota"},
-                {value: "3" , label:"San Andres"},
-                {value: "4" , label:"Cali"},
-                {value: "7" , label:"Manizales"},
-                {value: "5" , label:"Santa Marta"}]
+
 
 export const Searching = ({location,category,chechInOut}) => {
-  const {categories} = useContext(GlobalContext);
+  const {categories,cities} = useContext(GlobalContext);
 const categoriesJSON = categories;
 
 // const categ = useMemo(() => {

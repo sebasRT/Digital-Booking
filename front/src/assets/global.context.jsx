@@ -5,15 +5,34 @@ import { useLogged } from "../hooks/useLogged";
 import { useMedia } from "../hooks/useMedia";
 
 
+
 const url = "http://localhost:8080/"
 // const url = "http://3.128.29.96:8080/"
-let chargedCounter = 0;
+
+
+
+  
+let chargedCounter = 0; 
+const cities = [{value: "1" , label:"Medellin"},
+                {value: "6" , label:"Guatape"},
+                {value: "2" , label:"Bogota"},
+                {value: "3" , label:"San Andres"},
+                {value: "4" , label:"Cali"},
+                {value: "7" , label:"Manizales"},
+                {value: "5" , label:"Santa Marta"}]
+
+
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
 
   const isMobile = useMedia();
+
   const isLogged = useLogged();
+
+
+
+  
 
   const [products, setProducts] = useState("")
   const [categories, setcategories] = useState("")
@@ -56,7 +75,7 @@ export const GlobalProvider = ({children}) => {
 
   return (
 
-    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,isLogged,url}}>
+    <GlobalContext.Provider value={{isMobile,products,categories,charged,productsRandom,url,cities}}>
       {children}
     </GlobalContext.Provider>
 

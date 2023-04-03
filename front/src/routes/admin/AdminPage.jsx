@@ -10,13 +10,13 @@ const AdminPage = () => {
     <div id='adminPage'>
 
 <Link to="create" ><button className='createButton'></button></Link>
-        <div className='cards-container'>
+        <div className='cards-container editableProducts-box'>
     {Object.keys(products).map((product)=>{const pro = products[product];
     return <ProductCard key={`product${pro.idproductos}`} 
                         id={pro.idproductos}
                         title={pro.titulo}
                         idCategory={pro.categoria.idcategorias} 
-                        city={pro.ciudad.nombre}
+                        city={pro.ubicacion}
                         img={pro.imagenPrincipal}
                         description={pro.descripcion}
     ></ProductCard>

@@ -30,7 +30,7 @@ export const Results = () => {
     <div className='cards-container cont'>
       {
         Object.keys(productsFiltered).map((e)=> {const product = productsFiltered[e];
-          return (<Card key={product.idproductos} title={product.titulo} id={product.idproductos} category={product.categoria.titulo} description={product.descripcion} location={product.ciudad.nombre}></Card>)})
+          return (<Card url={product.imagenPrincipal} key={product.idproductos} title={product.titulo} id={product.idproductos} category={product.categoria.titulo} description={product.descripcion} location={product.ciudad.nombre}></Card>)})
       }
     </div>
     <div className='categories-container'>

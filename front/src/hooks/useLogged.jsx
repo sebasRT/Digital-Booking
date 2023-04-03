@@ -1,16 +1,22 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { GlobalContext } from '../assets/global.context'
 
 export const useLogged = () => {
-    const [logged, setLogged] = useState(false)
-
+    const [logged, setLogged] = useState(true)
+    const {url} = useContext(GlobalContext)
     const [user, setUser] = useState(
-      {username: "", 
+      {email: localStorage.getItem("email"),
+        password: localStorage.getItem("password") 
       }
     )
-useEffect(() => {
-// axios.post
-}, [])
+    
+// useEffect(() => {
+//   const jsonUser = JSON.stringify(user);
+//   axios.get(`${url}login`,jsonUser).then((e)=>{
+//     console.log(e.data);
+//   })
+// }, [])
 
-  return (logged,user)
+  return ({logged,user})
 }
