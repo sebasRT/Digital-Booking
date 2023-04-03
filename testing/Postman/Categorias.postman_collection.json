@@ -75,7 +75,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.128.29.96:8080/categoria/5",
+					"raw": "http://3.128.29.96:8080/categoria/12",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -86,7 +86,7 @@
 					"port": "8080",
 					"path": [
 						"categoria",
-						"5"
+						"12"
 					]
 				}
 			},
@@ -99,7 +99,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":\"1\",\r\n    \"titulo\":\"Hostel\",\r\n    \"descripcion\": \"Categoria Hotel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Hostel\",\r\n    \"descripcion\": \"Categoria Hotel\",\r\n    \"url_imagen\" : \"https://media.istockphoto.com/id/627892376/es/foto/habitaci%C3%B3n-de-hotel-suite-con-vistas.jpg?s=1024x1024&w=is&k=20&c=DcwnJOMBm34GM-5Y03eCNkMByKu0q0CT1M0WBhCrm7g=\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,15 +107,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/categoria/1",
+					"raw": "http://3.128.29.96:8080/categoria/12",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"3",
+						"128",
+						"29",
+						"96"
 					],
 					"port": "8080",
 					"path": [
 						"categoria",
-						"1"
+						"12"
 					]
 				}
 			},

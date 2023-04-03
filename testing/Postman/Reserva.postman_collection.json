@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "5024aa80-5067-4425-9841-cd6fd6bd2ac4",
+		"name": "Reserva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20449814"
+	},
+	"item": [
+		{
+			"name": "Reserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaXp6aW8iLCJleHAiOjE2ODMxNTc2MjEsIm5vbWJyZSI6ImZjb25pZ2xpbzEwMEBnbWFpbC5jb20ifQ.-akBEAVhvJNaTOySn8SHFfmFp6-3fBVYFldv7soWLLM9cATo86aoCbauqf07D6O-pKKL9X6GPCB6-0cDvxmg5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hora_inicio\": \"11:00\",\r\n    \"fecha_inicio\": \"26/3/2023\",\r\n    \"fecha_fin\": \"27/3/2023\",\r\n    \"idusuario\": {\r\n        \"idusuarios\":14,\r\n        \"nombre\": \"fabrizzio\",\r\n        \"apellido\": \"Coniglio\",\r\n        \"email\": \"fconiglio100@gmail.com\",\r\n        \"password\": \"password\",\r\n        \"ciudad\": \"cba\",\r\n        \"rol\": {\r\n            \"nombre\": \"ROLE_ADMIN\"\r\n        }\r\n    },\r\n    \"idproducto\": {\r\n        \"idproductos\": 1,\r\n        \"titulo\": \"Dorado la 70\",\r\n        \"ubicacion\": \"Blvr. Libertadores De América #70 #44B-66\",\r\n        \"descripcion\": \"Un lugar exclusivo y moderno para sus estadías de negocios y de entretenimiento en Medellín. Ubicado estratégicamente sobre el corredor turístico de la carrera 70, en el barrio Florida Nueva\",\r\n        \"imagenes\": [],\r\n        \"categoria\": {\r\n            \"idcategorias\": 1,\r\n            \"titulo\": \"Hoteles\",\r\n            \"descripcion\": \"Hoteles de Colombia\",\r\n            \"url_imagen\": \"https://img.nh-hotels.net/KPZV/014DN/original/RE_NH_royal-urban-93_014.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white\"\r\n        },\r\n        \"disponibilidad\": \"SI\",\r\n        \"politicas\": null,\r\n        \"caracteristicas\": [\r\n            {\r\n                \"idcaracteristicas\": 1,\r\n                \"descripcion\": \"[\\\"Gimnasio\\\",\\\"Terraza Bar\\\",\\\"Turco\\\"]\",\r\n                \"imagen\": null\r\n            }\r\n        ],\r\n        \"ciudad\": {\r\n            \"idciudades\": 1,\r\n            \"nombre\": \"Medellin\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/reserva/register",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"reserva",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtro de reserva por producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaXp6aW8iLCJleHAiOjE2ODMxNTc2MjEsIm5vbWJyZSI6ImZjb25pZ2xpbzEwMEBnbWFpbC5jb20ifQ.-akBEAVhvJNaTOySn8SHFfmFp6-3fBVYFldv7soWLLM9cATo86aoCbauqf07D6O-pKKL9X6GPCB6-0cDvxmg5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://3.128.29.96:8080/reserva/producto/1",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"reserva",
+						"producto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
