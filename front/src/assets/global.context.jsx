@@ -5,6 +5,7 @@ import { useMedia } from "../hooks/useMedia";
 
 
 const url = "http://3.128.29.96:8080/"
+
   
 let chargedCounter = 0; 
 const cities = [{value: "1" , label:"Medellin" , url:"https://th.bing.com/th/id/OIP.tbcWW_fVhVDkREphOv73PQHaEK?pid=ImgDet&rs=1"},

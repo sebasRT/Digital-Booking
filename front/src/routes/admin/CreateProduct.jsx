@@ -122,15 +122,30 @@ const [form, setform] = useState()
 useEffect(() => {
 
   const form = {
-    titulo: nombrePropiedad,
-    ubicacion: direccion,
-    descripcion: descripcion,
-    imagenPrincipal: imagenUrl,
-    imagenes: imagenes,
-    categoria: categorias[categoriaId], 
-    politicas: politicasDeCancelacion,
-    caracteristicas: caracteristicas,
-    ciudad: ciudades[ciudadId], 
+    "titulo": nombrePropiedad,
+    "ubicacion": direccion,
+    "descripcion": descripcion,
+    "imagenPrincipal": imagenUrl,
+    "imagenes": [],
+    "categoria": {
+        "idcategorias": categoriaId,
+        "titulo": "",
+        "descripcion": "",
+        "url_imagen": ""
+    },
+    "disponibilidad": "",
+    "politicas":politicasDeCancelacion,
+    "caracteristicas": [
+        {
+            "idcaracteristicas": 1,
+            "descripcion": "Wi fi,Gimnasio",
+            "imagen": null
+        }
+    ],
+    "ciudad": {
+        "idciudades": ciudadId,
+        "nombre": ""
+    }
   };
 
 setform(form);
@@ -245,32 +260,58 @@ setform(form);
               </div>
               <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
               <div className="creacionProducto__contenedor__contraste">
-                <ul className="creacionProducto_contenedor_checkboxes">
-                  {Object.keys(caracteristica).map(({ id, titulo, urlImagen },index) => {
-                    
-                    return (
-                      <li key={id}>
-                        <div className="input-checkbox">
-                          <div
-                            className="img-checkbox"
-                            style={{ backgroundImage: `url(${urlImagen})` }}
-                          ></div>
-                          <input
-                            type="checkbox"
-                            name={titulo}
-                            id={index}
-                            value={id}
-                            onChange={() => handleChangeCaracteristicas(index)}
-                            checked={checkedState[index]}
-                          />
-                          <label htmlFor={`custom-checkbox-${id}`}>
-                            {titulo}
-                          </label>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {imagenes.map(({id,url}) => {
+                  return (
+                    <div key={id} className="creacionProducto__felexContainer">
+                      <div className="input-box2">
+                      
+                        <input
+                          className="box-elemento-imagen"
+                          type="text"
+                          name="imagenUrl"
+                          id={`imgurl-${id}`}
+                          placeholder="WI-FI"
+                          value={url}
+                          disabled
+                        />
+                      </div>
+                      <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
+                    </div>
+                  );
+                })}
+                <div className="creacionProducto__felexContainer">
+                  <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
+                    <div className='input-new' style={ {width:"60%"}}>
+                  <label htmlFor="Nombre">Nombre</label>
+                    <input
+                      
+                      type="text"
+                      name="nombre"
+                      id="name"
+                      placeholder="WIFI"
+                      value={imagenUrl}
+                      onChange={handleChangeImagenUrl}
+                    />
+                    </div>
+                    <div className='input-new' style={ {width:"20%"}}>
+                    <label htmlFor="Nombre">Icono</label>
+                    <input
+                      
+                      type="text"
+                      name="icono"
+                      id="icono"
+                      placeholder="FA-WIFI"
+                      value={imagenUrl}
+                      onChange={handleChangeImagenUrl}
+                    />
+                    </div>
+                  </div>
+                  <input
+                    type="button"
+                    className="botonAgregar"
+                    onClick={agregarImagen}
+                  />
+                </div>
               </div>
               <h4 className="creacionProducto__subtitulo">
                 Politicas del Producto
@@ -368,9 +409,9 @@ setform(form);
                 </div>
               </div>
               <div className="contenedor_centrado">
-               
+               <Link to={"/creacionExitosa"}>
                 <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
-                
+                </Link>
               </div>
 
                 </form>
