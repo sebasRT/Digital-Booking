@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
-
-
+import { useEffect } from 'react';
+import axios from 'axios';
+import formProduct from "../../assets/formProduct.json"
 const CreateProduct = () => {
-
-
+  const [submit, setSubmit] = useState(false)
+  const {url}= useContext(GlobalContext)
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
 
@@ -55,7 +56,7 @@ const CreateProduct = () => {
 
   
   //Logica y estados de Checkbox de caracteristicas
-  //Las caracteristicas y sus imagenes son traidas con el hook useEffect a traves de servicios que consumen la api
+  
 
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [checkedState, setCheckedState] = useState(
@@ -81,7 +82,8 @@ const CreateProduct = () => {
     const [imagenes, setImagenes] = useState([]);
   
     const[contadorIdImg,setContadorIdImg]= useState(1)
-  
+
+    
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
         setImagenes([...imagenes, {
@@ -112,29 +114,45 @@ const CreateProduct = () => {
 
 
     const {categories} = useContext(GlobalContext);
+    const {cities} = useContext(GlobalContext);
+    const {caracteristica}= useContext(GlobalContext);
     
-    
+const [form, setform] = useState()
 
+useEffect(() => {
+
+  const form = {
+    titulo: nombrePropiedad,
+    ubicacion: direccion,
+    descripcion: descripcion,
+    imagenPrincipal: imagenUrl,
+    imagenes: imagenes,
+    categoria: categorias[categoriaId], 
+    politicas: politicasDeCancelacion,
+    caracteristicas: caracteristicas,
+    ciudad: ciudades[ciudadId], 
+  };
+
+setform(form);
+}, [submit])
+
+
+  const submitProduct =()=>{
+    setSubmit(!submit); 
+
+    axios.post(`${url}producto/register`,form)
+    .then(e=>console.log(e))
+    .catch(e=>console.log(e))
+
+  }
 
   return (
 
     <div>
-      <div className="cont-BloqueHeader">
-      <div className="contenedor-info">
-     
-      <div className="InfoHeader">
+      <div className="hiden">
+      
         <h2>Administración</h2>
-    </div>
-       
-      </div>
 
-      <div className="flecha-home">
-      
-          <button onClick={handleClick}>
-            {/* <FaChevronLeft /> */}
-          </button>
-      
-      </div>
     </div>
       <h2 className="creacionProducto__titulo">Crear Propiedad</h2>
       <div className="pantalla__creacionProducto--contenedor">
@@ -202,11 +220,13 @@ const CreateProduct = () => {
                     value={ciudadId}                    
                     onChange={handleChangeCiudadId}
                   >
-                    {ciudades.map((ciudadMap) => (
-                      <option value={ciudadMap.id} key={ciudadMap.id}>
-                        {ciudadMap.nombre}
-                      </option>
-                    ))}
+                    {Object.keys(cities).map((ciudad) => {
+                      const city = cities[ciudad];
+                      return(
+                      <option value={city.value} key={city.value}>
+                        {city.label}
+                      </option>)
+                    } )}
                   </select>
                 </div>
 
@@ -226,7 +246,7 @@ const CreateProduct = () => {
               <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
               <div className="creacionProducto__contenedor__contraste">
                 <ul className="creacionProducto_contenedor_checkboxes">
-                  {caracteristicas.map(({ id, titulo, urlImagen },index) => {
+                  {Object.keys(caracteristica).map(({ id, titulo, urlImagen },index) => {
                     
                     return (
                       <li key={id}>
@@ -348,10 +368,9 @@ const CreateProduct = () => {
                 </div>
               </div>
               <div className="contenedor_centrado">
-                <button type="submit" className="crearProducto" >
-
-                  Crear
-                </button>
+               
+                <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
+                
               </div>
 
                 </form>
