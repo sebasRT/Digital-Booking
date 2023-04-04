@@ -46,4 +46,13 @@
    background-color:#FBC02D;
    color: #FFFBE2;
   }
+
+  @media screen and (max-width: 480px){
+    .quitHeader{
+      display: none;
+    }
+    .tituloLogo{
+      display: none;
+    }
+  }
   

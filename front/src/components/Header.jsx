@@ -18,7 +18,7 @@ const Header = () => {
       <Link to='/' className='logo'>
       
         <img src="./logo1.svg" alt="DigitalBooking"  />
-        <p>sientete como en tu hogar</p>
+        <p className='tituloLogo'>Sientete como en tu hogar</p>
 
       </Link>
 

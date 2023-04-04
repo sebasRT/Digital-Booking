@@ -13,14 +13,14 @@
     display: grid;
     text-align: center;
     align-content: center;
-    grid-template-columns: 3fr 3fr 3fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 20px;
     grid-auto-flow: column;
 }
 .rmdp-container{
     background-color: transparent;
     max-width: 23vw;
-    min-height: 100%;
+    min-height: 124%;
 }
 .rmdp-input{
     min-height: 2rem;
@@ -32,9 +32,8 @@
     background-color: #607D8B;
     border-style: none;
     border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
+    width: 130%;
+    max-width: 300px;
 }
 @media screen and (max-width: 710px){
     .searchingForm{
