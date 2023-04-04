@@ -7,7 +7,7 @@ import { useLogged } from '../hooks/useLogged';
 
 const Header = () => {
   const isMobile = useMedia();
-  const {logged,user} = useLogged();
+  const {logged,name} = useLogged();
 
   const [hidden, setHidden] = useState({position:"sticky", top:"0px"})
   const handleHidden = ()=>{
@@ -23,7 +23,8 @@ const Header = () => {
       </Link>
 
     
-      { logged ? <Menu></Menu> :
+      { logged ? 
+      <Menu><span>{name.toLocaleUpperCase()}</span></Menu>:
         
         isMobile ?(
           <Menu></Menu>

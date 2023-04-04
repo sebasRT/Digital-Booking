@@ -1,13 +1,19 @@
 import React, { useContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
 import { useEffect } from 'react';
 import axios from 'axios';
-import formProduct from "../../assets/formProduct.json"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
+import "./AdminPage.css"
+
+
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
   const {url}= useContext(GlobalContext)
+  const history = useNavigate()
+
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
 
@@ -149,9 +155,10 @@ setform(form);
   return (
 
     <div>
-      <div className="hiden">
+      <div className="adminHeader">
       
-        <h2>Administración</h2>
+        <h3>Administración</h3>
+        <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
 
     </div>
       <h2 className="creacionProducto__titulo">Crear Propiedad</h2>

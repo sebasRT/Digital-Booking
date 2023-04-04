@@ -18,7 +18,7 @@ useEffect(() => {
   const jsonUser = JSON.stringify(user);
   axios.post(`${url}login`,jsonUser).then((e)=>{
   e.status == 200? setLogged(true):setLogged(false);
-  e.data[0] == "fconiglio100@gmail.com" ? setAdmin(true): null;})
+  e.data[0] == "team11@dh.co" ? setAdmin(true): null;})
   .catch(e=>{console.log(e);})
 })
 

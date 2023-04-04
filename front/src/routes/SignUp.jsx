@@ -31,7 +31,6 @@ export const SignUp = () => {
         }
       };
 
-      localStorage.setItem('formData', JSON.stringify(formData));
 
       axios.post(`${url}usuarioCliente/register`,formData)
       .then(e=>{
@@ -70,7 +69,7 @@ export const SignUp = () => {
     <div className="form-group">
     <div className='nombreDiv'>
     <label htmlFor="first-name" className="textTitulosInputs">Nombre</label>
-    <input type="text" className ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+    <input required="true" type="text" className ="nombre" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
     </div>
     </div>
     <div className="form-group">
@@ -83,13 +82,13 @@ export const SignUp = () => {
     <div className="form-group">
     <div className='emailDiv'>
     <label htmlFor="email" className="textTitulosInputs" >Correo electrónico</label>
-    <input type="email" className="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <input required="true" type="email" className="correo" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
     </div>
     </div>
     <div className="form-group">
     <div className='passwordDiv'>
     <label htmlFor="password" className="textTitulosInputs">Contraseña</label>
-    <input type="password" className={password + ' password'} id="password" name="password" value={password} onChange={handlePasswordChange} />
+    <input required="true" type="password" className={password + ' password'} id="password" name="password" value={password} onChange={handlePasswordChange} />
   
   </div>
   </div>

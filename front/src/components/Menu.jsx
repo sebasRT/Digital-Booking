@@ -6,7 +6,7 @@ import { useMedia } from '../hooks/useMedia';
 
 
 
-export const Menu = () => {
+export const Menu = ({children}) => {
     const [open, setOpen] = useState(false)
     const openHandle = ()=> setOpen(prev => !prev)
     const {logged,name,admin} = useLogged();
@@ -33,11 +33,12 @@ export const Menu = () => {
     
   return (
     <div className='menu'>
+      {children}
       <button className='menuButton' onClick={openHandle} ><img src="./src/icons/menu.svg" id="menuButton"/></button>
       <div className={`dropdown-menu ${open? "active": "unactive"}`} style={{width: `${isMobile?"80vw": "20vw"}`}} id="dm">
         {
           logged ? (<>
-          <Button1 text={name} ></Button1>
+          <Button1 text={name.toLocaleUpperCase()} ></Button1>
           {admin?  <Button1 text="Edita Productos" link={`admin`}></Button1>: <Button1 text="Mis reservas" link={`bookings`}></Button1>}
           <button onClick={closeSession}>cerrar sesión</button>
           </>

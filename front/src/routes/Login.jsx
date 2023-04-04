@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Login.css';
 import { GlobalContext } from '../assets/global.context';
@@ -11,9 +10,11 @@ export const Login = () => {
 
   const {url} = useContext(GlobalContext)
   const [logged,setLogged] = useState(false)
+  const [errorActive, setErrorActive] = useState({active: "unactive", message:""})
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+    
     const email = event.target.email.value;
     const password = event.target.password.value;
   
@@ -28,7 +29,18 @@ export const Login = () => {
     localStorage.setItem("jwt",e.data[2])
     setLogged(true)
     window.location.href = '/';
-    }).catch(e=>{console.log(e);setLogged(false)})
+    }).catch(e=>{
+
+      switch (e.message) {
+        case 'Network Error':
+          setErrorActive({active: "active", message:"Error de conexión"})
+          break;
+        case 'Request failed with status code 401':
+          setErrorActive ({active:"active", message:"Algunos parámetros no son correctos"})
+        default:
+          break;
+      }
+      setLogged(false)})
   
     // // Obtener los datos guardados en localStorage
     // const storedData = JSON.parse(localStorage.getItem('formData'));
@@ -55,17 +67,17 @@ export const Login = () => {
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <div className='emailDivLogin'>
-          <label htmlFor="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" />
+          <label htmlFor="email" >Correo electrónico</label>
+          <input type="email" id="email" name="email" required="true"/>
         </div>
       </div>
       <div className="form-group">
         <div className="passwordDivLogin">
           <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" />
+          <input type="password" id="password" name="password" required="true"/>
         </div>
       </div>
-
+      <div className={`errorContainer ${errorActive.active}`}>{`${errorActive.message}`}</div>
 
       <button type="submit" className='botReserva'>Ingresar</button>
 
