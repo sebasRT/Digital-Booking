@@ -61,7 +61,7 @@
   background: #fbc02d ;
   box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.12);
   border-radius: 0.3125rem;
-  width: 25%;
+  width: 300px;
   height: 3.125rem;
   border-radius: 0.3125rem;
   border: transparent;
@@ -164,6 +164,8 @@ color:#31363F;
   padding: 1.0625rem 1.25rem 0.9375rem 1.25rem;
 }
 
+
+
 .creacionProducto__contenedor__contraste .botonAgregar {
   background-image: url("../icons/agregar.svg");
   background-size: cover;
@@ -222,7 +224,7 @@ input.box-elemento-imagen {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 92%;
+    width: 95%;
   }
   .creacionProducto__contenedor__contraste .creacionProducto__felexContainer {
     display: flex;
@@ -298,12 +300,13 @@ input.box-elemento-imagen {
     font-size: 1.2rem;
   }
   .creacionProducto__form .input-box {
-    width: 50%;
+    width: 40%;
     padding: 0.625rem;
   }
   .creacionProducto__form .input-box2 {
     width: 100%;
     padding: 0.625rem;
+ 
   }
 
   .pantalla__creacionProducto--contenedor {
