@@ -9,13 +9,12 @@ export const Menu = () => {
     const openHandle = () => setOpen(prev => !prev)
     const { logged, name, admin } = useLogged();
     const isMobile = useMedia();
-
+    const [nombre, setnombre] = useState(name)
     const closeSession = () => {
-      window.location.href = '/';
       localStorage.removeItem("name")
       localStorage.removeItem("email")
       localStorage.removeItem("password")
-      localStorage.removeItem("jwt")
+      window.location.href = '/';
     }
 
     useEffect(() => {
@@ -37,7 +36,7 @@ export const Menu = () => {
   <div className="user-info" style={{ alignItems: 'center' }}>
     <div style={{ backgroundColor: '#263238', borderRadius: '50%', width: '50px', height: '50px', marginRight: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <span style={{ fontSize: '25px', fontWeight: 'bold', textTransform: 'uppercase', color: 'white' }}>
-        {name.substring(0, 1)}{localStorage.getItem('apellido') && localStorage.getItem('apellido').substring(0, 1)}
+        {nombre.substring(0, 1)}
       </span>
     </div>
     <div className="user-name" style={{ fontSize: '18px' }}>
