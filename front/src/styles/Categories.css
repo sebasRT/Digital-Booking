@@ -10,12 +10,28 @@
     }
 }
 .showAll{
-    margin: 10px;
+    background-color: #FBC02D;
+    border-style: none;
     border-radius: 5px;
-    border-style:solid;
-    border-width: 3px;
-    border-color: #FBC02D;
+    width: 12.1%;
+    margin: 10px;
+    padding: 7px;
 }
+@media screen and (max-width: 700px){
+    .showAll{
+        background-color: #FBC02D;
+        border-style: none;
+        border-radius: 5px;
+        width: 55%;
+        margin: 10px;
+        padding: 7px;
+    }
+}
+
+.showAll:hover{
+    background-color: #fbc02d85;
+}
+
 .showAll > button{
     border-width: 0;
     background-color: transparent;
@@ -36,6 +52,9 @@
     border-width: 2px;
     height: 180px;
     filter: drop-shadow(0px 3px 3px #DFE4EA);
+    box-sizing: border-box;
+    border: 1px solid #F3F1ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .category > img{
     border-radius: 20px;

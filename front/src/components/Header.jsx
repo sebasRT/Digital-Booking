@@ -7,7 +7,7 @@ import { useLogged } from '../hooks/useLogged';
 
 const Header = () => {
   const isMobile = useMedia();
-  const {logged,user} = useLogged();
+  const {logged,name} = useLogged();
 
   const [hidden, setHidden] = useState({position:"sticky", top:"0px"})
   const handleHidden = ()=>{
@@ -18,12 +18,13 @@ const Header = () => {
       <Link to='/' className='logo'>
       
         <img src="./logo1.svg" alt="DigitalBooking"  />
-        <p>sientete como en tu hogar</p>
+        <p className='tituloLogo'>Sientete como en tu hogar</p>
 
       </Link>
 
     
-      { logged ? <Menu></Menu> :
+      { logged ? 
+      <Menu><span>{"Hola, "+name.toUpperCase()}</span></Menu>:
         
         isMobile ?(
           <Menu></Menu>

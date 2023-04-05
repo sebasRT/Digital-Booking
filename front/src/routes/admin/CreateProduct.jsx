@@ -1,11 +1,18 @@
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
+import { useEffect } from 'react';
+import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
+import "./AdminPage.css"
 
 
 const CreateProduct = () => {
-
+  const [submit, setSubmit] = useState(false)
+  const {url}= useContext(GlobalContext)
+  const history = useNavigate()
 
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
@@ -55,7 +62,7 @@ const CreateProduct = () => {
 
   
   //Logica y estados de Checkbox de caracteristicas
-  //Las caracteristicas y sus imagenes son traidas con el hook useEffect a traves de servicios que consumen la api
+  
 
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [checkedState, setCheckedState] = useState(
@@ -81,7 +88,8 @@ const CreateProduct = () => {
     const [imagenes, setImagenes] = useState([]);
   
     const[contadorIdImg,setContadorIdImg]= useState(1)
-  
+
+    
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
         setImagenes([...imagenes, {
@@ -112,29 +120,61 @@ const CreateProduct = () => {
 
 
     const {categories} = useContext(GlobalContext);
+    const {cities} = useContext(GlobalContext);
+    const {caracteristica}= useContext(GlobalContext);
     
-    
+const [form, setform] = useState()
 
+useEffect(() => {
+
+  const form = {
+    "titulo": nombrePropiedad,
+    "ubicacion": direccion,
+    "descripcion": descripcion,
+    "imagenPrincipal": imagenUrl,
+    "imagenes": [],
+    "categoria": {
+        "idcategorias": categoriaId,
+        "titulo": "",
+        "descripcion": "",
+        "url_imagen": ""
+    },
+    "disponibilidad": "",
+    "politicas":politicasDeCancelacion,
+    "caracteristicas": [
+        {
+            "idcaracteristicas": 1,
+            "descripcion": "Wi fi,Gimnasio",
+            "imagen": null
+        }
+    ],
+    "ciudad": {
+        "idciudades": ciudadId,
+        "nombre": ""
+    }
+  };
+
+setform(form);
+}, [submit])
+
+
+  const submitProduct =()=>{
+    setSubmit(!submit); 
+
+    axios.post(`${url}producto/register`,form)
+    .then(e=>console.log(e))
+    .catch(e=>console.log(e))
+
+  }
 
   return (
 
     <div>
-      <div className="cont-BloqueHeader">
-      <div className="contenedor-info">
-     
-      <div className="InfoHeader">
-        <h2>Administración</h2>
-    </div>
-       
-      </div>
+      <div className="adminHeader">
+      
+        <h3>Administración</h3>
+        <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
 
-      <div className="flecha-home">
-      
-          <button onClick={handleClick}>
-            {/* <FaChevronLeft /> */}
-          </button>
-      
-      </div>
     </div>
       <h2 className="creacionProducto__titulo">Crear Propiedad</h2>
       <div className="pantalla__creacionProducto--contenedor">
@@ -202,11 +242,13 @@ const CreateProduct = () => {
                     value={ciudadId}                    
                     onChange={handleChangeCiudadId}
                   >
-                    {ciudades.map((ciudadMap) => (
-                      <option value={ciudadMap.id} key={ciudadMap.id}>
-                        {ciudadMap.nombre}
-                      </option>
-                    ))}
+                    {Object.keys(cities).map((ciudad) => {
+                      const city = cities[ciudad];
+                      return(
+                      <option value={city.value} key={city.value}>
+                        {city.label}
+                      </option>)
+                    } )}
                   </select>
                 </div>
 
@@ -225,32 +267,58 @@ const CreateProduct = () => {
               </div>
               <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
               <div className="creacionProducto__contenedor__contraste">
-                <ul className="creacionProducto_contenedor_checkboxes">
-                  {caracteristicas.map(({ id, titulo, urlImagen },index) => {
-                    
-                    return (
-                      <li key={id}>
-                        <div className="input-checkbox">
-                          <div
-                            className="img-checkbox"
-                            style={{ backgroundImage: `url(${urlImagen})` }}
-                          ></div>
-                          <input
-                            type="checkbox"
-                            name={titulo}
-                            id={index}
-                            value={id}
-                            onChange={() => handleChangeCaracteristicas(index)}
-                            checked={checkedState[index]}
-                          />
-                          <label htmlFor={`custom-checkbox-${id}`}>
-                            {titulo}
-                          </label>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {imagenes.map(({id,url}) => {
+                  return (
+                    <div key={id} className="creacionProducto__felexContainer">
+                      <div className="input-box2">
+                      
+                        <input
+                          className="box-elemento-imagen"
+                          type="text"
+                          name="imagenUrl"
+                          id={`imgurl-${id}`}
+                          placeholder="WI-FI"
+                          value={url}
+                          disabled
+                        />
+                      </div>
+                      <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
+                    </div>
+                  );
+                })}
+                <div className="creacionProducto__felexContainer">
+                  <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
+                    <div className='input-new' style={ {width:"60%"}}>
+                  <label htmlFor="Nombre">Nombre</label>
+                    <input
+                      
+                      type="text"
+                      name="nombre"
+                      id="name"
+                      placeholder="WIFI"
+                      value={imagenUrl}
+                      onChange={handleChangeImagenUrl}
+                    />
+                    </div>
+                    <div className='input-new' style={ {width:"20%"}}>
+                    <label htmlFor="Nombre">Icono</label>
+                    <input
+                      
+                      type="text"
+                      name="icono"
+                      id="icono"
+                      placeholder="FA-WIFI"
+                      value={imagenUrl}
+                      onChange={handleChangeImagenUrl}
+                    />
+                    </div>
+                  </div>
+                  <input
+                    type="button"
+                    className="botonAgregar"
+                    onClick={agregarImagen}
+                  />
+                </div>
               </div>
               <h4 className="creacionProducto__subtitulo">
                 Politicas del Producto
@@ -348,10 +416,9 @@ const CreateProduct = () => {
                 </div>
               </div>
               <div className="contenedor_centrado">
-                <button type="submit" className="crearProducto" >
-
-                  Crear
-                </button>
+               <Link to={"/creacionExitosa"}>
+                <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
+                </Link>
               </div>
 
                 </form>

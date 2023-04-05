@@ -1,0 +1,32 @@
+.modal{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+}
+.modal.is-open{
+    display: flex;
+    flex-direction: column;
+}
+.modal-container{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+button.red{
+    color: red;
+    border-color: red;
+    border-style:solid;
+    border-radius: 3px;
+}

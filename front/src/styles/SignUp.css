@@ -1,13 +1,18 @@
 .register-container {
     max-width: 400px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin-left: 41%;
     border: 0px solid #ccc;
     border-radius: 5px;
     text-align: center;
     font-size: 0.9rem;
     overflow: auto;
   }
+  @media screen and (max-width: 670px){
+    .register-container {
+      margin: 0px auto;
+    }
+  
+ }
   
   .register-container h1 {
     text-align: center;

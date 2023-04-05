@@ -1,5 +1,4 @@
 import React from 'react';
-import "../styles/Politicas.css";
 
 const politicas = () => {
   return (
@@ -7,7 +6,7 @@ const politicas = () => {
       <h2>Qué tienes que saber</h2>
       
       <hr className='linea'/>
-      <div className='containes-datos-politica'>
+      <div className='container-datos-politica'>
       <div className='columna1'>
         <h3>Normas de la casa</h3>
         <p>Check out 10:00</p>
