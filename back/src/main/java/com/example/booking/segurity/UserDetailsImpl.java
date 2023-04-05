@@ -1,5 +1,7 @@
 package com.example.booking.segurity;
 
+import com.example.booking.entity.Rol;
+import com.example.booking.entity.RolNombre;
 import com.example.booking.entity.Usuario;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,6 +28,34 @@ public class UserDetailsImpl implements UserDetails{
     @Override
     public String getUsername() {
         return usuario.getEmail();
+    }
+
+    public String getApellido() {
+        return usuario.getApellido();
+    }
+
+    public Long getId() {
+        return usuario.getIdusuarios();
+    }
+
+    //rol del usuario
+    public Rol getRol() {
+        return usuario.getRol();
+    }
+
+    //mostrar el id del rol del usuario
+    public Long getRolId() {
+        return usuario.getRol().getIdroles();
+    }
+
+    //mostrar el nombre del rol del usuario
+    public RolNombre getRolNombre() {
+        return usuario.getRol().getNombre();
+    }
+
+
+    public String getCiudad() {
+        return usuario.getCiudad();
     }
 
     @Override
