@@ -5,10 +5,23 @@
     color: #FBC02D;
 }
 
-.createButton{
+.createButton {
     height: 50px;
-    width: 50px;
-}
+    width: 70px;
+    position: relative;
+    border: none;
+    background: none;
+  }
+  
+  .createButton img {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 45px;
+    width: 45px;
+  }
+  
 .product-editor{
     top: 100px;
 }

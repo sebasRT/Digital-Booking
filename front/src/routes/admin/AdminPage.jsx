@@ -9,7 +9,10 @@ const AdminPage = () => {
   return (
     <div id='adminPage'>
 
-<Link to="create" ><button className='createButton'></button></Link>
+<Link to="create" ><button className='createButton'>
+  <img src='./src/icons/flecha-izquierda.png' width="50px" height="50px" alt='Flecha izquierda' />
+</button>
+</Link>
         <div className='cards-container editableProducts-box'>
     {Object.keys(products).map((product)=>{const pro = products[product];
     return <ProductCard key={`product${pro.idproductos}`} 

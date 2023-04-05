@@ -90,36 +90,72 @@
   padding: 0.8rem;
 }
 
-.creacionProducto__form input {
-  background: #DFE4EA;
-  opacity: 1;
-  box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
-  border-radius: 0.3125rem;
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-  cursor: pointer;
-  background: #ffffff;
-  border: none;
+@media screen and (min-width: 700px){
+  .creacionProducto__form input {
+    background: #DFE4EA;
+    opacity: 1;
+    box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.3125rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    background: #ffffff;
+    border: none;
+  }
 }
 
-.creacionProducto__form textarea {
-  opacity: 1;
-  box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
-  border-radius: 0.3125rem;
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 0.3125rem;
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-  font-family: "Poppins";
-  cursor: pointer;
-  background: #ffffff;
-  resize: none;
-  outline: none;
-  border-color: transparent;
+@media screen and (max-width: 700px){
+  .creacionProducto__form input {
+    background: #DFE4EA;
+opacity: 1;
+box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
+border-radius: 0.3125rem;
+width: 95%;
+padding: 0.5rem;
+margin-bottom: 1rem;
+font-size: 1.125rem;
+cursor: pointer;
+background: #ffffff;
+border: none;
+  }
 }
+
+@media screen and (min-width: 700px){
+  .creacionProducto__form textarea {
+    opacity: 1;
+      box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
+      width: 97%;
+      border-radius: 0.3125rem;
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+      font-family: "Poppins";
+      cursor: pointer;
+      background: #ffffff;
+      resize: none;
+      outline: none;
+      border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .creacionProducto__form textarea {
+    opacity: 1;
+      box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
+      width: 97%;
+      border-radius: 0.3125rem;
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+      font-family: "Poppins";
+      cursor: pointer;
+      background: #ffffff;
+      resize: none;
+      outline: none;
+      border-color: transparent;
+  }
+}
+
 
 .creacionProducto__form select {
   background:#DFE4EA;
