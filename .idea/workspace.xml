@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="458c06df-5af9-42af-a1e5-7432a8d191aa" name="Changes" comment="" />
+    <list default="true" id="458c06df-5af9-42af-a1e5-7432a8d191aa" name="Changes" comment="test: test automatizado de postman" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +66,16 @@
       <workItem from="1680307827263" duration="25000" />
       <workItem from="1680389591205" duration="17000" />
       <workItem from="1680473216965" duration="10000" />
+      <workItem from="1680565955784" duration="64000" />
     </task>
+    <task id="LOCAL-00001" summary="test: test automatizado de postman">
+      <created>1680566011448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680566011448</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +91,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test: test automatizado de postman" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: test automatizado de postman" />
   </component>
 </project>
