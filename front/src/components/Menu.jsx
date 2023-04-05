@@ -38,7 +38,7 @@ export const Menu = ({children}) => {
       <div className={`dropdown-menu ${open? "active": "unactive"}`} style={{width: `${isMobile?"80vw": "20vw"}`}} id="dm">
         {
           logged ? (<>
-          <Button1 text={name.toLocaleUpperCase()} ></Button1>
+          <Button1 text={name} ></Button1>
           {admin?  <Button1 text="Edita Productos" link={`admin`}></Button1>: <Button1 text="Mis reservas" link={`bookings`}></Button1>}
           <button onClick={closeSession}>cerrar sesión</button>
           </>
