@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { GlobalContext } from '../assets/global.context';
 import DetalleReserva from '../components/booking/DetalleReserva';
 import FormReserva from '../components/booking/FormReserva';
@@ -9,6 +9,8 @@ import Politicas from '../components/booking/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"
 import { Calendar, DateObject } from 'react-multi-date-picker';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const Booking = () => {
@@ -18,6 +20,37 @@ const Booking = () => {
   const [checkIn, setCheckIn] = useState("selecciona la fecha")
   const [checkOut, setCheckOut] = useState("selecciona la fecha")
 
+  const [form, setForm] = useState({
+    nombre: "",
+    apellido: "",
+    email: "",
+    ciudad: ""
+  });
+
+  
+
+  const handleForm = (target,value)=>{
+    switch (target) {
+      case "nombre":
+        setForm({...form, nombre:value})
+        break;
+      case "apellido":
+        setForm({...form, apellido:value})
+        break;
+      case "email":
+        setForm({...form, email:value})
+        break;
+      case "ciudad":
+        setForm({...form, ciudad:value})
+        break;
+    
+      default:
+        break;
+    }
+    
+  }
+
+  const history = useNavigate()
   const handleCheck =(e) => {
     if(e[1] != undefined){
       const dateIn = new DateObject(e[0]).format()
@@ -34,20 +67,29 @@ const Booking = () => {
     tomorrow.setDate(tomorrow.getDate() + 1)
 
   const [values, setValues] = useState([today, tomorrow,date2 ])
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  
+  }, [])
+  
   return (
-    
+    <>
+              <div className='adminHeader'>
+        <h2>{product.titulo}</h2>
+      <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
+
+      </div>
+
 <div className='contenedor-main'>
   <div className="bookingForm">
 
     <div className='hiden'>
-      <p>{product.categoria.titulo}
-      </p>
-        <h2>{product.titulo}</h2> 
         </div>
         <h3 className='hh3'>Completa tus datos</h3>
       <div className='contenedor-reserva'>
       
-      <FormReserva ></FormReserva>
+      <FormReserva form={handleForm}></FormReserva>
       <h3>Selecciona tu fecha de reserva</h3>
     <div className='contenedor-calendario' >
 
@@ -66,7 +108,7 @@ const Booking = () => {
         </Calendar>
         </div>
     </div>
-      <h3>Selecciona tu horario de llegada </h3>
+      <h2>Selecciona tu horario de llegada </h2>
     <div className='contenedor-select'>
       <br />
         <SelectReserva></SelectReserva>
@@ -74,10 +116,11 @@ const Booking = () => {
     </div>
 
   </div>
-  <DetalleReserva checkIn={checkIn} checkOut={checkOut} idProducto={id}/>
+  <DetalleReserva checkIn={checkIn} checkOut={checkOut} idProducto={id} form={form}/>
   <Politicas></Politicas>
       
 </div>
+    </>
   );
 };
 

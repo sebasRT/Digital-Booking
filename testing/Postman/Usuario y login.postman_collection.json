@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "bb6dbe3a-75d1-4f57-99e7-8e8c27d76a2e",
+		"name": "Usuario y login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20449814"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"fconiglio100@gmail.com\",\r\n    \"password\": \"password\"\r\n}\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/login",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Administrador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaXp6aW8iLCJleHAiOjE2ODMxNTcyOTUsIm5vbWJyZSI6ImZjb25pZ2xpbzEwMEBnbWFpbC5jb20ifQ.BvC6XxEaMPjSc4GZzJxs5we-PgxT6RQ0H-OTeA74II3BQstRuIEf4uYHgAysW2WZtHEjmNRCZ8IrkcK0Je7dEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"fabrizzio\",\r\n    \"apellido\": \"Coniglio\",\r\n    \"email\": \"fconiglio1000000@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"ciudad\": \"cba\",\r\n    \"rol\": {\r\n        \"nombre\": \"ROLE_ADMIN\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/usuario/register",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"fabrizzio\",\r\n    \"apellido\": \"Coniglio\",\r\n    \"email\": \"prueba1000000@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"ciudad\": \"cba\",\r\n    \"rol\": {\r\n        \"nombre\": \"ROLE_USER\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.128.29.96:8080/usuarioCliente/register",
+					"protocol": "http",
+					"host": [
+						"3",
+						"128",
+						"29",
+						"96"
+					],
+					"port": "8080",
+					"path": [
+						"usuarioCliente",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

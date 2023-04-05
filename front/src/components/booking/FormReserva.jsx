@@ -1,6 +1,28 @@
 import React from 'react'
 import '../../styles/FormReserva.css'
-const FormReserva = () => {
+const FormReserva = ({form}) => {
+
+  const setForm =(e)=>{
+    switch (e.target.name) {
+      case "nombre":
+        form(e.target.name,e.target.value)
+        break;
+      case "apellido":
+        form(e.target.name,e.target.value)
+        break;
+      case "email":
+        form(e.target.name,e.target.value)
+        break;
+      case "ciudad":
+        form(e.target.name,e.target.value)
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+
   return (
 
 
@@ -14,8 +36,9 @@ const FormReserva = () => {
             type="text"
             name="nombre"
             id="nombre"
-            placeholder= "paula"
-            disabled
+            placeholder= "Digital"
+            required
+            onChange={setForm}
           />
         </div>
 
@@ -25,9 +48,10 @@ const FormReserva = () => {
           <input
             type="text"
             name="apellido"
-            id="Apellido"
-            placeholder="castillo"
-            disabled
+            id="apellido"
+            placeholder="House"
+            required
+            onChange={setForm}
           />
         </div>
 
@@ -39,8 +63,9 @@ const FormReserva = () => {
             type="email"
             name="email"
             id="email"
-            disabled
-            placeholder="paulacas2204@gmail.com"
+            placeholder="team11@dh.co"
+            required
+            onChange={setForm}
           />
         </div>
 
@@ -51,7 +76,8 @@ const FormReserva = () => {
             type="text"
             name="ciudad"
             id="ciudad"
-            placeholder="ciudad"
+            placeholder="Ciudad"
+            onChange={setForm}
             required
           />
         </div>

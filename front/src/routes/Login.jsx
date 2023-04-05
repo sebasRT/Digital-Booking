@@ -26,7 +26,7 @@ export const Login = () => {
     localStorage.setItem("email",email)
     localStorage.setItem("name", e.data[1])
     localStorage.setItem("password", password)
-    localStorage.setItem("jwt",e.data[2])
+    localStorage.setItem("jwt",e.data[8])
     setLogged(true)
     window.location.href = '/';
     }).catch(e=>{

@@ -2,30 +2,30 @@
     display:grid;
     gap: 10px;
     background-color: #FFFBE2; 
-    padding: 10vw;
+    padding: 4vw;
     margin-top: 15px;
-    position:absolute;
+    position: fixed;
     transition: left 1s;
     filter:drop-shadow(0px 3px 3px  #737578);
     border-radius: 5px;
   }
   
   .dropdown-menu.active{
-    left: 60%;
+    left: 71.7%;
+    top: 65px;
   }
   .dropdown-menu.unactive{
     left: 100vw;
 
   }
-  @media screen and (max-width: 670px){
-    .dropdown-menu.active{
-      left: 0px;
-    }
   
- }
   .menuButton{
     background-color: transparent;
     border-style: none;
+  }
+
+  .menu-button-container{
+    padding: 19px 5px 0px 0px;
   }
   
   .quitHeader{
@@ -46,4 +46,24 @@
    background-color:#FBC02D;
    color: #FFFBE2;
   }
-  
+
+  @media screen and (max-width: 480px){
+    .quitHeader{
+      display: none;
+    }
+    .tituloLogo{
+      display: none;
+    }
+  }
+.user-info{
+  display: flex;
+}
+@media screen and (max-width: 670px){
+  .dropdown-menu.active{
+    left: 51px;
+    top: 52px;
+  }
+  .user-info{
+    display: none;
+  }
+}

@@ -1,13 +1,4 @@
 @import url("leaflet/dist/leaflet.css");
-.bookingSpace{
-    width: 90vw;
-    display: grid;
-    gap: 20px  ;
-    justify-content: center;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-
-}
 
 .div-contenedor{
     margin-left: 30px;
@@ -21,22 +12,46 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
 width: 25rem;
 height: auto;
-
-
 }
-@media screen and (min-width: 870px){
-    .bookingSpace{
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr;
+
+@media screen and (max-width: 480px){
+    .buttonPlace{
+    padding: 22px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 8px;
+    height: auto;
+    margin: 17px;
+    width: 18rem;
     }
 }
+
+.bookingSpace{
+    width: 90vw;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    flex-direction: row; 
+}
+
+@media screen and (max-width: 640px){
+    .bookingSpace{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .imageimg1{
     grid-area: myArea;
 }
 .images-container{
     margin: auto;
     height: 400px;
-    width: 90vw;
+    width: 85vw;
     display: grid;
     grid:
   'myArea myArea . .'
@@ -47,10 +62,32 @@ height: auto;
 .image{
     min-width:100%;
     min-height: 100%;
+    border-radius: 8px;
 }
 .images-zone{
     margin-top: 20px;
 }
+@media (max-width: 500px) {
+    .images-zone .images-container {
+      display: flex;
+      margin: 0px;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      justify-content: center;
+    }
+    .images-zone .image {
+      flex: 0 0 auto;
+      width: 100%;
+      height: auto;
+    }
+    .images-zone .image:first-child {
+      display: block;
+    }
+    .images-zone .buttons {
+      display: none;
+    }
+  }
+  
 hr{
     height: 0px;
     border-color: #fbc02d;
@@ -60,16 +97,26 @@ hr{
     margin: auto;
     width: 90vw;
 }
+
 #map{
-    height: 500px;
-    margin-bottom: 100px;
-    margin-top: 10px;
-  
-  
+    width: 100%;
+    height: 640px; 
+    margin-top: 0;
   }
-  .leaflet-container{
+
+.leaflet-container{
     z-index: -1;
     position: relative;
     height: 100%;
-  }
-  
+  } 
+
+
+@media screen and (max-width: 640px) {
+    #map{
+    width: 362px;
+    height: 392px;
+    margin-bottom: 29px;
+    margin-top: 9px;
+    }
+    
+}

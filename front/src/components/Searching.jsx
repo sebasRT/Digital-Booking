@@ -47,11 +47,11 @@ const categoriesJSON = categories;
       <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
       <Form className='searchingForm' method="get" action="/results" onSubmit={handleSubmit}>
       
-          <Select className='placeInput' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>
+          <Select className='placeInput1' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>
     
-          <Select className='placeInput' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
+          <Select className='placeInput2' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
     
-          <div className='placeInput'><Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar></div>
+          <div className='placeInput3'><Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar></div>
 
           <button type="button" className='searchButton'>
             <Link to= {
