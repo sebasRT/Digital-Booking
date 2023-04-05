@@ -5,7 +5,7 @@ import { GlobalContext } from '../assets/global.context';
 import DetalleReserva from '../components/booking/DetalleReserva';
 import FormReserva from '../components/booking/FormReserva';
 import SelectReserva from '../components/booking/SelectReserva';
-import Politicas from '../components/Politicas';
+import Politicas from '../components/booking/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"
 import { Calendar, DateObject } from 'react-multi-date-picker';
@@ -37,6 +37,8 @@ const Booking = () => {
   return (
     
 <div className='contenedor-main'>
+  <div className="bookingForm">
+
     <div className='hiden'>
       <p>{product.categoria.titulo}
       </p>
@@ -46,36 +48,36 @@ const Booking = () => {
       <div className='contenedor-reserva'>
       
       <FormReserva ></FormReserva>
-      <DetalleReserva checkIn={checkIn} checkOut={checkOut}/>
       <h3>Selecciona tu fecha de reserva</h3>
-      <div className='contenedor-calendario' >
+    <div className='contenedor-calendario' >
 
       <br />
       <div className='calendar'>
 
-    <Calendar
-      minDate={new Date()}
-      range
-      rangeHover
-      numberOfMonths={media? 1 : 2}
-      onChange={handleCheck}
-      className={`yellow`}
-      >
+        <Calendar
+        minDate={new Date()}
+        range
+        rangeHover
+        numberOfMonths={media? 1 : 2}
+        onChange={handleCheck}
+        className={`yellow`}
+        >
       
-    </Calendar>
+        </Calendar>
         </div>
-      </div>
+    </div>
       <h3>Selecciona tu horario de llegada </h3>
-      <div className='contenedor-select'>
+    <div className='contenedor-select'>
       <br />
         <SelectReserva></SelectReserva>
-      </div>
-      </div>
-      
-      
-        <Politicas></Politicas>
-      
     </div>
+    </div>
+
+  </div>
+  <DetalleReserva checkIn={checkIn} checkOut={checkOut} idProducto={id}/>
+  <Politicas></Politicas>
+      
+</div>
   );
 };
 

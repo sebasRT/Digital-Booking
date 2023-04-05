@@ -1,26 +1,38 @@
 
 import { faLocationDot, faStar} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { GlobalContext } from '../../assets/global.context';
 import '../../styles/DetalleReserva.css';
+import axios from 'axios';
 
 
-const DetalleReserva = ({checkIn, checkOut}) => {
+const DetalleReserva = ({checkIn, checkOut, idProducto,idUsuario}) => {
 
     const {id}= useParams()
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
+    const {url} = useContext(GlobalContext)
+    const jwt = localStorage.getItem("jwt")
+    const [usuario, setUsuario] = useState()
+    const [producto, setProducto] = useState()
+
+    useEffect(() => {
+      axios.get(`${url}`)
+      }, [idUsuario])
+
+  useEffect(() => {
+    axios.get(`${url}producto/id/${idProducto}`).then(e=>setProducto(e.data)).catch(e=>console.log(e))
+    }, [idProducto])
+
   
+
   return (
     <div className="detalle">
       <div className="detalle_contenedro--uno">
         <h2 className="detalle__titulo">Detalle de la reserva</h2>
-        <img
-          src={product.categoria.url_imagen}
-          alt="fondo"
-        />
+        <div style={{backgroundImage:`url(${product.imagenPrincipal})`, backgroundSize:"cover", backgroundPosition:"center"}}></div>
       </div>
         <div >
           <div className="detalle__datos">
@@ -39,7 +51,7 @@ const DetalleReserva = ({checkIn, checkOut}) => {
             </div>
             <div className='check'>
               <hr className='lin' />
-              <p>Check- In:  <span>{checkIn}</span></p>
+              <p>Check- In:  <span>{checkIn }</span></p>
               <hr className='lin'/>
               <p>check-Out:  <span>{checkOut}</span></p>
               <hr className='lin' />

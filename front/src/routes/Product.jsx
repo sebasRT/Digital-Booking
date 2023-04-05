@@ -8,7 +8,7 @@ import "../styles/Product.css"
 import cards from "../assets/cards.json" 
 import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
-import Politicas from '../components/Politicas'
+import Politicas from '../components/booking/Politicas'
 import disponibilidades from '../assets/disponibilidades.json'
 
 
