@@ -51,7 +51,6 @@ const categoriesJSON = categories;
     
           <Select className='placeInput2' name='category' placeholder='Categoría' onChange={handleChange} options={categ} required="true"></Select>
     
-          <div className='placeInput3'><Calendar name= "chechInOut" onChange={handleChangeCalendar} value={formValues.chechInOut} ></Calendar></div>
 
           <button type="button" className='searchButton'>
             <Link to= {
