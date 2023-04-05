@@ -10,12 +10,28 @@
     }
 }
 .showAll{
-    margin: 10px;
+    background-color: #FBC02D;
+    border-style: none;
     border-radius: 5px;
-    border-style:solid;
-    border-width: 3px;
-    border-color: #FBC02D;
+    width: 12.1%;
+    margin: 10px;
+    padding: 7px;
 }
+@media screen and (max-width: 700px){
+    .showAll{
+        background-color: #FBC02D;
+        border-style: none;
+        border-radius: 5px;
+        width: 55%;
+        margin: 10px;
+        padding: 7px;
+    }
+}
+
+.showAll:hover{
+    background-color: #fbc02d85;
+}
+
 .showAll > button{
     border-width: 0;
     background-color: transparent;

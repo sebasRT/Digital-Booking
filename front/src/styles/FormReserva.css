@@ -1,4 +1,5 @@
 
+  @media screen and (min-width: 700px){
   .formulario {
     box-sizing: border-box;
     border: 0.0625rem solid #dfe4ea;
@@ -11,24 +12,47 @@
     height: 217px;
     display:flex;
   }
+}
+
+  @media screen and (max-width: 700px){
+    .formulario{
+    box-sizing: border-box;
+    background: #ffffff;
+    padding: 1rem;
+    border: 0.0625rem solid #dfe4ea;
+    border-radius: 0.5rem;
+    }
+  }
   
   .contenedor-form h3 {
     color: var(--color-dos);
     padding: 0.8rem;
   }
   
-  .formulario input {
-    background: var(--color-cuatro);
-    opacity: 1;
-    box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
-    border-radius: 0.3125rem;
-    border-radius: 0.3125rem;
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-    cursor: pointer;
-    width: 388px;
-    height: 40px;
+  @media screen and (min-width: 700px){
+    .formulario input {
+      background: var(--color-cuatro);
+      opacity: 1;
+      box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.15);
+      border-radius: 0.3125rem;
+      border-radius: 0.3125rem;
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+      cursor: pointer;
+      width: 388px;
+      height: 40px;
+    }
   }
+  
+    @media screen and (max-width: 700px){
+      .formulario input {
+    opacity: 1;
+    margin-bottom: 1rem;
+    width: 310px;
+    height: 38px;
+  }
+}
+
   
   input::-webkit-input-placeholder {
     opacity: 0.5;

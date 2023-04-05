@@ -46,7 +46,6 @@ const Booking = () => {
       <div className='contenedor-reserva'>
       
       <FormReserva ></FormReserva>
-      <DetalleReserva checkIn={checkIn} checkOut={checkOut}/>
       <h3>Selecciona tu fecha de reserva</h3>
       <div className='contenedor-calendario' >
 
@@ -70,6 +69,7 @@ const Booking = () => {
       <br />
         <SelectReserva></SelectReserva>
       </div>
+      <DetalleReserva checkIn={checkIn} checkOut={checkOut}/>
       </div>
       
       

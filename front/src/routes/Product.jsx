@@ -26,6 +26,10 @@ const Product = () => {
       ref.current.scrollTop = 0;
     },[ref]);
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
     const cardsImages = allCards.find((e)=> e.id == id).images

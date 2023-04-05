@@ -14,36 +14,38 @@ export const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
   
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+    const email = event.target.email.value.trim();
+    const password = event.target.password.value.trim();
+  
+    if (email.length === 0 || password.length === 0) {
+      // Si algún campo está vacío, mostrar un mensaje de error en el formulario
+      alert('Por favor, completa todos los campos');
+      return;
+    }
   
     const data = { 
-      email: email
-      , password: password };
-
-    axios.post(`${url}login`,data).then(e=>{
-    localStorage.setItem("email",email)
-    localStorage.setItem("name", e.data[1])
-    localStorage.setItem("password", password)
-    localStorage.setItem("jwt",e.data[2])
-    setLogged(true)
-    window.location.href = '/';
-    }).catch(e=>{console.log(e);setLogged(false)})
+      email: email,
+      password: password 
+    };
   
-    // // Obtener los datos guardados en localStorage
-    // const storedData = JSON.parse(localStorage.getItem('formData'));
-  
-    // if (storedData && email === storedData.email && password === storedData.password) {
-    //   // Si los datos coinciden, redireccionar al usuario a la página de inicio
-    //  
-    // } else {
-    //   // Si los datos no coinciden o no hay datos guardados, mostrar mensaje de error
-    //   alert('Correo electrónico o contraseña incorrectos');
-    // }
+    axios.post(`${url}login`,data)
+      .then(e => {
+        localStorage.setItem("email", email);
+        localStorage.setItem("name", e.data[1]);
+        localStorage.setItem("password", password);
+        localStorage.setItem("jwt", e.data[2]);
+        setLogged(true);
+        window.location.href = '/';
+      })
+      .catch(e => {
+        console.log(e);
+        setLogged(false);
+      });
   
     event.target.email.value = '';
     event.target.password.value = '';
   };
+  
   
 
   return (

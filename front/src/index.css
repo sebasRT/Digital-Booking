@@ -11,14 +11,14 @@ body{
   margin: 0%;
 }
 
-#app{
-  /* display: flex; */
+#app {
+  /*display: flex;*/
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh;
+  overflow: auto;
 }
+
 .route{
   display: flex;
   flex-direction: column;
@@ -45,8 +45,15 @@ header{
   
 }
 .menu{
-  margin-right: 10px;
+  margin-right: 46px;
+  display: flex;
 }
+@media screen and (max-width: 460px){
+  .menu{
+    margin-right: 10px;
+  }
+}
+
 .sessionButton{
   margin: 3%;
   height: fit-content;
@@ -70,6 +77,26 @@ header{
   margin: 3%; 
  
 }
+
+.botonCerrar {
+  margin: 3%;
+  font-size: 14px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #FBC02D;
+  background: #ffffff00;
+}
+
+.botonCerrar:hover {
+  background-color: #ffbc14;
+}
+
+
+
+
 .logo{
   display: flex;
   flex-direction: row;
@@ -160,5 +187,16 @@ a{
 .tituloLogo{
   font-family: 'Poppins';
 font-style: italic;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px){
+  .tituloLogo{
+    display: none;
+  }
+}
+
+#menuButton{
+  height: 40px;
+  width: 25px;
 }

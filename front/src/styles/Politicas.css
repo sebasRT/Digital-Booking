@@ -6,9 +6,6 @@
 
 }
 
-/* .containes-datos-politica{
-    
-} */
 
 .linea{
     height: 0px;
@@ -28,7 +25,7 @@ line-height: 36px;
 .columna1{
     width:300px;
     margin-bottom: 40px;
-    /* display: inline-block; */
+
     margin: 20px;
 }
 
@@ -38,11 +35,15 @@ line-height: 36px;
 p{
    margin:15px; 
 }
-.containes-datos-politica{
+.containes-datos-politica {
     display: flex;
     justify-content: space-around;
     padding-bottom: 3rem;
 }
 
-
-
+@media screen and (max-width: 640px){
+    .containes-datos-politica {
+        display: inherit;
+        padding-bottom: 3rem;
+    }
+}

@@ -41,15 +41,30 @@
     font-size: 0.875rem;
     color:#fbc02d ;
   }
+
+  @media screen and (min-width: 700px){
+    .detalle__datos{
+      font-family: "Quicksand";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color:black; 
+    }
+}
+
+@media screen and (max-width: 700px){
   .detalle__datos{
     font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    color:black;
-    
-  }
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: black;
+  padding: 7px 0px 0px 12px;
+    }
+}
+
   .detalle__datos h3 {
     font-weight: 700;
     font-size: 1.25rem;
@@ -86,27 +101,24 @@
     font-size: 20px;
     color: black;
    }
-   .container-buton{
+
+   @media screen and (min-width: 700px){
+    .container-buton{
+      align-items: center;
+    justify-content: center;
+    display: flex;
+    }
+}
+
+@media screen and (max-width: 700px){
+  .container-buton{
     align-items: center;
     justify-content: center;
     display: flex;
-   }
-  /* Modelo adaptativo tablet */
-  /* @media screen and (min-width: 768px) {
-    .detalle {
-      display: flex;
+    padding: 0px 0px 20px 0px;
     }
-    .detalle__titulo {
-      font-size: 1.5rem;
-    }
-    .detalle img {
-      height: 17.375rem;
-    }
-    .detalle__datos h3 {
-      font-size: 1.5rem;
-    }
-  } */
-  
+}
+
   /* Modelo adaptativo destokp */
   @media screen and (min-width: 992px) {
     .detalle {
