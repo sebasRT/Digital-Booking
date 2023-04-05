@@ -24,7 +24,7 @@ const Header = () => {
 
     
       { logged ? 
-      <Menu><span>{"Hola, "+name.toUpperCase()}</span></Menu>:
+      <Menu><span>{"Hola, "+name}</span></Menu>:
         
         isMobile ?(
           <Menu></Menu>
