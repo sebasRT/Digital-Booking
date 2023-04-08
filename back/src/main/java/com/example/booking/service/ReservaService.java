@@ -91,6 +91,14 @@ public class ReservaService implements IReservaService {
         return reservaDTOList;
     }
 
+    @Override
+    public Iterable<ReservaDTO> findByUsuarioId(Long id) {
+
+        List<ReservaDTO> reservaDTOList = new ArrayList<>();
+        reservaRepository.findByIdusuario(id).forEach(reserva -> reservaDTOList.add(mapDTO(reserva)));
+        return reservaDTOList;
+    }
+
     private ReservaDTO mapDTO(Reserva reserva) {
         return objectMapper.convertValue(reserva, ReservaDTO.class);
     }

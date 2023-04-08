@@ -29,4 +29,10 @@ public class ReservaController {
     public ResponseEntity<Iterable<ReservaDTO>> findAllReservasByProductoId(@PathVariable Long id) {
         return ResponseEntity.ok(iReservaService.findByProductoId(id));
     }
+
+    @Operation(summary = "Get list of reservas for id usuario")
+    @GetMapping("/usuario/{id}")
+    public ResponseEntity<Iterable<ReservaDTO>> findAllReservasByUsuarioId(@PathVariable Long id) {
+        return ResponseEntity.ok(iReservaService.findByUsuarioId(id));
+    }
 }
