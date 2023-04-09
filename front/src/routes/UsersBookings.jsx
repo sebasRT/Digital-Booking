@@ -1,44 +1,68 @@
+import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../assets/global.context'
-import axios from 'axios'
-import "../styles/Booking.css"
-let bookings = []
-const UsersBookings = () => {
-  const token = localStorage.getItem("jwt")
-  const {products,url} = useContext(GlobalContext)
-  const [booking, setbooking] = useState([])
-  const headers = {
-    Authorization: `Bearer ${token}`
-  };
+import { GlobalContext } from '../assets/global.context';
+import BookingCard from '../components/BookingCard';
+import { useNavigate } from 'react-router-dom';
+import Navigate from '../components/Navigate';
+import LoadingSpinner from '../components/LoadingSpinner';
 
-  useEffect(() => {
-    Object.keys(products).map((product)=>{
-      axios.get(`${url}reserva/producto/${products[product].idproductos}`,{headers}).
-      then(e=>e.data[0] ? setbooking(...booking,e.data):console.log(bookings))
-      .catch(e=>console.log(e))
-    })
-  
-  }, [])
-  
-  
-  
-  
+let bookings = [];
+
+const UsersBookings = () => {
+    const history = useNavigate();
+const token = localStorage.getItem("jwt");
+const id = localStorage.getItem("id");
+const headers = {
+    Authorization: `Bearer ${token}`
+};
+const {url} = useContext(GlobalContext)
+
+const [booking, setBooking] = useState([]);
+const [charged,setCharged] = useState(false);
+
+
+useEffect( () => { 
+    bookings = [];
+    axios.get(`${url}reserva/usuario/${id}`,{headers}).
+    then(e=>{
+        
+        if (e.data[0]) {
+            const data = e.data;
+            data.forEach(p=>bookings.push(p));
+
+        }else{console.log("no hay nada con este id")} })
+
+    .catch(e=>console.log(e)).finally(()=>{setBooking(bookings),setCharged(true)})
+
+    return () => {
+        bookings = [];
+    };
+    },[])
+
 
   return (
+    <>
+    <Navigate title={"Mis reservas"}></Navigate>
+    <div className='cards-container' style={{paddingBottom:"100px"}}>
+        {
+        charged? (booking.length === 0 ? <h1>Aun no hay reservas a tu nombre</h1> : (
+            booking.map((e)=>(
+                <BookingCard
+                key={e}
+                  img={e.idproducto.imagenPrincipal}
+                  place={e.idproducto.titulo}
+                  checkIn={e.fecha_inicio}
+                  checkOut={e.fecha_fin}
+                  >              </BookingCard>
+                  ))
+    
 
-    <div className='cards-container'>
-
-      {Object.keys(booking).map(e=>{
-        const bookingSpace = booking[e];
-        console.log(bookingSpace);
-        return(<div key={bookingSpace.idreservas} className='bookingCard'>
-          <span><strong>Ciudad:</strong> {bookingSpace.idproducto.ciudad.nombre}</span>
-          <span><strong>Sitio:</strong> {bookingSpace.idproducto.titulo}</span>
-          <span><strong>Check-In:</strong> {bookingSpace.fecha_inicio}</span>
-          <span><strong>Check-Out:</strong> {bookingSpace.fecha_fin}</span>
-        </div>)
-      })}
-   </div>
+        )) : <LoadingSpinner></LoadingSpinner>
+        
+        
+            }
+    </div>
+            </>
   )
 }
 

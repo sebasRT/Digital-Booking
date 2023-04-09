@@ -25,8 +25,10 @@ export const Login = () => {
     axios.post(`${url}login`,data).then(e=>{
     localStorage.setItem("email",email)
     localStorage.setItem("name", e.data[1])
+    localStorage.setItem("lastname",e.data[2])
     localStorage.setItem("password", password)
     localStorage.setItem("jwt",e.data[8])
+    localStorage.setItem("id",e.data[3])
     setLogged(true)
     window.location.href = '/';
     }).catch(e=>{

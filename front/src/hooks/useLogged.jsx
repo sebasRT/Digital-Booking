@@ -24,7 +24,7 @@ useEffect(() => {
     e.status == 200? setUsuario(e.data): console.log("no existe usuario");
   e.status == 200? setLogged(true):setLogged(false);
   e.data[0] == "team11@dh.co" ? setAdmin(true): null;})
-  .catch(e=>{console.log(e);})
+  .catch(e=>{e.message.includes("401")? console.log("no user"): console.log(e);;})
 },[])
 
   return ({logged,name,admin,usuario})

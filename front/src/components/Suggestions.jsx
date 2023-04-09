@@ -3,16 +3,12 @@ import "../styles/Suggestions.css"
 
 import Card from '../components/Card';
 
-import cards from "../assets/cards.json"
 import { GlobalContext } from '../assets/global.context';
-const cardsJSON = cards;
 
 export const Suggestions = () => {
 
   const {productsRandom} = useContext(GlobalContext);
-  
-  console.log(productsRandom);
-  return (
+    return (
     
     <div className='Suggestions'>
         

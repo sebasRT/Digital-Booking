@@ -5,6 +5,10 @@ import { GlobalContext } from '../assets/global.context';
 import Card from '../components/Card';
 import "../styles/Suggestions.css" 
 import "../styles/Cards.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+import Navigate from '../components/Navigate';
 
 
 
@@ -12,9 +16,10 @@ export const Products = () => {
 
   const {products} = useContext(GlobalContext);
   
+  const history = useNavigate()
   return (
     <div>
-      <h2>Productos</h2>
+      <Navigate title="Productos"></Navigate>
       <div className='Suggestions'>
       <div className='cards-container'>
         

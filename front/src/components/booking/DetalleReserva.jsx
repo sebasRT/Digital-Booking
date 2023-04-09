@@ -16,7 +16,6 @@ const DetalleReserva = ({checkIn, checkOut, idProducto,form}) => {
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
     const {url} = useContext(GlobalContext)
-    const jwt = localStorage.getItem("jwt")
     const [reservaExitosa, setReservaExitosa] = useState(false)
     const {usuario}=useLogged();
 
