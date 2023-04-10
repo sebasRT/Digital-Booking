@@ -10,18 +10,18 @@ import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
 import Politicas from '../components/booking/Politicas'
 import disponibilidades from '../assets/disponibilidades.json'
+import Navigate from '../components/Navigate'
 
 
 const Product = () => {
-    const isLogged = useLogged(); //esta funcion me comprueba si el usuario ya esta loggueado o no
+    const {logged} = useLogged() //esta funcion me comprueba si el usuario ya esta loggueado o no
     const {id} = useParams()
     const {products} = useContext(GlobalContext);
     const product = products.find((e)=>e.idproductos == id );
     const disponibilidad = disponibilidades[id]
     const allCards = cards
-
     const ref = useRef();
-
+    
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
@@ -30,27 +30,19 @@ const Product = () => {
     //                    ||             
     const cardsImages = allCards.find((e)=> e.id == id).images
     const coordinates = allCards.find((e)=> e.id == id).coordinates
-    const date2 = new Date(2023,2,22);
     const media = useMedia();
-    const today = new Date()
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
-    const availableDays = allCards.find((e)=> e.id == id).disponibilidad
-    
+
     // Una vez las fechas disponibles estén en el back: cambiar este array por la info en el back
     //                                             ||
     const [values, setValues] = useState(disponibilidad)
 
   return (
-    <div ref={ref}>
+    <div ref={ref} style={{paddingBottom:"70px"}}>
 
-      <div className="hiden">
-
-        <p>{product.categoria.titulo}</p>
-        <h2>{product.titulo}</h2>
-
-      </div>
-      <div className='div-contenedor'>
+    <Navigate title={product.titulo}></Navigate>
+        <div className='div-contenedor'>
       <div className='images-zone'>
         <div className='buttons'></div>
         <div className='images-container'>
@@ -92,7 +84,7 @@ const Product = () => {
         </div>
         <div className='buttonPlace'>
           <h3>Agrega tus fechas de viaje para tener precios exactos</h3>
-          {isLogged ? <Button1 link={`/booking/${id}`} text="Iniciar reserva"></Button1> : (<div>
+          {logged ? <Button1 link={`/booking/${id}`} text="Iniciar reserva"></Button1> : (<div>
             <Button1 link={"/login"} text={"Ingresa"}></Button1>
           <br />
           <h5>si aun no tienes cuenta:</h5>

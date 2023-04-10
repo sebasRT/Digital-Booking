@@ -44,7 +44,7 @@ const categoriesJSON = categories;
 
   return (
     <div className='searching'>
-      <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
+      <h2 style={{margin:"0"}}>Busca ofertas en hoteles, casas y mucho mas</h2>
       <Form className='searchingForm' method="get" action="/results" onSubmit={handleSubmit}>
       
           <Select className='placeInput1' name='location' placeholder='¿A dónde vamos?' onChange={handleChange} options={cities} required="true" ></Select>

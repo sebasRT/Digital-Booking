@@ -9,11 +9,14 @@ export const Menu = () => {
     const openHandle = () => setOpen(prev => !prev)
     const { logged, name, admin } = useLogged();
     const isMobile = useMedia();
+    const [nombre, setNombre] = useState("")
 
     const closeSession = () => {
       localStorage.removeItem("name")
       localStorage.removeItem("email")
       localStorage.removeItem("password")
+      localStorage.removeItem("jwt")
+      localStorage.removeItem("lastname")
       window.location.href = '/';
     }
 
@@ -23,7 +26,7 @@ export const Menu = () => {
             setOpen(false);
         }
       }
-
+      setNombre(name)
       document.body.addEventListener("click",closeDropDown);
       return () => {
         document.body.removeEventListener("click",closeDropDown)
@@ -36,7 +39,7 @@ export const Menu = () => {
   <div className="user-info" style={{ alignItems: 'center' }}>
     <div style={{ backgroundColor: '#263238', borderRadius: '50%', width: '50px', height: '50px', marginRight: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <span style={{ fontSize: '25px', fontWeight: 'bold', textTransform: 'uppercase', color: 'white' }}>
-        {name.substring(0, 1)}{localStorage.getItem('apellido') && localStorage.getItem('apellido').substring(0, 1)}
+        {nombre.substring(0, 1)}{localStorage.getItem('lastname') && localStorage.getItem('lastname').substring(0, 1)}
       </span>
     </div>
     <div className="user-name" style={{ fontSize: '18px' }}>
@@ -55,7 +58,10 @@ export const Menu = () => {
             {
               logged ? (
                 <>
-                  {admin?  <Button1 text="Edita Productos" link={`admin`}></Button1>: <Button1 text="Mis reservas" link={`bookings`}></Button1>}
+                  {admin?  <><Button1 text="Edita Productos" link={`admin`}></Button1>
+                  <Button1 text="Todas las reservas" link={`allBookings`}></Button1>
+                  <Button1 text="Tus reservas" link={`bookings`}></Button1></>
+                  : <Button1 text="Mis reservas" link={`bookings`}></Button1>}
                   <button onClick={closeSession} type="button" className="botonCerrar">cerrar sesión</button>
                 </>
               ) : (

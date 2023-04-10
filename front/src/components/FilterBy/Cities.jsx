@@ -11,7 +11,7 @@ const Cities = () => {
     <div className="categories-container">
 
     {Object.keys(cities).map((e)=> {const city = cities[e];
-                                     return(<Link to={`/results?location=${city.value}`}>
+                                     return(<Link key={e} to={`/results?location=${city.value}`}>
                                      <FilterCard name={city.label} img={city.url}></FilterCard>
                                      </Link>
                                      )})}
