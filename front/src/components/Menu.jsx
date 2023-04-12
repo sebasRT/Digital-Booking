@@ -43,9 +43,9 @@ export const Menu = () => {
       </span>
     </div>
     <div className="user-name" style={{ fontSize: '18px' }}>
-      <p style={{ fontSize: '15px', color: 'rgba(0, 0, 0, 0.5)', fontWeight: 'bold'}}>Hola,</p>
-      {name} {localStorage.getItem('apellido') ? localStorage.getItem('apellido') : ''}
-    </div>
+  <p style={{ fontSize: '15px', color: 'rgba(0, 0, 0, 0.5)', fontWeight: 'bold'}}>Hola,</p>
+  {`${nombre.charAt(0).toLocaleUpperCase()}${nombre.slice(1).toLocaleLowerCase()} ${localStorage.getItem('lastname') ? localStorage.getItem('lastname').charAt(0).toLocaleUpperCase() + localStorage.getItem('lastname').slice(1).toLocaleLowerCase() : ''}`}
+</div>
   </div>
 )}
 
@@ -62,7 +62,7 @@ export const Menu = () => {
                   <Button1 text="Todas las reservas" link={`allBookings`}></Button1>
                   <Button1 text="Tus reservas" link={`bookings`}></Button1></>
                   : <Button1 text="Mis reservas" link={`bookings`}></Button1>}
-                  <button onClick={closeSession} type="button" className="botonCerrar">cerrar sesión</button>
+                  <button onClick={closeSession} type="button" className="botonCerrar">Cerrar sesión</button>
                 </>
               ) : (
                 <>

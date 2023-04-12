@@ -20,6 +20,9 @@ const Card = ({url,category,title,location,description,id}) => {
             <div className="name-hotel">
               <span className="starts">{category}</span>
               <FontAwesomeIcon className="icon-star" icon={faStar}/>
+              <FontAwesomeIcon className="icon-star" icon={faStar}/>
+              <FontAwesomeIcon className="icon-star" icon={faStar}/>
+              <FontAwesomeIcon className="icon-star" icon={faStar}/>
               <h1 className="title">{title}</h1>
             </div>
             <div className="ranking-card c">
