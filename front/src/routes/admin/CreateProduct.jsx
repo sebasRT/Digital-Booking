@@ -35,6 +35,7 @@ const CreateProduct = () => {
 
   const [ciudades, setCiudades] = useState([]);
   const [ciudadId, setCiudadId] = useState("");
+
   const handleChangeCiudadId = (event) => {
     setCiudadId(event.target.value);
   };
@@ -86,9 +87,14 @@ const CreateProduct = () => {
     };
   
     const [imagenes, setImagenes] = useState([]);
-  
+    const [propiedades, setPropiedades] = useState([]);
+    
     const[contadorIdImg,setContadorIdImg]= useState(1)
 
+    useEffect(() => {
+      console.log(imagenes);
+    
+    }, [imagenes])
     
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
@@ -113,7 +119,8 @@ const CreateProduct = () => {
     }
 
     const handleSubmit = (e) => {
-      e.preventDefault();}
+      e.preventDefault()
+      ;}
   
     //traer ciudades, categorias y caracteristicas
 
@@ -158,8 +165,10 @@ setform(form);
 }, [submit])
 
 
-  const submitProduct =()=>{
-    setSubmit(!submit); 
+  const submitProduct =(e)=>{
+    e.preventDefault()
+    setSubmit(true); 
+    console.log(form);
 
     axios.post(`${url}producto/register`,form)
     .then(e=>console.log(e))
@@ -180,7 +189,7 @@ setform(form);
       <div className="pantalla__creacionProducto--contenedor">
         <div className="pantalla__creacionProducto--contenedor__principal">
           <div className="creacionProducto__form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={submitProduct}>
               <div className="formPrincipal">
                 <div className="input-box">
                   <label htmlFor="nombrePropiedad">
@@ -416,9 +425,7 @@ setform(form);
                 </div>
               </div>
               <div className="contenedor_centrado">
-               <Link to={"/creacionExitosa"}>
                 <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
-                </Link>
               </div>
 
                 </form>

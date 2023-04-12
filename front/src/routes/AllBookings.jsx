@@ -79,7 +79,7 @@ const UsersBookings = () => {
                 >              </BookingCard>
               ))
               :
-              (<h1>Aun no tienes reservas por hacer</h1>)
+              (<h1>Aun no tienes reservas hechas</h1>)
               
             }</>
             )

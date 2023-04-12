@@ -100,6 +100,7 @@ const Booking = () => {
         minDate={new Date()}
         range
         rangeHover
+        value={values}
         numberOfMonths={media? 1 : 2}
         onChange={handleCheck}
         className={`yellow`}

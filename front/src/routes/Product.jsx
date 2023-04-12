@@ -24,11 +24,12 @@ const Product = () => {
     
     useEffect(() => {
       window.scrollTo(0, 0);
+      console.log(product);
     }, []);
 
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
-    const cardsImages = allCards.find((e)=> e.id == id).images
+    const cardsImages = product.imagenes.map(e=>e.url)
     const coordinates = allCards.find((e)=> e.id == id).coordinates
     const media = useMedia();
     const tomorrow = new Date()
