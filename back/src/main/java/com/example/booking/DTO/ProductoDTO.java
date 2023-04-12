@@ -46,10 +46,12 @@ public class ProductoDTO {
 
     private Ciudad ciudad;
 
-    private String cordenadas;
+    private String latitud;
+
+    private String longitud;
 
 
-    public ProductoDTO(String titulo, String ubicacion, String descripcion, String imagenPrincipal, List<Imagen> imagenes, Categoria categoria, String disponibilidad, String politicas, Set<Caracteristica> caracteristicas, Ciudad ciudad, String cordenadas) {
+    public ProductoDTO(String titulo, String ubicacion, String descripcion, String imagenPrincipal, List<Imagen> imagenes, Categoria categoria, String disponibilidad, String politicas, Set<Caracteristica> caracteristicas, Ciudad ciudad, String latitud, String longitud) {
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
@@ -60,7 +62,8 @@ public class ProductoDTO {
         this.politicas = politicas;
         this.caracteristicas = caracteristicas;
         this.ciudad = ciudad;
-        this.cordenadas = cordenadas;
+        this.latitud = latitud;
+        this.longitud = longitud;
 
     }
 }
