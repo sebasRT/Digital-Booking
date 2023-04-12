@@ -55,41 +55,34 @@ header{
     margin-right: 10px;
   }
 }
-
 .sessionButton{
   margin: 3%;
   height: fit-content;
   font-size: 1vw;
   text-align:center;
   border-radius: 5px;
-  border-style:solid;
-  border-color: #FBC02D;
-  
+  background-color: #FBC02D;
+  height: 38px;
 }
 
-.sessionButton :hover{
-  color:#FBC02D;
-}
 .sessionButton > a{
-  color: #FBC02D;
   text-decoration: none;
   font-size: 1rem;
 }
+
 .sessionButton > a >h4{
   margin: 3%; 
- 
 }
 
 .botonCerrar {
+  border: none;
   margin: 3%;
-  font-size: 14px;
-  height: 40px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #FBC02D;
-  background: #ffffff00;
+    height: fit-content;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fb7f2d;
+    height: 38px;
+    color: white;
 }
 
 .botonCerrar:hover {
@@ -201,4 +194,9 @@ font-style: italic;
 #menuButton{
   height: 40px;
   width: 25px;
+}
+
+h2{
+  font-size: 36px;
+  padding: 10px;
 }
