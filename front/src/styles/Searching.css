@@ -28,14 +28,25 @@
     text-align: center;
 }
 .searchButton{
-    color: white;
     background-color: #607D8B;
-    border-style: none;
-    border-radius: 5px;
+    border: none;
+    color: white;
     width: 100%;
-    max-width: 400px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
     margin: auto;
 }
+.searchButton:hover {
+    background-color: #263238;
+} 
+
 @media screen and (max-width: 710px){
     .searchingForm{
         grid-auto-flow: row;
