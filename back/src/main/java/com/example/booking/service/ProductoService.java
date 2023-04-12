@@ -62,6 +62,7 @@ public class ProductoService implements IProductoService {
         producto.setImagenes(productoDTO.getImagenes());
         producto.setDisponibilidad(productoDTO.getDisponibilidad());
         producto.setPoliticas(productoDTO.getPoliticas());
+        producto.setCordenadas(productoDTO.getCordenadas());
 
         return mapDTO(iProductoRepository.save(producto));
     }

@@ -61,12 +61,16 @@ public class Producto {
     @JoinColumn(name="idciudades")
     private Ciudad ciudad;
 
-    public Producto (String titulo, String ubicacion, String descripcion,  Categoria categoria, String disponibilidad, String politicas){
+    @Column(name="cordenadas")
+    private String cordenadas;
+
+    public Producto (String titulo, String ubicacion, String descripcion,  Categoria categoria, String disponibilidad, String politicas, String Cordenadas) {
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
         this.disponibilidad = disponibilidad;
         this.politicas = politicas;
+        this.cordenadas = Cordenadas;
     }
 
     @Override

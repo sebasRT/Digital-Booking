@@ -32,7 +32,7 @@ public class ProductoServiceTest {
         Categoria categoria = new Categoria(categoriaDTO.getIdcategorias(), categoriaDTO.getTitulo(), categoriaDTO.getDescripcion(), categoriaDTO.getUrl_imagen(), null);
 
         //Creamos un producto
-        ProductoDTO productoDTO = new ProductoDTO("Producto 1", "ubicacion 1", "descripcion 1", "imagenPrincipal 1", null, categoria,"SI",null, null, null);
+        ProductoDTO productoDTO = new ProductoDTO("Producto 1", "ubicacion 1", "descripcion 1", "imagenPrincipal 1", null, categoria,"SI",null, null, null, null);
         productoService.create(productoDTO);
         assertNotNull(productoDTO);
 
