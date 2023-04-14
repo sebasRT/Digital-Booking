@@ -7,8 +7,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
-import formProduct from"../../assets/formProduct.json"
-import Navigator from '../../components/Navigator';
+
 
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
@@ -23,7 +22,7 @@ const CreateProduct = () => {
   };
 
   const [categorias, setCategorias] = useState([]);
-  const [categoriaId, setCategoriaId] = useState(1);
+  const [categoriaId, setCategoriaId] = useState("");
   const handleChangeCategoriaId = (event) => {
     setCategoriaId(event.target.value);
   };
@@ -34,8 +33,7 @@ const CreateProduct = () => {
   };
 
   const [ciudades, setCiudades] = useState([]);
-  const [ciudadId, setCiudadId] = useState(1);
-
+  const [ciudadId, setCiudadId] = useState("");
   const handleChangeCiudadId = (event) => {
     setCiudadId(event.target.value);
   };
@@ -87,14 +85,9 @@ const CreateProduct = () => {
     };
   
     const [imagenes, setImagenes] = useState([]);
-    const [propiedades, setPropiedades] = useState([]);
-    
+  
     const[contadorIdImg,setContadorIdImg]= useState(1)
 
-    useEffect(() => {
-      console.log(imagenes);
-    
-    }, [imagenes])
     
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
@@ -113,6 +106,14 @@ const CreateProduct = () => {
     }; 
     
     
+    const navigate = useNavigate()
+    const handleClick = () => {
+      navigate(-1)
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();}
+  
     //traer ciudades, categorias y caracteristicas
 
 
@@ -126,154 +127,148 @@ const [form, setform] = useState()
 useEffect(() => {
 
   const form = {
-    titulo: nombrePropiedad,
-    ubicacion: "",
-    descripcion: descripcion,
-    imagenPrincipal: imagenUrl,
-    imagenes: imagenes,    
-    categoria: {
-      idcategorias: categoriaId,
-      titulo: "",
-      descripcion: "",
-      url_imagen: "",
+    "titulo": nombrePropiedad,
+    "ubicacion": direccion,
+    "descripcion": descripcion,
+    "imagenPrincipal": imagenUrl,
+    "imagenes": [],
+    "categoria": {
+        "idcategorias": categoriaId,
+        "titulo": "",
+        "descripcion": "",
+        "url_imagen": ""
     },
-    disponibilidad: "",
-    politicas:null,
-    caracteristicas:[
-      {
-        idcaracteristicas: 1,
-        descripcion: "Gimnasio,Terraza Bar,Turco",
-        imagen: null
+    "disponibilidad": "",
+    "politicas":politicasDeCancelacion,
+    "caracteristicas": [
+        {
+            "idcaracteristicas": 1,
+            "descripcion": "Wi fi,Gimnasio",
+            "imagen": null
+        }
+    ],
+    "ciudad": {
+        "idciudades": ciudadId,
+        "nombre": ""
     }
+  };
 
-    ]
-    ,
-    ciudad: {
-      idciudades: ciudadId,
-    }
-
-    
-  }
 setform(form);
+}, [submit])
 
-},[nombrePropiedad,categoriaId,descripcion,imagenUrl,imagenes,categoriaId,ciudadId])
 
+  const submitProduct =()=>{
+    setSubmit(!submit); 
 
-let config = {
-  headers: {
-    'Authorization': 'Bearer ' + localStorage.getItem("jwt")
-  }
-}
-  const submitProduct =(e)=>{
-    e.preventDefault()
-    setSubmit(true); 
-
-    axios.post(`${url}producto/register`,form,config)
-    .then(e=>console.log(e), setSubmit(true))
+    axios.post(`${url}producto/register`,form)
+    .then(e=>console.log(e))
     .catch(e=>console.log(e))
 
   }
 
   return (
-    <>
-    {
-      submit? <Navigate to="/admin" /> : (
-        <div>
-        <Navigator title="Crear Producto"></Navigator>
-  
-        <div className="pantalla__creacionProducto--contenedor">
-          <div className="pantalla__creacionProducto--contenedor__principal">
-            <div className="creacionProducto__form">
-              <form onSubmit={submitProduct}>
-                <div className="formPrincipal">
-                  <div className="input-box">
-                    <label htmlFor="nombrePropiedad">
-                      Nombre de la propiedad
-                    </label>
-                    <input
-                      type="text"
-                      name="nombrePropiedad"
-                      id="nombrePropiedad"
-                      placeholder="Hotel Hermirage"
-                      value={nombrePropiedad}
-                      onChange={handleChangeNombrePropiedad}
-                      required
-                    />
-                  </div>
-                  <div className="input-box">
-                    <label htmlFor="categoria">Categoria</label>
-                    <select
-                      type="text"
-                      name="categoria"
-                      id="categoria"
-                      placeholder="Hotel"
-                      value={categoriaId}
-                      onChange={handleChangeCategoriaId}
-                      required
-                      >
-                      {Object.keys(categories).map(categori => {
-                        const cat = categories[categori];                    
-                        return(
-                        <option value={cat.idcategorias} key={cat.idcategorias}>
-                          {cat.titulo}
-                        </option>)
-                        }
-                      )}
-                    </select>
-                  </div>
-                  <div className="input-box">
-                    <label htmlFor="direccion">Direccion</label>
-                    <input
-                      className="box-direccion"
-                      type="text"
-                      name="direccion"
-                      id="direccion"
-                      placeholder="Av. Colon 1643"
-                      value={direccion}
-                      onChange={handleChangeDireccion}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="input-box">
-                    <label htmlFor="ciudad">Ciudad</label>
-                    <select
-                      type="text"
-                      name="ciudad"
-                      id="ciudad"
-                      placeholder="Ciudad"
-                      required
-                      value={ciudadId}                    
-                      onChange={handleChangeCiudadId}
-                    >
-                      {Object.keys(cities).map((ciudad) => {
-                        const city = cities[ciudad];
-                        return(
-                        <option value={city.value} key={city.value}>
-                          {city.label}
-                        </option>)
-                      } )}
-                    </select>
-                  </div>
-  
-                  </div>
-                  <div className="input-box2">
-                  <label htmlFor="descripcion">Descripcion</label>
-                  <textarea
-                    name="descripcion"
-                    id="descripcion"
-                    placeholder="Escribir aquí"
-                    cols="200"
-                    rows="5"
-                    value={descripcion}
-                    onChange={handleChangeDescripcion}
-                    />
+
+    <div>
+      <div className="adminHeader">
+      
+        <h3>Administración</h3>
+        <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
+
+    </div>
+      <h2 className="creacionProducto__titulo">Crear Propiedad</h2>
+      <div className="pantalla__creacionProducto--contenedor">
+        <div className="pantalla__creacionProducto--contenedor__principal">
+          <div className="creacionProducto__form">
+            <form onSubmit={handleSubmit}>
+              <div className="formPrincipal">
+                <div className="input-box">
+                  <label htmlFor="nombrePropiedad">
+                    Nombre de la propiedad
+                  </label>
+                  <input
+                    type="text"
+                    name="nombrePropiedad"
+                    id="nombrePropiedad"
+                    placeholder="Hotel Hermirage"
+                    value={nombrePropiedad}
+                    onChange={handleChangeNombrePropiedad}
+                    required
+                  />
                 </div>
-                <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
-                <div className="creacionProducto__contenedor__contraste">
-                  {/* {imagenes.map(({id,url}) => {
-                    return (
-                      <div key={id} className="creacionProducto__felexContainer">
+                <div className="input-box">
+                  <label htmlFor="categoria">Categoria</label>
+                  <select
+                    type="text"
+                    name="categoria"
+                    id="categoria"
+                    placeholder="Hotel"
+                    value={categoriaId}
+                    onChange={handleChangeCategoriaId}
+                    required
+                  >
+                    {Object.keys(categories).map(categori => {
+                      const cat = categories[categori];                    
+                      return(
+                      <option value={cat.idcategorias} key={cat.idcategorias}>
+                        {cat.titulo}
+                      </option>)
+                      }
+                    )}
+                  </select>
+                </div>
+                <div className="input-box">
+                  <label htmlFor="direccion">Direccion</label>
+                  <input
+                    className="box-direccion"
+                    type="text"
+                    name="direccion"
+                    id="direccion"
+                    placeholder="Av. Colon 1643"
+                    value={direccion}
+                    onChange={handleChangeDireccion}
+                    required
+                  />
+                </div>
+                
+                <div className="input-box">
+                  <label htmlFor="ciudad">Ciudad</label>
+                  <select
+                    type="text"
+                    name="ciudad"
+                    id="ciudad"
+                    placeholder="Ciudad"
+                    required
+                    value={ciudadId}                    
+                    onChange={handleChangeCiudadId}
+                  >
+                    {Object.keys(cities).map((ciudad) => {
+                      const city = cities[ciudad];
+                      return(
+                      <option value={city.value} key={city.value}>
+                        {city.label}
+                      </option>)
+                    } )}
+                  </select>
+                </div>
+
+                </div>
+                <div className="input-box2">
+                <label htmlFor="descripcion">Descripcion</label>
+                <textarea
+                  name="descripcion"
+                  id="descripcion"
+                  placeholder="Escribir aquí"
+                  cols="200"
+                  rows="5"
+                  value={descripcion}
+                  onChange={handleChangeDescripcion}
+                />
+              </div>
+              <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
+              <div className="creacionProducto__contenedor__contraste">
+                {imagenes.map(({id,url}) => {
+                  return (
+                    <div key={id} className="creacionProducto__felexContainer">
                       <div className="input-box2">
                         
                           <input
@@ -288,13 +283,15 @@ let config = {
                         </div>
                         <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                       </div>
-                    );
-                  })} */}
-                  {/* <div className="creacionProducto__felexContainer">
-                    <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
-                      <div className='input-new' style={ {width:"60%"}}>
-                    <label htmlFor="Nombre">Nombre</label>
-                      <input
+                      <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
+                    </div>
+                  );
+                })}
+                <div className="creacionProducto__felexContainer">
+                  <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
+                    <div className='input-new' style={ {width:"60%"}}>
+                  <label htmlFor="Nombre">Nombre</label>
+                    <input
                       
                       type="text"
                       name="nombre"
@@ -345,22 +342,49 @@ let config = {
                         />
                     </div>
                   </div>
-                  <div>
-                    <h5 className="creacionProducto__subtitulo_inde">
-                      Salud y seguridad
-                    </h5>
-                    <div className="input-box2">
-                      <label htmlFor="descripcion2">Descripcion</label>
-                      <textarea
-                        name="descripcion2"
-                        id="descripcion2"
-                        placeholder="Escribir aquí"
-                        cols="100"
-                        rows="10"
-                        value={saludYSeguridad}
-                        onChange={handleChangeSaludYSeguridad}
-                      />
-                    </div>
+                  <input
+                    type="button"
+                    className="botonAgregar"
+                    onClick={agregarImagen}
+                  />
+                </div>
+              </div>
+              <h4 className="creacionProducto__subtitulo">
+                Politicas del Producto
+              </h4>
+              <div className="creacionProducto__contenedor_politicas">
+                <div>
+                  <h5 className="creacionProducto__subtitulo_inde">
+                    Normas de la casa
+                  </h5>
+                  <div className="input-box2">
+                    <label htmlFor="descripcion1">Descripcion</label>
+                    <textarea
+                      name="descripcion1"
+                      id="descripcion1"
+                      placeholder="Escribir aquí"
+                      cols="100"
+                      rows="10"
+                      value={normasDeCasa}
+                      onChange={handleChangeNormasDeCasa}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h5 className="creacionProducto__subtitulo_inde">
+                    Salud y seguridad
+                  </h5>
+                  <div className="input-box2">
+                    <label htmlFor="descripcion2">Descripcion</label>
+                    <textarea
+                      name="descripcion2"
+                      id="descripcion2"
+                      placeholder="Escribir aquí"
+                      cols="100"
+                      rows="10"
+                      value={saludYSeguridad}
+                      onChange={handleChangeSaludYSeguridad}
+                    />
                   </div>
                   <div>
                     <h5 className="creacionProducto__subtitulo_inde">
@@ -418,6 +442,20 @@ let config = {
                       onClick={agregarImagen}
                     />
                   </div>
+                  <input
+                    type="button"
+                    className="botonAgregar"
+                    onClick={agregarImagen}
+                  />
+                </div>
+              </div>
+              <div className="contenedor_centrado">
+               <Link to={"/creacionExitosa"}>
+                <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
+                </Link>
+              </div>
+
+                </form>
                 </div>
                 <div className="contenedor_centrado">
                   <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>

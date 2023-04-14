@@ -4,7 +4,7 @@ import axios from 'axios'
 import "../styles/Booking.css"
 import { useNavigate } from 'react-router-dom'
 import BookingCard from '../components/BookingCard'
-import Navigator from '../components/Navigator'
+import Navigate from '../components/Navigate'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 let counter = 0;
@@ -79,7 +79,7 @@ const UsersBookings = () => {
                 >              </BookingCard>
               ))
               :
-              (<h1>Aun no tienes reservas hechas</h1>)
+              (<h1>Aun no tienes reservas por hacer</h1>)
               
             }</>
             )

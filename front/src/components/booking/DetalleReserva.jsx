@@ -62,7 +62,7 @@ const DetalleReserva = ({checkIn, checkOut, idProducto,form}) => {
   return (
     <>
     {
-      reservaExitosa? <Navigate to="/reservaExitosa"> </Navigate>:     <div className="detalle">
+      reservaExitosa? <ReservaExitosa></ReservaExitosa> :     <div className="detalle">
       <div className="detalle_contenedro--uno">
         <h2 className="detalle__titulo">Detalle de la reserva</h2>
         <div style={{backgroundImage:`url(${product.imagenPrincipal})`, backgroundSize:"cover", backgroundPosition:"center", width:"100%"
@@ -91,10 +91,10 @@ const DetalleReserva = ({checkIn, checkOut, idProducto,form}) => {
               <label htmlFor='nombre'><strong>Nombre: </strong> <span>{form.nombre}</span></label>
               <hr className='lin' />
 
-              <label htmlFor='calendar'><strong>Check- In: </strong> <span>{checkIn }</span></label>
+              <label htmlFor=''><strong>Check- In: </strong> <span>{checkIn }</span></label>
               <hr className='lin'/>
               
-              <label htmlFor='calendar'><strong>check-Out: </strong> <span>{checkOut}</span></label>
+              <label htmlFor=''><strong>check-Out: </strong> <span>{checkOut}</span></label>
               <hr className='lin' />
               
                 {/* <Select

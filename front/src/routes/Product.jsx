@@ -10,7 +10,7 @@ import Map from '../components/Map';
 import { useLogged } from '../hooks/useLogged';
 import Politicas from '../components/booking/Politicas';
 import disponibilidades from '../assets/disponibilidades.json';
-import Navigate from '../components/Navigator';
+import Navigate from '../components/Navigate';
 import { Modal } from 'react-bootstrap';
 
 
@@ -42,13 +42,12 @@ const handleCloseModal = () => {
     
     useEffect(() => {
       window.scrollTo(0, 0);
-      console.log(product);
     }, []);
 
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
-    const cardsImages = product.imagenes.map(e=>e.url)
-    const coordinates = {lat: product.latitud, long: product.longitud}
+    const cardsImages = allCards.find((e)=> e.id == id).images
+    const coordinates = allCards.find((e)=> e.id == id).coordinates
     const media = useMedia();
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
