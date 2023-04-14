@@ -62,7 +62,7 @@ const DetalleReserva = ({checkIn, checkOut, idProducto,form}) => {
   return (
     <>
     {
-      reservaExitosa? <ReservaExitosa></ReservaExitosa> :     <div className="detalle">
+      reservaExitosa? <Navigate to= "/creacionExitosa"></Navigate> :     <div className="detalle">
       <div className="detalle_contenedro--uno">
         <h2 className="detalle__titulo">Detalle de la reserva</h2>
         <div style={{backgroundImage:`url(${product.imagenPrincipal})`, backgroundSize:"cover", backgroundPosition:"center", width:"100%"

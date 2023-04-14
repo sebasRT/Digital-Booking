@@ -10,7 +10,7 @@ import Map from '../components/Map'
 import { useLogged } from '../hooks/useLogged'
 import Politicas from '../components/booking/Politicas'
 import disponibilidades from '../assets/disponibilidades.json'
-import Navigate from '../components/Navigate'
+import Navigate from '../components/Navigator'
 
 
 const Product = () => {
@@ -30,7 +30,7 @@ const Product = () => {
     // una vez las imágenes estén en el back: cambiar "allCards" por product.images
     //                    ||             
     const cardsImages = product.imagenes.map(e=>e.url)
-    const coordinates = allCards.find((e)=> e.id == id).coordinates
+    const coordinates = {lat: product.latitud, long: product.longitud}
     const media = useMedia();
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)

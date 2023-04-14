@@ -9,12 +9,12 @@ const Modal = ({children,isOpen,cancel,proceed,deleted}) => {
         <div className="modal-container">
 
         {children}
-        </div>
-        {deleted? <></>:<div className='buttons'>
-
-            <button onClick={cancel}>cancelar</button><button onClick={proceed} className='red'>proceder</button>
-              </div>
+        {deleted? <></>:<div className='modalButtons'>
+          <button onClick={cancel}>cancelar</button><button onClick={proceed} className='red'>proceder</button>
+          </div>
+      
 }
+       </div>
     </div>
   )
 }

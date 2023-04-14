@@ -47,8 +47,8 @@ const ProductCard = ({id,title,idCategory,city,img}) => {
 
         <Modal isOpen={advertOpened} cancel={cancelDelete} proceed={deleteProduct} deleted={deleted} >
             {
-                deleted? <h1>Eliminado correctamente</h1> : 
-                ( <><h2>seguro que quieres eliminar el elemento: id {id} </h2>
+                deleted? <span style={{size:"10px"}}>Eliminado correctamente</span> : 
+                ( <><span>seguro que quieres eliminar el elemento? : </span>
                     <h3>{title}</h3>
                 </>
                             )

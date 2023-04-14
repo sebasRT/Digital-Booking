@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../assets/global.context';
 import BookingCard from '../components/BookingCard';
-import Navigate from '../components/Navigate';
+import Navigate from '../components/Navigator';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 let bookings = [];

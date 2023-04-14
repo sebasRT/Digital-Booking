@@ -40,29 +40,16 @@ export const GlobalProvider = ({children}) => {
     }
   }
 
-  const upDateProducts = ()=>{
-    setCharged(false)
-    setProducts("")}
-    
-useEffect(() => {
-  async function getProducts (){
-    const response = await axios.get(`${url}producto`)
-    chargedCounter = chargedCounter+1;
-    handleCharged()
-    setProducts(response.data)
-  }
-  getProducts()
-
-
-
-  return () => {
-    setProducts({})
-  }
-}, [actualizar])
-
-
 
   useEffect(() => {
+    async function getProducts (){
+      const response = await axios.get(`${url}producto`)
+      chargedCounter = chargedCounter+1;
+      handleCharged()
+      setProducts(response.data)
+    }
+    getProducts()
+
     async function getProductsRandom (){
       const response = await axios.get(`${url}producto/random`)
       chargedCounter = chargedCounter+1;

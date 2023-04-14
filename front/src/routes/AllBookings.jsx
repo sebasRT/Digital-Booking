@@ -4,7 +4,7 @@ import axios from 'axios'
 import "../styles/Booking.css"
 import { useNavigate } from 'react-router-dom'
 import BookingCard from '../components/BookingCard'
-import Navigate from '../components/Navigate'
+import Navigate from '../components/Navigator'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 let counter = 0;
