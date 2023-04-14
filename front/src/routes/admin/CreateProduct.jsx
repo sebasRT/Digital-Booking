@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
 import { useEffect } from 'react';
@@ -12,7 +12,6 @@ import "./AdminPage.css"
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
   const {url}= useContext(GlobalContext)
-  const history = useNavigate()
 
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
@@ -271,16 +270,18 @@ setform(form);
                   return (
                     <div key={id} className="creacionProducto__felexContainer">
                       <div className="input-box2">
-                      
-                        <input
-                          className="box-elemento-imagen"
-                          type="text"
-                          name="imagenUrl"
-                          id={`imgurl-${id}`}
-                          placeholder="WI-FI"
-                          value={url}
-                          disabled
-                        />
+                        
+                          <input
+                            className="box-elemento-imagen"
+                            type="text"
+                            name="imagenUrl"
+                            id={`imgurl-${id}`}
+                            placeholder="WI-FI"
+                            value={url}
+                            disabled
+                          />
+                        </div>
+                        <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                       </div>
                       <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                     </div>
@@ -296,21 +297,49 @@ setform(form);
                       name="nombre"
                       id="name"
                       placeholder="WIFI"
-                      value={imagenUrl}
-                      onChange={handleChangeImagenUrl}
-                    />
+                        value={imagenUrl}
+                        onChange={handleChangeImagenUrl}
+                        />
+                      </div>
+                      <div className='input-new' style={ {width:"20%"}}>
+                      <label htmlFor="Nombre">Icono</label>
+                      <input
+                        
+                        type="text"
+                        name="icono"
+                        id="icono"
+                        placeholder="FA-WIFI"
+                        value={imagenUrl}
+                        onChange={handleChangeImagenUrl}
+                      />
+                      </div>
                     </div>
-                    <div className='input-new' style={ {width:"20%"}}>
-                    <label htmlFor="Nombre">Icono</label>
                     <input
-                      
-                      type="text"
-                      name="icono"
-                      id="icono"
-                      placeholder="FA-WIFI"
-                      value={imagenUrl}
-                      onChange={handleChangeImagenUrl}
+                      type="button"
+                      className="botonAgregar"
+                      onClick={agregarImagen}
                     />
+                  </div> */}
+                </div>
+                <h4 className="creacionProducto__subtitulo">
+                  Politicas del Producto
+                </h4>
+                <div className="creacionProducto__contenedor_politicas">
+                  <div>
+                    <h5 className="creacionProducto__subtitulo_inde">
+                      Normas de la casa
+                    </h5>
+                    <div className="input-box2">
+                      <label htmlFor="descripcion1">Descripcion</label>
+                      <textarea
+                        name="descripcion1"
+                        id="descripcion1"
+                        placeholder="Escribir aquí"
+                        cols="100"
+                        rows="10"
+                        value={normasDeCasa}
+                        onChange={handleChangeNormasDeCasa}
+                        />
                     </div>
                   </div>
                   <input
@@ -357,55 +386,60 @@ setform(form);
                       onChange={handleChangeSaludYSeguridad}
                     />
                   </div>
-                </div>
-                <div>
-                  <h5 className="creacionProducto__subtitulo_inde">
-                    Políticas de cancelación
-                  </h5>
-                  <div className="input-box2">
-                    <label htmlFor="descripcion3">Descripcion</label>
-                    <textarea
-                      name="descripcion3"
-                      id="descripcion3"
-                      placeholder="Escribir aquí"
-                      cols="100"
-                      rows="10"
-                      value={politicasDeCancelacion}
-                      onChange={handleChangePoliticasDeCancelacion}
-                    />
+                  <div>
+                    <h5 className="creacionProducto__subtitulo_inde">
+                      Políticas de cancelación
+                    </h5>
+                    <div className="input-box2">
+                      <label htmlFor="descripcion3">Descripcion</label>
+                      <textarea
+                        name="descripcion3"
+                        id="descripcion3"
+                        placeholder="Escribir aquí"
+                        cols="100"
+                        rows="10"
+                        value={politicasDeCancelacion}
+                        onChange={handleChangePoliticasDeCancelacion}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <h4 className="creacionProducto__subtitulo">Cargar Imagenes</h4>
-              <div className="creacionProducto__contenedor__contraste">
-                {imagenes.map(({id,url}) => {
-                  return (
-                    <div key={id} className="creacionProducto__felexContainer">
-                      <div className="input-box2">
-                        <input
-                          className="box-elemento-imagen"
-                          type="text"
-                          name="imagenUrl"
-                          id={`imgurl-${id}`}
-                          placeholder="Insertar https://"
-                          value={url}
-                          disabled
-                        />
+                <h4 className="creacionProducto__subtitulo">Cargar Imagenes</h4>
+                <div className="creacionProducto__contenedor__contraste">
+                  {imagenes.map(({id,url}) => {
+                    return (
+                      <div key={id} className="creacionProducto__felexContainer">
+                        <div className="input-box2">
+                          <input
+                            className="box-elemento-imagen"
+                            type="text"
+                            name="imagenUrl"
+                            id={`imgurl-${id}`}
+                            placeholder="Insertar https://"
+                            value={url}
+                            disabled
+                          />
+                        </div>
+                        <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                       </div>
-                      <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
+                    );
+                  })}
+                  <div className="creacionProducto__felexContainer">
+                    <div className="input-box2" style={{ marginTop: "15px" }}>
+                      <input
+                        
+                        type="text"
+                        name="imagenUrl"
+                        id="imagenUrl"
+                        placeholder="Insertar https://"
+                        value={imagenUrl}
+                        onChange={handleChangeImagenUrl}
+                      />
                     </div>
-                  );
-                })}
-                <div className="creacionProducto__felexContainer">
-                  <div className="input-box2" style={{ marginTop: "15px" }}>
                     <input
-                      
-                      type="text"
-                      name="imagenUrl"
-                      id="imagenUrl"
-                      placeholder="Insertar https://"
-                      value={imagenUrl}
-                      onChange={handleChangeImagenUrl}
+                      type="button"
+                      className="botonAgregar"
+                      onClick={agregarImagen}
                     />
                   </div>
                   <input
@@ -423,9 +457,19 @@ setform(form);
 
                 </form>
                 </div>
-                </div>   
+                <div className="contenedor_centrado">
+                  <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
                 </div>
-    </div>
+  
+                  </form>
+                  </div>
+                  </div>   
+                  </div>
+      </div>
+      )  
+     
+    }
+                        </>
   )
 }
 

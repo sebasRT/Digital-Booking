@@ -42,7 +42,7 @@ useEffect( () => {
 
   return (
     <>
-    <Navigate title={"Mis reservas"}></Navigate>
+    <Navigator title={"Mis reservas"}></Navigator>
     <div className='cards-container' style={{paddingBottom:"100px"}}>
         {
         charged? (booking.length === 0 ? <h1>Aun no hay reservas a tu nombre</h1> : (

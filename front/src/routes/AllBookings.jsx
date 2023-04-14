@@ -59,7 +59,7 @@ const UsersBookings = () => {
 <>
     
       
-    <Navigate title="Todas las reservas"></Navigate>
+    <Navigator title="Todas las reservas"></Navigator>
     <div className='cards-container' style={{paddingBottom:"80px"}}>
 
         {
