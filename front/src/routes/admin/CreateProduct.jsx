@@ -7,7 +7,8 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
-
+import formProduct from"../../assets/formProduct.json"
+import Navigate from '../../components/Navigator';
 
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
@@ -23,7 +24,7 @@ const CreateProduct = () => {
   };
 
   const [categorias, setCategorias] = useState([]);
-  const [categoriaId, setCategoriaId] = useState("");
+  const [categoriaId, setCategoriaId] = useState(1);
   const handleChangeCategoriaId = (event) => {
     setCategoriaId(event.target.value);
   };
@@ -34,7 +35,8 @@ const CreateProduct = () => {
   };
 
   const [ciudades, setCiudades] = useState([]);
-  const [ciudadId, setCiudadId] = useState("");
+  const [ciudadId, setCiudadId] = useState(1);
+
   const handleChangeCiudadId = (event) => {
     setCiudadId(event.target.value);
   };
@@ -86,9 +88,14 @@ const CreateProduct = () => {
     };
   
     const [imagenes, setImagenes] = useState([]);
-  
+    const [propiedades, setPropiedades] = useState([]);
+    
     const[contadorIdImg,setContadorIdImg]= useState(1)
 
+    useEffect(() => {
+      console.log(imagenes);
+    
+    }, [imagenes])
     
     const agregarImagen = () => {
       if (imagenUrl.length !== "") {
@@ -113,7 +120,8 @@ const CreateProduct = () => {
     }
 
     const handleSubmit = (e) => {
-      e.preventDefault();}
+      e.preventDefault()
+      ;}
   
     //traer ciudades, categorias y caracteristicas
 
@@ -128,40 +136,49 @@ const [form, setform] = useState()
 useEffect(() => {
 
   const form = {
-    "titulo": nombrePropiedad,
-    "ubicacion": direccion,
-    "descripcion": descripcion,
-    "imagenPrincipal": imagenUrl,
-    "imagenes": [],
-    "categoria": {
-        "idcategorias": categoriaId,
-        "titulo": "",
-        "descripcion": "",
-        "url_imagen": ""
+    titulo: nombrePropiedad,
+    ubicacion: "",
+    descripcion: descripcion,
+    imagenPrincipal: imagenUrl,
+    imagenes: imagenes,    
+    categoria: {
+      idcategorias: categoriaId,
+      titulo: "",
+      descripcion: "",
+      url_imagen: "",
     },
-    "disponibilidad": "",
-    "politicas":politicasDeCancelacion,
-    "caracteristicas": [
-        {
-            "idcaracteristicas": 1,
-            "descripcion": "Wi fi,Gimnasio",
-            "imagen": null
-        }
-    ],
-    "ciudad": {
-        "idciudades": ciudadId,
-        "nombre": ""
+    disponibilidad: "",
+    politicas:null,
+    caracteristicas:[
+      {
+        idcaracteristicas: 1,
+        descripcion: "Gimnasio,Terraza Bar,Turco",
+        imagen: null
     }
-  };
 
+    ]
+    ,
+    ciudad: {
+      idciudades: ciudadId,
+    }
+
+    
+  }
 setform(form);
-}, [submit])
+
+},[nombrePropiedad,categoriaId,descripcion,imagenUrl,imagenes,categoriaId,ciudadId])
 
 
-  const submitProduct =()=>{
-    setSubmit(!submit); 
+let config = {
+  headers: {
+    'Authorization': 'Bearer ' + localStorage.getItem("jwt")
+  }
+}
+  const submitProduct =(e)=>{
+    e.preventDefault()
+    setSubmit(true); 
 
-    axios.post(`${url}producto/register`,form)
+    axios.post(`${url}producto/register`,form,config)
     .then(e=>console.log(e))
     .catch(e=>console.log(e))
 
@@ -170,17 +187,12 @@ setform(form);
   return (
 
     <div>
-      <div className="adminHeader">
-      
-        <h3>Administración</h3>
-        <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
+      <Navigate title="Crear Producto"></Navigate>
 
-    </div>
-      <h2 className="creacionProducto__titulo">Crear Propiedad</h2>
       <div className="pantalla__creacionProducto--contenedor">
         <div className="pantalla__creacionProducto--contenedor__principal">
           <div className="creacionProducto__form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={submitProduct}>
               <div className="formPrincipal">
                 <div className="input-box">
                   <label htmlFor="nombrePropiedad">
@@ -267,7 +279,7 @@ setform(form);
               </div>
               <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
               <div className="creacionProducto__contenedor__contraste">
-                {imagenes.map(({id,url}) => {
+                {/* {imagenes.map(({id,url}) => {
                   return (
                     <div key={id} className="creacionProducto__felexContainer">
                       <div className="input-box2">
@@ -285,8 +297,8 @@ setform(form);
                       <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                     </div>
                   );
-                })}
-                <div className="creacionProducto__felexContainer">
+                })} */}
+                {/* <div className="creacionProducto__felexContainer">
                   <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
                     <div className='input-new' style={ {width:"60%"}}>
                   <label htmlFor="Nombre">Nombre</label>
@@ -318,7 +330,7 @@ setform(form);
                     className="botonAgregar"
                     onClick={agregarImagen}
                   />
-                </div>
+                </div> */}
               </div>
               <h4 className="creacionProducto__subtitulo">
                 Politicas del Producto
@@ -416,9 +428,7 @@ setform(form);
                 </div>
               </div>
               <div className="contenedor_centrado">
-               <Link to={"/creacionExitosa"}>
                 <button type="submit" className="crearProducto" onClick={submitProduct}>Crear</button>
-                </Link>
               </div>
 
                 </form>
