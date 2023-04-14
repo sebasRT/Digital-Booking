@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context'
 import ProductCard from './ProductCard';
@@ -6,9 +6,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackspace, faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
 import Navigate from '../../components/Navigator';
+import axios from "axios";
 
 const AdminPage = () => {
-    const {products} = useContext(GlobalContext);
+    const [products, setProducts] = useState({})
+    const { url } = useContext(GlobalContext)
+
+    useEffect(() => {
+      axios.get(`${url}producto`).then((response)=>{
+        setProducts(response.data)
+      }).catch((error)=>{
+        console.log(error)
+      })
+      
+    return () => {
+      setProducts({})}
+    
+    }, [])
 
     const history = useNavigate()
   return (

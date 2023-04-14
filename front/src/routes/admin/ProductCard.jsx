@@ -8,7 +8,7 @@ import "../../styles/Cards.css"
 import "./AdminPage.css"
 import Modal from '../../components/Modal'
 
-const ProductCard = ({id,title,idCategory,city,img}) => {
+const ProductCard = ({id,title,idCategory,city,img,description}) => {
     const {url} = useContext(GlobalContext)
     const [advertOpened, setAdvertOpened] = useState(false)
     const [deleted, setDeleted] = useState(false)
@@ -59,6 +59,7 @@ const ProductCard = ({id,title,idCategory,city,img}) => {
         <h4>titulo: <span>{title}</span></h4>
         <h4>categoría: <span>{category()}</span></h4>
         <h4>ciudad: <span>{city}</span></h4>
+        <h4>descripcion: <span style={{fontSize:"10px", fontWeight:"lighter"}}>{description}</span></h4>
         </div>
         <div className='buttons-container'>
         <div onClick={deleteOption}><FontAwesomeIcon icon={faTrash} className="editorIcon"></FontAwesomeIcon></div>

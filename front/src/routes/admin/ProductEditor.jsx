@@ -78,7 +78,7 @@ const handleProduct =(e)=>{
 
 const putProduct = ()=>{
   axios.put(`${url}producto/${id}`,product).
-  then(e=>{setProduct(e.data), window.location.href = '/admin';}).
+  then(e=>{setProduct(e.data), setEdited(true)}).
   catch(e=>console.log(e))
 }
   return (

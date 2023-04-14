@@ -7,7 +7,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
-
+import formProduct from"../../assets/formProduct.json"
 
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
@@ -23,7 +23,7 @@ const CreateProduct = () => {
   };
 
   const [categorias, setCategorias] = useState([]);
-  const [categoriaId, setCategoriaId] = useState("");
+  const [categoriaId, setCategoriaId] = useState(1);
   const handleChangeCategoriaId = (event) => {
     setCategoriaId(event.target.value);
   };
@@ -34,7 +34,7 @@ const CreateProduct = () => {
   };
 
   const [ciudades, setCiudades] = useState([]);
-  const [ciudadId, setCiudadId] = useState("");
+  const [ciudadId, setCiudadId] = useState(1);
 
   const handleChangeCiudadId = (event) => {
     setCiudadId(event.target.value);
@@ -135,42 +135,49 @@ const [form, setform] = useState()
 useEffect(() => {
 
   const form = {
-    "titulo": nombrePropiedad,
-    "ubicacion": direccion,
-    "descripcion": descripcion,
-    "imagenPrincipal": imagenUrl,
-    "imagenes": [],
-    "categoria": {
-        "idcategorias": categoriaId,
-        "titulo": "",
-        "descripcion": "",
-        "url_imagen": ""
+    titulo: nombrePropiedad,
+    ubicacion: "",
+    descripcion: descripcion,
+    imagenPrincipal: "",
+    imagenes: imagenes,    
+    categoria: {
+      idcategorias: categoriaId,
+      titulo: "",
+      descripcion: "",
+      url_imagen: "",
     },
-    "disponibilidad": "",
-    "politicas":politicasDeCancelacion,
-    "caracteristicas": [
-        {
-            "idcaracteristicas": 1,
-            "descripcion": "Wi fi,Gimnasio",
-            "imagen": null
-        }
-    ],
-    "ciudad": {
-        "idciudades": ciudadId,
-        "nombre": ""
+    disponibilidad: "",
+    politicas:null,
+    caracteristicas:[
+      {
+        idcaracteristicas: 1,
+        descripcion: "Gimnasio,Terraza Bar,Turco",
+        imagen: null
     }
-  };
 
+    ]
+    ,
+    ciudad: {
+      idciudades: ciudadId,
+      nombre: "",
+    }
+
+    
+  }
 setform(form);
-}, [submit])
 
+}, [])
 
+let config = {
+  headers: {
+    'Authorization': 'Bearer ' + localStorage.getItem("jwt")
+  }
+}
   const submitProduct =(e)=>{
     e.preventDefault()
     setSubmit(true); 
-    console.log(form);
 
-    axios.post(`${url}producto/register`,form)
+    axios.post(`${url}producto/register`,form,config)
     .then(e=>console.log(e))
     .catch(e=>console.log(e))
 
@@ -276,7 +283,7 @@ setform(form);
               </div>
               <h4 className="creacionProducto__subtitulo">Agregar Atributos</h4>
               <div className="creacionProducto__contenedor__contraste">
-                {imagenes.map(({id,url}) => {
+                {/* {imagenes.map(({id,url}) => {
                   return (
                     <div key={id} className="creacionProducto__felexContainer">
                       <div className="input-box2">
@@ -294,8 +301,8 @@ setform(form);
                       <input type="button" className="botonQuitar" onClick={()=>quitarImagen(id)} />
                     </div>
                   );
-                })}
-                <div className="creacionProducto__felexContainer">
+                })} */}
+                {/* <div className="creacionProducto__felexContainer">
                   <div className="input-box2" style={{ display:"flex",flexWrap:"nowrap",justifyContent:"space-around"}}>
                     <div className='input-new' style={ {width:"60%"}}>
                   <label htmlFor="Nombre">Nombre</label>
@@ -327,7 +334,7 @@ setform(form);
                     className="botonAgregar"
                     onClick={agregarImagen}
                   />
-                </div>
+                </div> */}
               </div>
               <h4 className="creacionProducto__subtitulo">
                 Politicas del Producto
