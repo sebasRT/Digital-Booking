@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { GlobalContext } from '../../assets/global.context';
 import "../../styles/CreateProduct.css"
 import { useEffect } from 'react';
@@ -10,7 +10,6 @@ import Navigator from '../../components/Navigator';
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
   const {url}= useContext(GlobalContext)
-  const history = useNavigate()
 
   //Estados de los primeros campos del form nombre,categoria,ciudad,direccion
   //Las ciudades y las categorias son traidas con el hook useEffect a traves de servicios que consumen la api
@@ -109,17 +108,7 @@ const CreateProduct = () => {
       let auxImg= [...imagenes].filter((e)=>e.id!==id)
       setImagenes(auxImg);    
     }; 
-    
-    
-    const navigate = useNavigate()
-    const handleClick = () => {
-      navigate(-1)
-    }
-
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      ;}
-  
+      
     //traer ciudades, categorias y caracteristicas
 
 

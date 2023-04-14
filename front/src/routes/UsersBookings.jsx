@@ -2,14 +2,12 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../assets/global.context';
 import BookingCard from '../components/BookingCard';
-import { useNavigate } from 'react-router-dom';
-import Navigate from '../components/Navigate';
+import Navigator from '../components/Navigator';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 let bookings = [];
 
 const UsersBookings = () => {
-    const history = useNavigate();
 const token = localStorage.getItem("jwt");
 const id = localStorage.getItem("id");
 const headers = {
