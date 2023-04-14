@@ -165,7 +165,7 @@ let config = {
     setSubmit(true); 
 
     axios.post(`${url}producto/register`,form,config)
-    .then(e=>console.log(e), setSubmit(false))
+    .then(e=>console.log(e), setSubmit(true))
     .catch(e=>console.log(e))
 
   }
