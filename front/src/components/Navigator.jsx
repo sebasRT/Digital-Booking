@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Navigate = ({title}) => {
+const Navigator = ({title}) => {
 
     const history = useNavigate()
   return (
@@ -16,4 +16,4 @@ const Navigate = ({title}) => {
   )
 }
 
-export default Navigate
+export default Navigator

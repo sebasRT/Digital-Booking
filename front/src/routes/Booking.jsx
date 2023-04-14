@@ -9,7 +9,7 @@ import Politicas from '../components/booking/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"
 import { Calendar, DateObject } from 'react-multi-date-picker';
-import Navigate from '../components/Navigator';
+import Navigator from '../components/Navigator';
 
 const Booking = () => {
   const {id}= useParams()
@@ -73,7 +73,7 @@ const Booking = () => {
   
   return (
     <>
-<Navigate title={`Reserva ${product.titulo}`}></Navigate>
+<Navigator title={`Reserva ${product.titulo}`}></Navigator>
 <div className='contenedor-main'>
   <div className="bookingForm">
 

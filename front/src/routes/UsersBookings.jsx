@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../assets/global.context';
 import BookingCard from '../components/BookingCard';
-import Navigate from '../components/Navigator';
+import Navigator from '../components/Navigator';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 let bookings = [];
@@ -41,7 +41,7 @@ useEffect( () => {
 
   return (
     <>
-    <Navigate title={"Mis reservas"}></Navigate>
+    <Navigator title={"Mis reservas"}></Navigator>
     <div className='cards-container' style={{paddingBottom:"100px"}}>
         {
         charged? (booking.length === 0 ? <h1>Aun no hay reservas a tu nombre</h1> : (

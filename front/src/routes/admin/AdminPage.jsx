@@ -5,7 +5,7 @@ import ProductCard from './ProductCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackspace, faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
-import Navigate from '../../components/Navigator';
+import Navigator from '../../components/Navigator';
 import axios from "axios";
 
 const AdminPage = () => {
@@ -18,7 +18,7 @@ const AdminPage = () => {
       }).catch((error)=>{
         console.log(error)
       })
-      
+
     return () => {
       setProducts({})}
     
@@ -27,7 +27,7 @@ const AdminPage = () => {
     const history = useNavigate()
   return (
     <div id='adminPage'>
-      <Navigate title="Administracion"></Navigate>
+      <Navigator title="Administracion"></Navigator>
      
         <Link to="create" ><div className='createButton'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></div></Link>
         <div className='cards-container editableProducts-box'>

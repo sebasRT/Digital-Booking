@@ -4,7 +4,7 @@ import axios from 'axios'
 import "../styles/Booking.css"
 import { useNavigate } from 'react-router-dom'
 import BookingCard from '../components/BookingCard'
-import Navigate from '../components/Navigator'
+import Navigator from '../components/Navigator'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 let counter = 0;
@@ -59,7 +59,7 @@ const UsersBookings = () => {
 <>
     
       
-    <Navigate title="Todas las reservas"></Navigate>
+    <Navigator title="Todas las reservas"></Navigator>
     <div className='cards-container' style={{paddingBottom:"80px"}}>
 
         {

@@ -6,7 +6,7 @@ import Card from '../components/Card';
 import "../styles/Suggestions.css" 
 import "../styles/Cards.css"
 import { useNavigate } from 'react-router-dom';
-import Navigate from '../components/Navigator';
+import Navigator from '../components/Navigator';
 
 
 
@@ -16,7 +16,7 @@ export const Products = () => {
   
   return (
     <div>
-      <Navigate title="Productos"></Navigate>
+      <Navigator title="Productos"></Navigator>
       <div className='Suggestions'>
       <div className='cards-container'>
         
