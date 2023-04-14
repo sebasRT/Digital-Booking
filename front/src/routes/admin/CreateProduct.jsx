@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AdminPage.css"
 import formProduct from"../../assets/formProduct.json"
+import Navigate from '../../components/Navigator';
 
 const CreateProduct = () => {
   const [submit, setSubmit] = useState(false)
@@ -138,7 +139,7 @@ useEffect(() => {
     titulo: nombrePropiedad,
     ubicacion: "",
     descripcion: descripcion,
-    imagenPrincipal: "",
+    imagenPrincipal: imagenUrl,
     imagenes: imagenes,    
     categoria: {
       idcategorias: categoriaId,
@@ -159,14 +160,14 @@ useEffect(() => {
     ,
     ciudad: {
       idciudades: ciudadId,
-      nombre: "",
     }
 
     
   }
 setform(form);
 
-}, [])
+},[nombrePropiedad,categoriaId,descripcion,imagenUrl,imagenes,categoriaId,ciudadId])
+
 
 let config = {
   headers: {
@@ -186,13 +187,8 @@ let config = {
   return (
 
     <div>
-      <div className="adminHeader">
-      
-        <h3>Administración</h3>
-        <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
+      <Navigate title="Crear Producto"></Navigate>
 
-    </div>
-      <h2 className="creacionProducto__titulo">Crear Propiedad</h2>
       <div className="pantalla__creacionProducto--contenedor">
         <div className="pantalla__creacionProducto--contenedor__principal">
           <div className="creacionProducto__form">
