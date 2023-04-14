@@ -10,7 +10,7 @@ import Map from '../components/Map';
 import { useLogged } from '../hooks/useLogged';
 import Politicas from '../components/booking/Politicas';
 import disponibilidades from '../assets/disponibilidades.json';
-import Navigate from '../components/Navigate';
+import Navigator from '../components/Navigator';
 import { Modal } from 'react-bootstrap';
 
 
@@ -68,7 +68,7 @@ const handleCloseModal = () => {
 
     return (
       <div ref={ref} style={{paddingBottom:"70px"}}>
-        <Navigate title={product.titulo}></Navigate>
+        <Navigator title={product.titulo}></Navigator>
         <div className='div-contenedor'>
           <div className='images-zone'>
             <div className='images-container-wrapper'>

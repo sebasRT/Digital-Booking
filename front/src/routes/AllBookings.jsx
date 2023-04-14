@@ -2,9 +2,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { GlobalContext } from '../assets/global.context'
 import axios from 'axios'
 import "../styles/Booking.css"
-import { useNavigate } from 'react-router-dom'
-import BookingCard from '../components/BookingCard'
-import Navigate from '../components/Navigate'
+import Navigator from '../components/Navigator'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 let counter = 0;
@@ -17,7 +15,6 @@ const UsersBookings = () => {
   const {products,url} = useContext(GlobalContext)
   const [booking, setBooking] = useState([])
   const [bookingCharged, setBookingCharged] = useState(false);
-  const history = useNavigate()
 
   const headers = {
     Authorization: `Bearer ${token}`

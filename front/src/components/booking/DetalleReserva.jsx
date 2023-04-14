@@ -2,7 +2,7 @@
 import { faLocationDot, faStar} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import { GlobalContext } from '../../assets/global.context';
 import '../../styles/DetalleReserva.css';
 import axios from 'axios';

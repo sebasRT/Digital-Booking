@@ -9,9 +9,7 @@ import Politicas from '../components/booking/Politicas';
 import { useMedia } from '../hooks/useMedia';
 import "../styles/Booking.css"
 import { Calendar, DateObject } from 'react-multi-date-picker';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-
+import Navigator from '../components/Navigator';
 
 const Booking = () => {
   const {id}= useParams()
@@ -75,12 +73,7 @@ const Booking = () => {
   
   return (
     <>
-              <div className='adminHeader'>
-        <h2>{product.titulo}</h2>
-      <button onClick={()=>history(-1)} className='go-backButton'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon></button>
-
-      </div>
-
+<Navigator title={`Reserva ${product.titulo}`}></Navigator>
 <div className='contenedor-main'>
   <div className="bookingForm">
 
@@ -94,12 +87,13 @@ const Booking = () => {
     <div className='contenedor-calendario' >
 
       <br />
-      <div className='calendar'>
-
+      <div className='calendar'  >
+    <input type="file" name="calendar" id="calendar" />
         <Calendar
         minDate={new Date()}
         range
         rangeHover
+        value={values}
         numberOfMonths={media? 1 : 2}
         onChange={handleCheck}
         className={`yellow`}
